@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-::root
+:root
 {
     /*Переменные для градиентов и цветов. Кушать вместе с var()*/
     --greenGradientDiag: linear-gradient(from top left to bottom right,#7BC74D,#00000000,#7BC74D);
