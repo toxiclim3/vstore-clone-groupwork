@@ -1,0 +1,33 @@
+body
+{
+    background: var(--baseGray);
+}
+
+.background
+{
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: var(--greenBottomRight);
+    z-index: -1;
+}
+
+.container
+{
+    width: 80vw;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.loginContainer
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background: var(--grayDiag);
+}
