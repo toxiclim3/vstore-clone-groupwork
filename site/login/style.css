@@ -9,6 +9,16 @@ p
     margin: 0;
 }
 
+header
+{
+    padding: 1em;
+}
+
+header a
+{
+    color: white;
+}
+
 .background
 {
     position: absolute;
