@@ -1,7 +1,12 @@
 body
 {
     /* Временное изображение */
-    background: url(img/20250125_000904.jpg);
+    background: url(./img/20250125_000904.jpg);
+}
+
+p
+{
+    margin: 0;
 }
 
 .background
@@ -34,6 +39,11 @@ body
     color: white;
 }
 
+.container h1
+{
+    margin-left: 1em;
+}
+
 .loginContainer
 {
     width: 100%;
@@ -43,9 +53,18 @@ body
     justify-content: space-evenly;
     align-items: center;
 
-    background: var(--grayDiag);
+    background: var(--grayTop);
 
-    border-radius: 9px;
+    padding: 2%;
+
+    border-radius: 18px;
+}
+
+
+
+.left
+{
+    flex-basis: 70%;
 }
 
 .left form
@@ -58,14 +77,101 @@ body
 
 .left input
 {
-    padding: 0.8rem;
+    padding: 1rem 0.8rem;
     width: 100%;
+
+    margin-bottom: 1em;
+
+    background-color: var(--brightGray);
+    border: none;
+    border-radius: 4.5px;
+    color: white;
 }
 
 .left form .buttons
 {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;  
+    justify-content: space-between;
 
+    margin-top: 1em;
+}
+
+.left form .buttons input[type="submit"]
+{
+    flex-basis: 60%;
+    margin-right: 2em;
+
+    background: var(--greenBrightRight);
+}
+
+.left form .buttons input[type="button"]
+{
+    flex-basis: 40%;
+
+    background: #363a42;
+}
+
+
+.left .newaccount
+{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.left .newaccount p
+{
+    padding: 0 0.5rem;
+    color: var(--brightestGray);
+}
+
+.left .newaccount a
+{
+    padding: 0 0.5rem;
+    color: white;
+}
+
+
+
+.right
+{
+    flex-basis: 20%;
+    height: 100%;
+
+    text-align: center;
+}
+
+.right .signin
+{
     
+    color: var(--green);
+
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.right .qrcode
+{
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: white;
+
+    border-radius: 18px;
+
+    margin: 1em 0;
+    overflow: hidden;
+}
+
+.right .qrcode img
+{
+    width: 100%;
+}
+
+.right .use
+{
+    font-size: 0.9em;
 }

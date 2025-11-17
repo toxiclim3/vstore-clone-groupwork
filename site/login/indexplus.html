@@ -17,7 +17,7 @@
         <h1>Log in</h1>
 
          <div class="loginContainer">
-            <div class="left">
+            <div class="left login">
                 <form action="">
                     <label for="login">SIGN IN WITH ACCOUNT NAME</label>
                     <input type="text" name="login" id="login">
@@ -27,21 +27,23 @@
 
                     <div class="buttons">
                         <input type="submit" value="SIGN IN">
-                        <input type="button" value="Help,I can't log in">
+                        <input type="button" value="Help, I can't log in">
                     </div>
                 </form>
 
-                <p>No account?</p>
-                <a href="../newaccount/indexplus.html">Create a new one!</a>
+                <div class="newaccount">
+                    <p>No account?</p>
+                    <a href="../newaccount/indexplus.html">Create a new one!</a>
+                </div>
             </div>
 
-            <div class="right">
-                <p>SIGN IN WITH QR-CODE</p>
+            <div class="right login">
+                <p class="signin">SIGN IN WITH QR-CODE</p>
                 <div class="qrcode">
-                    <img src="" alt="">
+                    <img src="./img/qr-code.svg" alt="">
                 </div>
 
-                <p>Use our app or other means to scan this QR-code and log into your account</p>
+                <p class="use">Use our app or other means to scan this QR-code and log into your account</p>
             </div>
          </div>
     </div>
