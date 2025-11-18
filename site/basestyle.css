@@ -49,3 +49,172 @@ body
     font-variation-settings:
     "wdth" 100;
 }
+
+
+
+/*
+KDG Vstore Header Styles
+  (Стили ИСКЛЮЧИТЕЛЬНО для хедера )
+*/
+
+/* 1. Стили самой шапки */
+.site-header {
+    background-color: #25282d; 
+    padding: 12px 24px;
+    border-bottom: none;
+    /* Добавим, чтобы шапка была привязана к верху */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* 2. Контейнер внутри шапки */
+.header-container {
+    display: flex; /* !!! ГЛАВНОЕ ПРАВИЛО !!! */
+    align-items: center; 
+    justify-content: space-between; /* Чтобы разнести левую и правую часть */
+    max-width: 100%;
+    margin: 0 auto; 
+    gap: 20px; 
+}
+
+/* 3. Левая группа  */
+.header-left {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Не сжиматься */
+}
+
+/* 4. Логотип */
+.logo-text {
+    font-weight: bold;
+    color: var(--baseWhite, #eeeeee);
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 24px;
+}
+
+/* 5. Стили навигации */
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-navigation li {
+    margin-right: 20px;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: var(--baseWhite, #eeeeee); 
+    font-weight: 500;
+    text-transform: none; 
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+/* 5.1. Активный пункт меню  */
+.main-navigation a.active {
+    color: var(--green, #85c557); 
+    font-weight: 700;
+}
+
+/* 5.2. Наведение на пункт меню */
+.main-navigation a:hover {
+    color: var(--green, #85c557);
+}
+
+/* 6. Поиск (В HTML его нет, но стили пусть будут) */
+.header-center {
+    flex-grow: 1; /* Занимать всё доступное пространство */
+    display: flex;
+    max-width: 500px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--baseGray, #373C43);
+    border-radius: 20px; /* Скругление */
+    padding: 8px 14px;
+    width: 100%; 
+}
+
+.search-bar .search-icon {
+    color: var(--brightGray, #626975);
+    font-size: 18px;
+    margin-right: 10px;
+    line-height: 1;
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--baseWhite, #eeeeee);
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    width: 100%;
+}
+
+.search-bar input::placeholder {
+    color: var(--brightGray, #626975);
+}
+
+
+/* 7. Правая группа Иконки + Кнопки */
+.header-right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Не сжиматься */
+}
+
+/* 8. Кнопка-иконка */
+.icon-button {
+    color: var(--baseWhite, #eeeeee);
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 20px;
+    transition: color 0.2s ease;
+}
+
+.icon-button:hover {
+    color: var(--green, #85c557);
+}
+
+/* 9. Общий стиль для кнопок */
+.btn {
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-left: 10px;
+    text-transform: none; 
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* 9.1. Кнопка РФегистрации  */
+.btn-signin {
+    background-color: var(--baseGray, #373C43); 
+    color: var(--baseWhite, #eeeeee);
+}
+
+.btn-signin:hover {
+    background-color: var(--lightGray, #3a3e46);
+}
+
+/* 9.2. Кнопка "Скачать"  */
+.btn-download {
+    background-color: var(--green, #85c557); 
+    color: #121212; 
+    font-weight: 700;
+}
+
+.btn-download:hover {
+    background-color: #a0dd7a; 
+}
