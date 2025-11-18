@@ -169,10 +169,30 @@ KDG Vstore Header Styles
 /* == СТИЛИ КОНТЕНТА СТРАНИЦЫ (V STORE) == */
 /* ======================================= */
 
+/* фон */
+body
+{
+    z-index: -2;
+    background-color: var(--baseGray);
+}
+
+/* градиентный фон поверх базового */
+.background
+{
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    z-index: -1;
+
+    background: var(--greenRight);
+}
+
+
 /* 10. Основной контейнер страницы */
 main.store-page {
     /* Используем переменные из вашего basestyle.css */
-    background-color: var(--baseGray, #26282d);
+    
     color: var(--baseWhite, #eeeeee);
     /* На скриншоте контент не во всю ширину */
     max-width: 1400px;
