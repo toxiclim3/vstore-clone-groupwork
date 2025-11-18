@@ -39,7 +39,9 @@ header a
     right: 0;
     margin: auto;
 
-    width: 80vw;
+    width: 50vw;
+    max-width: 800px;
+
     height: 50vh;
 
     display: flex;
@@ -139,6 +141,8 @@ header a
 .left form .buttons input[type="submit"]
 {
     flex-basis: 60%;
+    max-width: 600px;
+
 
     background: var(--greenBrightRight);
 }
