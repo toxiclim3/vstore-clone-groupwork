@@ -1,8 +1,11 @@
 body
 {
-    background: url("./img/create-an-account-image.png");
-}
+    height: 100vh;
 
+    background: url("./img/create-an-account-image.png") center center no-repeat ;
+    background-size: cover;
+
+}
 p
 {
     margin: 0;
