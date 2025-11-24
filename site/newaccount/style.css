@@ -4,7 +4,7 @@ body
 
     background: url("./img/create-an-account-image.png") center center no-repeat ;
     background-size: cover;
-
+    /* Изображение для фона */
 }
 
 p
@@ -22,8 +22,9 @@ header a
     color: white;
 }
 
+/* Фоны */
 .background2
-{
+{   /*Серый цвет для фона */
     position: absolute;
 
     width: 100vw;
@@ -37,6 +38,7 @@ header a
 
 .background
 {
+    /*Градиентный зелёный для фона */
     position: absolute;
 
     width: 100vw;
@@ -46,6 +48,7 @@ header a
     z-index: -1;
 }
 
+/* Большой контейнер для всего содержимого */
 .container
 {
     position: absolute;
@@ -72,6 +75,7 @@ header a
     margin-left: 1em;
 }
 
+/* Внутренний контейнер для самой "карточки" */
 .loginContainer
 {
     width: 100%;
@@ -89,7 +93,7 @@ header a
 }
 
 
-
+/* Внутренний контейнер для формы и всего такого */
 .left
 {
     flex-basis: 100%;
@@ -161,73 +165,4 @@ header a
 
 
     background: var(--greenBrightRight);
-}
-
-
-.left .newaccount
-{
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.left .newaccount p
-{
-    padding: 0 0.5rem;
-    color: var(--brightestGray);
-}
-
-.left .newaccount a
-{
-    padding: 0 0.5rem;
-    color: white;
-
-    transition: var(--hovTrans);
-}
-
-.left .newaccount a:hover
-{
-    color: var(--green);
-}
-
-.right
-{
-    flex-basis: 20%;
-    height: 100%;
-
-    text-align: center;
-}
-
-.right .signin
-{
-    
-    color: var(--green);
-
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.right .qrcode
-{
-    width: 100%;
-    aspect-ratio: 1;
-    background-color: white;
-
-    border-radius: 18px;
-
-    margin: 1em 0;
-    overflow: hidden;
-}
-
-.right .qrcode img
-{
-    width: 100%;
-}
-
-.right .use
-{
-    font-size: 0.9em;
 }

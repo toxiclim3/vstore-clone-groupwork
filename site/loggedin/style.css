@@ -4,7 +4,7 @@ body
 
     background: url("./img/create-an-account-image.png") center center no-repeat ;
     background-size: cover;
-
+    /* Изображение для фона */
 }
 
 p
@@ -22,8 +22,9 @@ header a
     color: white;
 }
 
+/* Фоны */
 .background2
-{
+{   /*Серый цвет для фона */
     position: absolute;
 
     width: 100vw;
@@ -37,6 +38,7 @@ header a
 
 .background
 {
+    /*Градиентный зелёный для фона */
     position: absolute;
 
     width: 100vw;
@@ -46,6 +48,7 @@ header a
     z-index: -1;
 }
 
+/* Большой контейнер для всего содержимого */
 .container
 {
     position: absolute;
@@ -72,6 +75,7 @@ header a
     margin-left: 1em;
 }
 
+/* Внутренний контейнер для самой "карточки" */
 .loginContainer
 {
     width: 100%;
@@ -90,7 +94,7 @@ header a
 
 
 
-.left
+.login
 {
     flex-basis: 100%;
     text-align: center;
