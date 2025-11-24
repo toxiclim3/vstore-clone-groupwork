@@ -1,6 +1,531 @@
-*
-{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* =========================================================
+   БАЗОВЫЕ ПЕРЕМЕННЫЕ ТЕМЫ 
+========================================================= */
+:root {
+    --baseGray: #26282d;
+    --lightGray: #3a3e46;
+    --brightGray: #626975;
+    --brightestGray: #acacae;
+    --baseWhite: #eeeeee;
+
+    --green: #85c557;
+    --brightGreen: #82CA77;
+
+    --red: #bd5450;
+
+    --greenDiag: linear-gradient(to bottom right,rgba(123, 199, 77, 0.3),rgba(0, 0, 0, 0),rgba(123, 199, 77, 0.3));
+    --greenLeftRight: linear-gradient(to right,rgba(123, 199, 77, 0.3),rgba(0, 0, 0, 0),rgba(123, 199, 77, 0.3));
+    --greenRight: linear-gradient(to right,rgba(0, 0, 0, 0) 50%,rgba(124, 199, 77, 0.3));
+    --greenBottomRight: linear-gradient(130deg,rgba(0, 0, 0, 0) 50%, rgba(123, 199, 77, 0.5) 100%);
+    --greenBottom: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%, rgba(123, 199, 77, 0.5) 100%);
+    
+    --greenBrightRight: linear-gradient(to bottom right, var(--green),var(--brightGreen));
+
+    --grayDiag: linear-gradient(to bottom right, var(--lightGray),var(--baseGray));
+    --grayTop: linear-gradient(to bottom, var(--lightGray),var(--baseGray));
+
+    --hovTrans: 0.2s ease;
+}
+
+/* Сброс отступов и базовые настройки */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    background: radial-gradient(circle at top, #252d35 0, #121418 45%, #070809 100%);
+    color: var(--baseWhite);
+}
+
+/* Контейнер всей страницы, чтобы центрировать контент */
+.page-wrap {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+/* =========================================================
+========================================================= */
+
+/* 1. Сама шапка */
+.site-header {
+    background-color: #25282d;
+    padding: 12px 24px;
+    border-bottom: none;
+    position: sticky; /* “прилипает” к верху при скролле */
+    top: 0;
+    z-index: 100;
+}
+
+/* 2. Внутренний контейнер шапки */
+.header-container {
+    display: flex;             /* располагаем всё в ряд */
+    align-items: center; 
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* 3. Левая группа: логотип + меню */
+.header-left {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* 4. Логотип V STORE */
+.logo-box {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background-color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #121212;
+    font-weight: 900;
+    margin-right: 6px;
+    font-size: 18px;
+}
+
+.logo-text {
+    font-weight: bold;
+    color: var(--baseWhite);
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+/* 5. Горизонтальное меню */
+.main-navigation ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-navigation li {
+    margin-right: 18px;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: var(--baseWhite);
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.main-navigation a.active {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.main-navigation a:hover {
+    color: var(--green);
+}
+
+/* 6. Центр: строка поиска */
+.header-center {
+    flex-grow: 1;
+    display: flex;
+    max-width: 420px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #3a3e46;
+    border-radius: 20px;
+    padding: 6px 12px;
+    width: 100%;
+}
+
+.search-bar .search-icon {
+    color: var(--brightGray);
+    font-size: 16px;
+    margin-right: 8px;
+    line-height: 1;
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--baseWhite);
+    font-size: 13px;
+    width: 100%;
+}
+
+.search-bar input::placeholder {
+    color: var(--brightGray);
+}
+
+/* 7. Правая группа: иконки + кнопки */
+.header-right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.icon-button {
+    color: var(--baseWhite);
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 14px;
+    transition: color 0.2s ease;
+}
+
+.icon-button:hover {
+    color: var(--green);
+}
+
+/* Общий стиль кнопок */
+.btn {
+    padding: 6px 14px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-left: 8px;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Кнопка Sign in */
+.btn-signin {
+    background-color: #373C43;
+    color: var(--baseWhite);
+}
+
+.btn-signin:hover {
+    background-color: var(--lightGray);
+}
+
+/* Кнопка Download */
+.btn-download {
+    background-color: var(--green);
+    color: #121212;
+    font-weight: 700;
+}
+
+.btn-download:hover {
+    background-color: #a0dd7a;
+}
+
+/* =========================================================
+   БЛОК ПРОФИЛЯ
+========================================================= */
+
+.profile {
+    margin: 18px auto;
+    padding: 18px 20px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #222832, #1c252d);
+    border: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+}
+
+/* Заглушка аватарки (картинку подставляешь сам) */
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    overflow: hidden;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Имя + уровень */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info .level {
+    font-size: 13px;
+    color: #b7d9a2;
+}
+
+.profile-info .level span {
+    color: var(--green);
+}
+
+.profile-info .nickname {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+/* Правая часть — мини статистика */
+.profile-stats {
+    margin-left: auto;
+    display: flex;
+    gap: 26px;
+}
+
+.stat-box {
+    text-align: right;
+}
+
+.stat-box p {
+    font-size: 13px;
+    color: var(--brightestGray);
+}
+
+.stat-box span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* =========================================================
+   ОБЩИЙ СТИЛЬ СЕКЦИЙ (Achievements, Game collection)
+========================================================= */
+
+.section {
+    margin: 12px auto;
+    background-color: rgba(34, 39, 45, 0.9);
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 16px 18px;
+}
+
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   ДОСТИЖЕНИЯ
+========================================================= */
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 карточек в ряд как на скрине */
+    gap: 10px;
+}
+
+.achievement-card {
+    position: relative;
+    height: 90px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #4b4f56;
+    border: 1px solid rgba(0,0,0,0.5);
+}
+
+/* картинка достижения (ты подставляешь свои) */
+.achievement-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Подпись снизу с градиентом */
+.ach-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 4px 6px;
+    font-size: 11px;
+    background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+/* =========================================================
+   КОЛЛЕКЦИЯ ИГР
+========================================================= */
+
+/* Сетка: две колонки */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+/* Одна карточка игры */
+.game-card {
+    display: flex;
+    padding: 10px;
+    background-color: #262b33;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.7);
+}
+
+/* Обложка игры */
+.game-thumb {
+    width: 280px;
+    height: 120px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #555;
+    flex-shrink: 0;
+}
+
+.game-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Правая часть карточки */
+.game-info {
+    margin-left: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-info h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+/* мелкий текст под названием */
+.game-meta {
+    font-size: 12px;
+    color: var(--brightestGray);
+    margin-bottom: 6px;
+}
+
+/* текст с процентом прохождения */
+.game-progress-text {
+    font-size: 12px;
+    color: var(--brightestGray);
+}
+
+/* полоска прогресса */
+.progress {
+    width: 100%;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #1b1f25;
+    overflow: hidden;
+}
+
+.progress > div {
+    height: 100%;
+    background: linear-gradient(to right, var(--green), var(--brightGreen));
+}
+
+/* =========================================================
+   ПАГИНАЦИЯ ПОД ИГРАМИ
+========================================================= */
+
+.pagination {
+    margin: 18px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+}
+
+.pagination button {
+    background: transparent;
+    border-radius: 4px;
+    border: none;
+    color: var(--brightestGray);
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: background var(--hovTrans), color var(--hovTrans);
+}
+
+.pagination button.current {
+    background-color: #3a3e46;
+    color: var(--baseWhite);
+}
+
+.pagination button:hover {
+    background-color: #3a3e46;
+    color: var(--baseWhite);
+}
+
+/* =========================================================
+   ФУТЕР НИЗУ СТРАНИЦЫ
+========================================================= */
+
+.footer {
+    margin-top: 24px;
+    padding: 18px 0 26px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 11px;
+    color: var(--brightestGray);
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Социальные иконки (можно заменить на картинки или SVG) */
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social a {
+    color: var(--brightestGray);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.footer-links a {
+    color: var(--brightestGray);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--baseWhite);
+}
+
+/* Адаптив: сжимаем сетки на маленьких экранах */
+@media (max-width: 900px) {
+    .profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-stats {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .achievements-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-thumb {
+        width: 220px;
+    }
+
+    .header-center {
+        display: none; /* можно скрыть поиск на очень маленьких */
+    }
 }
