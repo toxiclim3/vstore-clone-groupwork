@@ -6,6 +6,7 @@ body
     background-size: cover;
     /* Изображение для фона */
 }
+
 p
 {
     margin: 0;
@@ -23,8 +24,7 @@ header a
 
 /* Фоны */
 .background2
-{
-     /*Серый цвет для фона */
+{   /*Серый цвет для фона */
     position: absolute;
 
     width: 100vw;
@@ -58,7 +58,9 @@ header a
     right: 0;
     margin: auto;
 
-    width: 60vw;
+    width: 50vw;
+    max-width: 500px;
+
     height: 50vh;
 
     display: flex;
@@ -82,7 +84,6 @@ header a
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
 
     background: var(--grayTop);
 
@@ -91,26 +92,27 @@ header a
     border-radius: 18px;
 }
 
-/* Левая сторона с формой и кнопочками */
+
+/* Внутренний контейнер для формы и всего такого */
 .left
 {
-    flex-basis: 70%;
-    height: 100%;
+    flex-basis: 100%;
 }
 
 .left form
 {
     display: flex;
     flex-direction: column;
+
     justify-content: center;
 }
 
 .left input
 {
-    padding: 1.5rem 0.8rem;
+    padding: 1rem 0.8rem;
     width: 100%;
 
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 
     background-color: var(--brightGray);
     border: none;
@@ -119,6 +121,11 @@ header a
 
     transition: var(--hovTrans);
 
+}
+
+.left p
+{
+    text-align: center;
 }
 
 .left input.failure
@@ -140,105 +147,21 @@ header a
 {
     display: flex;
     flex-direction: row;  
-    justify-content: space-between;
+    justify-content: center;
 
     margin-top: 1em;
-}
-
-.left form #result
-{
-    color: var(--red);
 }
 
 .left form .buttons input[type="submit"]
 {
     flex-basis: 60%;
-    margin-right: 4em;
+    max-width: 600px;
+
 
     background: var(--greenBrightRight);
 }
 
-.left form .buttons input[type="button"]
+.gray
 {
-    flex-basis: 40%;
-
-    background: #363a42;
-}
-
-
-.left .newaccount
-{
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.left .newaccount p
-{
-    padding: 0 0.5rem;
-    color: var(--brightestGray);
-}
-
-.left .newaccount a
-{
-    padding: 0 0.5rem;
-    color: white;
-
-    transition: var(--hovTrans);
-}
-
-.left .newaccount a:hover
-{
-    color: var(--green);
-}
-
-
-/* Правая сторона с QR-кодом */
-.right
-{
-    flex-basis: 20%;
-    height: 100%;
-
-    text-align: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    justify-items: center;
-    flex-direction: column;
-}
-
-.right .signin
-{
-    
-    color: var(--green);
-
-    font-weight: bold;
-}
-
-.right .qrcode
-{
-
-    aspect-ratio: 1;
-    background-color: white;
-
-    border-radius: 18px;
-
-    margin: 1em 0;
-    overflow: hidden;
-
-
-}
-
-.right .qrcode img
-{
-    width: 100%;
-}
-
-.right .use
-{
-    font-size: 0.9em;
+    color: var(--brightGray);
 }

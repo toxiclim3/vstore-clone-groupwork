@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,0&icon_names=arrow_back_ios" />
+    <link rel="stylesheet" href="../basestyle.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="background2"></div>
+    <div class="background"></div>
+    <header><a href="../../index.html"><span class="material-symbols-outlined">arrow_back_ios</span></a></header>
+
+    <!-- Общий контейнер -->
+    <div class="container">
+        <h1>Check your mailbox</h1>
+
+        <!-- Контейнер для самой карточки -->
+         <div class="loginContainer">
+            <!-- Форма для регистрации -->
+            <div class="left login">
+                <p>Check your mailbox for the reset code <br> <span class="gray">(which is always 111111, because i don't have a mail server)</span></p>
+                <form action="" id="mailcheck">
+                    <label for="login">CODE</label>
+                    <input type="text" name="login" id="code">
+
+                    <!-- Я не добавлял капчу потому что лень -->
+                    <div class="buttons">
+                        <input type="submit" value="RESET PASSWORD">
+                    </div>
+                </form>
+            </div>
+         </div>
+    </div>
+
+    <script src="resetp2.js"></script>
+</body>
+</html>

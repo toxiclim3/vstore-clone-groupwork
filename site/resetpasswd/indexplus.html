@@ -9,29 +9,31 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- 2 Обьекта на весь экран для фона -->
     <div class="background2"></div>
     <div class="background"></div>
-
-    <!-- возврат на главную страницу -->
     <header><a href="../../index.html"><span class="material-symbols-outlined">arrow_back_ios</span></a></header>
 
-    <!-- Содержимое -->
+    <!-- Общий контейнер -->
     <div class="container">
-        <h1>Almost there!</h1>
+        <h1>Reset your password</h1>
 
+        <!-- Контейнер для самой карточки -->
          <div class="loginContainer">
-            <div class="login">
-                <h2>
-                    You're logged in!
-                    <br>
-                    Redirecting to next page...
-                </h2>
+            <!-- Форма для регистрации -->
+            <div class="left login" >
+                <form action="" id="resetform">
+                    <label for="login">YOUR EMAIL</label>
+                    <input type="email" name="login" id="login">
+
+                    <div class="buttons">
+                        <input type="submit" value="RESET PASSWORD">
+                    </div>
+                </form>
             </div>
          </div>
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="resetp1.js"></script>
 </body>
 </html>

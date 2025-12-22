@@ -21,16 +21,18 @@
 		 <div class="loginContainer">
 					<div class="left login">
 						<!-- Форма для логина -->
-						<form action="">
+						<form action="" id="loginform">
 							<label for="login">SIGN IN WITH ACCOUNT NAME</label>
 							<input type="text" name="login" id="login">
 
 							<label for="password">PASSWORD</label>
 							<input type="password" name="password" id="password">
 
+							<p id="result"></p>
+
 							<div class="buttons">
 								<input type="submit" value="SIGN IN">
-								<input type="button" value="Help, I can't log in">
+								<input type="button" value="Help, I can't log in" id="resetpass">
 							</div>
 						</form>
 						<!-- Нет аккаунта? Создайте новый? -->
@@ -52,5 +54,6 @@
 		 </div>
 	</div>
 
+	<script src="script.js"></script>
 </body>
 </html>
