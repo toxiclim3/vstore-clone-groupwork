@@ -21,12 +21,15 @@
          <div class="loginContainer">
             <!-- Форма для регистрации -->
             <div class="left login">
-                <p>Check your mailbox for the reset code <br> <span class="gray">(which is always 111111, because i don't have a mail server)</span></p>
-                <form action="" id="mailcheck">
-                    <label for="login">CODE</label>
-                    <input type="text" name="login" id="code">
+                <p>Enter your new password <br> <span class="gray">Password must be at least 8 characters long, with at least 1 number and at least 1 symbol</span></p>
+                <form action="" id="newpass">
+                    <label for="password">ENTER YOUR NEW PASSWORD</label>
+                    <input type="text" name="password" id="password">
 
-                    <!-- Я не добавлял капчу потому что лень -->
+                    <label for="repeat">REPEAT YOUR PASSWORD</label>
+                    <input type="password" name="repeat" id="repeat">
+
+                    <p id="error"></p>
                     <div class="buttons">
                         <input type="submit" value="RESET PASSWORD">
                     </div>
@@ -35,6 +38,6 @@
          </div>
     </div>
 
-    <script src="resetp2.js"></script>
+    <script src="resetp3.js"></script>
 </body>
 </html>
