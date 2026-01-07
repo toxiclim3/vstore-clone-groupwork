@@ -61,6 +61,8 @@ header a
     width: 60vw;
     height: 50vh;
 
+    max-width: 800px;
+
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -156,11 +158,17 @@ header a
     margin-right: 4em;
 
     background: var(--greenBrightRight);
+
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 .left form .buttons input[type="button"]
 {
     flex-basis: 40%;
+
+    font-weight: 500;
+    font-size: 1.2rem;
 
     background: #363a42;
 }

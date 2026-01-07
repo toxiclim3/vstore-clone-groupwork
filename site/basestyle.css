@@ -53,7 +53,7 @@ body
 
 
 /*
-KDG Vstore Header Styles
+Саша Vstore Header Styles
   (Стили ИСКЛЮЧИТЕЛЬНО для хедера )
 */
 
@@ -150,7 +150,7 @@ KDG Vstore Header Styles
 .search-bar {
     display: flex;
     align-items: center;
-    background-color: var(--baseGray, #373C43);
+    background-color: #373C43;
     border-radius: 20px; /* Скругление */
     padding: 8px 14px;
     width: 100%; 
