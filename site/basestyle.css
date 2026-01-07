@@ -85,28 +85,7 @@ body
     flex-shrink: 0; /* Не сжиматься */
 }
 
-/* 4. Логотип */
-.logo-box {
-    width: 32px;
-    height: 32px;
-    border-radius: 6px;
-    background-color: var(--green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #121212;
-    font-weight: 900;
-    margin-right: 6px;
-    font-size: 18px;
-}
-
-.logo-text {
-    font-weight: bold;
-    color: var(--baseWhite, #eeeeee);
-    text-decoration: none;
-    margin-right: 30px;
-    font-size: 20px;
-}
+/* 4. Логотип — теперь usite\img\icons\system-icons\logo-icon2.svg*/
 
 /* 5. Стили навигации */
 .main-navigation ul {
