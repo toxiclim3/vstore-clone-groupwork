@@ -1,3 +1,170 @@
+/* Header styles copied from site/profile/style.css (keeps basestyle.css untouched) */
+
+/* 1. Сама шапка */
+.site-header {
+    background-color: #25282d;
+    padding: 12px 24px;
+    border-bottom: none;
+    position: sticky; /* “прилипает” к верху при скролле */
+    top: 0;
+    z-index: 100;
+}
+
+/* 2. Внутренний контейнер шапки */
+.header-container {
+    display: flex;             /* располагаем всё в ряд */
+    align-items: center; 
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* 3. Левая группа: логотип + меню */
+.header-left {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* 4. Логотип V STORE */
+.logo-box {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background-color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #121212;
+    font-weight: 900;
+    margin-right: 6px;
+    font-size: 18px;
+}
+
+.logo-text {
+    font-weight: bold;
+    color: var(--baseWhite);
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+/* 5. Горизонтальное меню */
+.main-navigation ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-navigation li {
+    margin-right: 18px;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: var(--baseWhite);
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.main-navigation a.active {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.main-navigation a:hover {
+    color: var(--green);
+}
+
+/* 6. Центр: строка поиска */
+.header-center {
+    flex-grow: 1;
+    display: flex;
+    max-width: 420px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #3a3e46;
+    border-radius: 20px;
+    padding: 6px 12px;
+    width: 100%;
+}
+
+.search-bar .search-icon {
+    color: var(--brightGray);
+    font-size: 16px;
+    margin-right: 8px;
+    line-height: 1;
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--baseWhite);
+    font-size: 13px;
+    width: 100%;
+}
+
+.search-bar input::placeholder {
+    color: var(--brightGray);
+}
+
+/* 7. Правая группа: иконки + кнопки */
+.header-right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.icon-button {
+    color: var(--baseWhite);
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 14px;
+    transition: color 0.2s ease;
+}
+
+.icon-button:hover {
+    color: var(--green);
+}
+
+/* Общий стиль кнопок */
+.btn {
+    padding: 6px 14px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-left: 8px;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* Кнопка Sign in */
+.btn-signin {
+    background-color: #373C43;
+    color: var(--baseWhite);
+}
+
+.btn-signin:hover {
+    background-color: var(--lightGray);
+}
+
+/* Кнопка Download */
+.btn-download {
+    background-color: var(--green);
+    color: #121212;
+    font-weight: 700;
+}
+
+.btn-download:hover {
+    background-color: #a0dd7a;
+}
 
 /* ======================================= */
 /* == СТИЛИ КОНТЕНТА СТРАНИЦЫ (V STORE) == */
