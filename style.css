@@ -1,3 +1,8 @@
+/* Logo image for header (SVG) */
+.logo-link { display:flex; align-items:center; gap:8px; text-decoration:none; margin-right:12px; }
+.logo-full { width:110px; height:auto; display:block; }
+@media (max-width:500px) { .logo-full { width:80px; } }
+
 /* Header styles moved to site/basestyle.css */
 /* ======================================= */
 
