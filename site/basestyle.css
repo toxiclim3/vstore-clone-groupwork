@@ -86,12 +86,26 @@ KDG Vstore Header Styles
 }
 
 /* 4. Логотип */
+.logo-box {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background-color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #121212;
+    font-weight: 900;
+    margin-right: 6px;
+    font-size: 18px;
+}
+
 .logo-text {
     font-weight: bold;
     color: var(--baseWhite, #eeeeee);
     text-decoration: none;
     margin-right: 30px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 /* 5. Стили навигации */
