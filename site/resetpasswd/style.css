@@ -58,10 +58,8 @@ header a
 	right: 0;
 	margin: auto;
 
-	width: 50vw;
-	max-width: 500px;
-
-	height: 50vh;
+	width: 800px;
+    height: 450px;
 
 	display: flex;
 	justify-content: space-evenly;
@@ -125,9 +123,14 @@ header a
 	transform: translate(-50%, -50%);
 }
 
+.left form label
+{
+	margin-bottom: 0.8rem;
+}
+
 .left form#newpass
 {
-
+	top: 60%;
 }
 
 .left input
@@ -192,4 +195,46 @@ header a
 p#error
 {
 	color: var(--red);
+}
+
+@media screen and (max-width: 820px) 
+{
+    .container
+    {
+        width: 90vw;
+		height: 60vh;
+    }
+
+    .left
+    {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .loginContainer
+    {
+        padding: 5%;
+    }
+
+    .right
+    {
+
+        display: none;
+    }
+    
+    .buttons
+    {
+        flex-direction: column !important;
+    }
+
+    .left form .buttons input[type="submit"]
+    {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    .left form .buttons input[type="button"]
+    {
+        margin-bottom: 1em;
+    }
 }
