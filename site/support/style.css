@@ -4,3 +4,97 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body
+{
+    transition: var(--hovTrans);
+}
+
+/* Фоны */
+.background2
+{
+     /*Серый цвет для фона */
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: var(--bluishGray);
+    /* filter: opacity(0.7); */
+
+    z-index: -2;
+}
+
+.background
+{
+    /*Градиентный зелёный для фона */
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: var(--greenRight);
+    z-index: -1;
+}
+
+/* Основной контейнер */
+.main
+{
+    width: 1400px;
+    margin: auto;
+    margin-top: 3em;
+}
+
+h1
+{
+    padding-bottom: 1em;
+    color: white;
+}
+
+.search-bar
+{
+    margin-bottom: 1em;
+}
+
+/* Вот эти вот сворачиваемые блоки текста */
+details
+{
+    background: var(--lightGray);
+    border-radius: 8px;
+    color: white;
+
+    padding: 1rem;
+    margin-bottom: 0.5em;
+
+}
+
+/* Эти 2 скрывают стандартный маркер "развернуть\свернуть" */
+::-webkit-details-marker {display: none;}
+summary 
+{
+    display: block;
+    position: relative;
+}
+
+details:open summary
+{
+    padding-bottom: 0.5em;
+}
+
+summary::before {
+    content: "\F285";
+    font-size: 1.5em;
+
+
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    translate:0 -50%;
+}
+
+details:open > summary::before {
+    content: "\F282";
+
+    top: 50%;
+    translate:0 -50%;
+}

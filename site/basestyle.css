@@ -5,12 +5,13 @@
 :root
 {
     /*Переменные для градиентов и цветов. Кушать вместе с var()*/
+    --bluishGray: #222831;
     --baseGray: #26282d;
     --lightGray: #3a3e46;
     --brightGray: #626975;
     --brightestGray: #acacae;
     --baseWhite: #eeeeee;
-
+    
     --green: #85c557;
     --brightGreen: #82CA77;
 
