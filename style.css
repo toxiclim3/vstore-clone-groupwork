@@ -1,6 +1,6 @@
 
 
-/* Header styles moved to site/basestyle.css */
+/* Стили шапки перенесены в site/basestyle.css */
 /* ======================================= */
 
 /* фон */
@@ -115,10 +115,65 @@ main.store-page {
 .store-section h3 {
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     text-transform: uppercase; /* Все заголовки большими буквами */
     letter-spacing: 0.05em; /* Немного разрядим буквы */
 }
+
+.section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.framed {
+    /* фон панели взят из базовых переменных для согласованного вида */
+    background: var(--baseGray);
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: 18px 20px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.01);
+} 
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.section-icon {
+    width: 28px;
+    height: 28px;
+    /* заставляет SVG отображаться чисто белым */
+    filter: brightness(0) invert(1);
+} 
+
+.section-title h3 {
+    margin: 0;
+    color: var(--baseWhite);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+}
+
+.section-head .view-more {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--baseWhite);
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease, transform 0.06s ease;
+}
+
+.section-head .view-more:hover {
+    background: rgba(255,255,255,0.03);
+    color: var(--baseWhite);
+    transform: translateY(-1px);
+} 
 
 /* 14. Сетки для карточек */
 .store-grid {
@@ -146,6 +201,72 @@ main.store-page {
 
 .square {
     height: 180px; /* Для "Popular Games" */
+}
+
+/* Макет большой карточки для выделенных рядов, например «Free games» */
+.big-card {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.big-card .card-media {
+    position: relative;
+    height: 220px; /* увеличенная высота для соответствия макету */
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+}
+
+.big-card .free-badge {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    height: 40px;
+    background: var(--green);
+    color: #0b0b0b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    letter-spacing: 0.04em;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,0.12);
+}
+
+.big-card .free-badge.soon {
+    background: var(--lightGray);
+    color: var(--brightestGray);
+    opacity: 0.95;
+}
+
+.big-card .card-meta {
+    padding: 12px 10px;
+}
+
+.big-card .card-meta h4 {
+    font-size: 16px;
+    margin: 0 0 6px 0;
+    color: var(--baseWhite, #eeeeee);
+    font-weight: 700;
+}
+
+.big-card .card-meta p {
+    margin: 0;
+    color: var(--brightestGray, #acacae);
+    font-size: 13px;
+}
+
+/* Для широких секций (например «Free games») используйте 3 колонки */
+.store-section.wide .store-grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 24px;
 }
 
 /* 16. Баннер мобильного приложения */
@@ -235,7 +356,7 @@ main.store-page {
     margin-bottom: 0;
 }
 
-/* Upcoming list: thumbnail + stacked title and price (matches Epic look) */
+/* Список релизов: миниатюра + заголовок и цена (в стиле Epic) */
 .upcoming-list {
     display: flex;
     flex-direction: column;
@@ -269,7 +390,7 @@ main.store-page {
     font-weight: 700;
 }
 
-/* Popular games */
+/* Популярные игры */
 .store-section
 {
 
