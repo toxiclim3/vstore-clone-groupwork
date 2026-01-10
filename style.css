@@ -183,18 +183,21 @@ main.store-page {
 
 /* 17. Секция статистики (Top Sellers, Most Played.) */
 .store-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 колонки */
     gap: 20px;
     padding: 20px 0 30px 0;
 }
 
 /* Стилизуем каждый блок статистики */
-.store-stats div {
+.store-stats>div {
     background-color: #1e2124;
     padding: 24px;
     border-radius: 12px;
     border: 1px solid #3a3e46;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .store-stats h4 {
@@ -206,12 +209,18 @@ main.store-page {
 }
 
 .store-stats ul {
+
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .store-stats li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
     margin-bottom: 10px;
     color: var(--brightestGray, #acacae);
     font-size: 14px;
