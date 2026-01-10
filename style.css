@@ -134,7 +134,6 @@ main.store-page {
     padding: 18px 20px;
     border-radius: 8px;
     margin-bottom: 18px;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.01);
 }
 
 .framed .section-head
@@ -582,10 +581,50 @@ main.store-page {
 
 /* Это футор */
 .site-footer {
-    background: linear-gradient(90deg, rgba(0,0,0,0.48), rgba(0,0,0,0.18));
+    
+    position: relative;
+
+    
+
     padding: 36px 0 22px 0;
     color: var(--brightestGray);
+
+    z-index: 0;
 }
+
+.site-footer .bg
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: var(--baseGray);
+    
+
+    z-index: -1;
+}
+
+.site-footer .bg2
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: var(--greenLeftRight);
+
+    z-index: -1;
+}
+
 
 .footer-top {
     display: flex;
@@ -597,6 +636,8 @@ main.store-page {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+
+    z-index: 2;
 }
 
 .footer-left-col {
@@ -611,15 +652,16 @@ main.store-page {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 46px; /* увеличенные иконки */
-    height: 46px;
+
+    width: 1.5em; /* увеличенные иконки */
+    height: 1.5em;
     border-radius: 50%;
     border: 1px solid rgba(0,0,0,0.08);
     background: var(--baseWhite);
     color: #0b0b0b; /* чёрная иконка внутри белого кружка */
     margin: 0 14px 0 0;
     text-decoration: none;
-    font-size: 20px; /* размер иконки */
+    font-size: 2em; /* размер иконки */
 }
 
 .footer-copy {
@@ -631,7 +673,7 @@ main.store-page {
     line-height: 1.5;
 }
 
-..footer-links {
+.footer-links {
     display: flex;
     gap: 22px; /* spacing между ссылками */
     flex-wrap: wrap;
@@ -682,12 +724,8 @@ main.store-page {
     align-items: center; /* выровнять кнопку вверх/вниз */
 }
 
-.site-footer {
-    /* обновлённый градиент для точного соответствия цветам в макете */
-    background: linear-gradient(90deg, rgba(16,20,23,0.92) 0%, rgba(35,43,45,0.96) 40%, rgba(34,48,49,0.9) 100%);
-    padding: 28px 0 22px 0;
-    color: var(--brightestGray);
-}
+
+
 
 .footer-left {
     max-width: 760px;
@@ -782,6 +820,11 @@ main.store-page {
     .store-grid-3 {
         grid-template-columns: repeat(2, 1fr) !important;
     }
+
+    .framed .store-grid
+    {
+        grid-template-columns: 1fr !important;
+    }
 }
 
 @media (max-width: 900px) {
@@ -793,6 +836,8 @@ main.store-page {
     .store-grid {
         grid-template-columns: repeat(3, 1fr) !important;
     }
+
+    
     
     /* Баннер мобильного приложения - вертикально */
     .mobile-banner {
