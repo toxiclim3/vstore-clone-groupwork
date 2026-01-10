@@ -183,7 +183,7 @@ main.store-page {
 
 /* 17. Секция статистики (Top Sellers, Most Played.) */
 .store-stats {
-    display: flex;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* 3 колонки */
     gap: 20px;
     padding: 20px 0 30px 0;
@@ -215,10 +215,16 @@ main.store-page {
     margin: 0;
 }
 
+.store-stats img
+{
+    border-radius: 8px;
+    margin-right: 1em;
+}
+
 .store-stats li {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 
     margin-bottom: 10px;
