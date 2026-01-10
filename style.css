@@ -235,6 +235,40 @@ main.store-page {
     margin-bottom: 0;
 }
 
+/* Upcoming list: thumbnail + stacked title and price (matches Epic look) */
+.upcoming-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.upcoming-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.upcoming-item img {
+    width: 60px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #3a3e46;
+}
+
+.upcoming-info h4 {
+    font-size: 15px;
+    margin: 0;
+    color: var(--baseWhite, #eeeeee);
+    font-weight: 700;
+}
+
+.upcoming-info .price {
+    margin: 6px 0 0 0;
+    color: var(--brightestGray, #acacae);
+    font-weight: 700;
+}
+
 /* Popular games */
 .store-section
 {
