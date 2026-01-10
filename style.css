@@ -235,15 +235,43 @@ main.store-page {
     margin-bottom: 0;
 }
 
+/* Popular games */
+.store-section
+{
+
+}
+
+.store-section .store-grid
+{
+    grid-template-columns: repeat(6,1fr);
+}
+
+.store-section .store-grid .text
+{
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+}
+
+.store-section .store-grid h6
+{
+    font-size: 0.8rem;
+    color: var(--brightestGray);
+}
+
+.store-section .store-grid h4
+{
+    font-size: 1rem;
+}
+
 /* 18. Адаптивность (Media Queries) */
 @media (max-width: 1200px) {
     /* 6 колонок -> 4 колонки */
     .store-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr) !important;
     }
     /* 3 колонки -> 2 колонки */
     .store-grid-3 {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 }
 
@@ -254,7 +282,7 @@ main.store-page {
     
     /* 4 колонки -> 3 колонки */
     .store-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr) !important;
     }
     
     /* Баннер мобильного приложения - вертикально */
@@ -275,7 +303,7 @@ main.store-page {
     /* Все сетки -> 2 колонки */
     .store-grid,
     .store-grid-3 {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 
     .square {
