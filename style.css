@@ -49,6 +49,13 @@ main.store-page {
     border-color: var(--green, #85c557); /* Подсветка при наведении */
 }
 
+.img-placeholder img
+{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
 /* 12. Главный баннер */
 .hero-banner {
     position: relative; /* Нужен для позиционирования текста */
