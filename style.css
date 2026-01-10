@@ -199,6 +199,114 @@ main.store-page {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.store-grid-3 .card-shop {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--baseGray);
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.03);
+    min-height: 300px; /* фиксированная высота карточки, приближена к оригиналу */
+    justify-content: space-between; /* кнопка прижата вниз */
+}
+
+.store-grid-3 .card-shop .square {
+    height: 180px; /* увеличенная высота превью для точного соответствия */
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.store-grid-3 .card-shop .square img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* маленькая декоративная точка в правом нижнем углу превью (как на оригинале) */
+.store-grid-3 .card-shop .square::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.18);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+.store-grid-3 .card-shop .text {
+    padding-top: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.store-grid-3 .card-shop .text h4 {
+    margin: 0;
+    color: var(--baseWhite);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.store-grid-3 .card-shop .text p {
+    margin: 0 0 12px 0;
+    color: var(--brightestGray);
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.btn-shop {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.06);
+    color: var(--baseWhite);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.12s ease, transform 0.06s ease;
+    align-self: flex-start; /* кнопка слева внизу */
+}
+
+.btn-shop:hover {
+    background: rgba(255,255,255,0.03);
+    transform: translateY(-2px);
+}
+
+.btn-shop .bi {
+    font-size: 14px;
+}
+
+.btn-shop {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.08);
+    color: var(--baseWhite);
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.12s ease, transform 0.06s ease;
+}
+
+.btn-shop:hover {
+    background: rgba(255,255,255,0.03);
+    transform: translateY(-2px);
+}
+
+.btn-shop .bi {
+    font-size: 14px;
+}
+
 /* 15. Размеры карточек */
 
 .game-card {
