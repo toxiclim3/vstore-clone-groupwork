@@ -68,8 +68,9 @@ main.store-page {
 /* 12.1. Изображение баннера (в HTML это .hero-image) */
 .hero-banner .hero-image {
     width: 100%;
-    height: 520px;
-    border-radius: 8px 0px 0px 8px;
+    height: 100%;
+    /* height: 520px; */
+    border-radius: 14px 0px 0px 14px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -84,7 +85,7 @@ main.store-page {
 /* 12.2. Правая панель в баннере */
 .hero-banner .hero-panel {
     background: var(--lightGray);
-    border-radius: 0px 8px 8px 0px;
+    border-radius: 0px 14px 14px 0px;
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -93,7 +94,7 @@ main.store-page {
 }
 
 .hero-panel .hero-info {
-    margin: 0 0 8px 0;
+    margin: 0 0 14px 0;
 }
 
 .hero-panel .hero-info h2 {
@@ -181,13 +182,13 @@ main.store-page {
 
 /* малые экраны: панели в столбец */
 @media (max-width: 980px) {
-    .hero-banner {
-        grid-template-columns: 1fr;
-    }
-    .hero-banner .hero-image,
+    
+    /* .hero-banner .hero-image,
     .hero-banner .hero-panel {
         height: 420px;
-    }
+    } */
+
+
 }
 
 /* 13. Секции контента */
@@ -875,6 +876,11 @@ main.store-page {
     }
 }
 
+@media screen and (max-width: 769px) 
+{
+      
+}
+
 @media (max-width: 600px) {
     /* Все сетки -> 2 колонки */
      .store-section .store-grid,
@@ -915,6 +921,42 @@ main.store-page {
     {
         display: none;
     }
+
+    /* .hero-banner .hero-image
+    {
+        height: 200px;
+    } */
+
+    .hero-banner .hero-panel
+    {
+        height: 300px;
+    }
+
+
+    .hero-banner {
+        grid-template-columns: 1fr;
+    }  
+
+    .hero-banner .hero-thumbs
+    {
+        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+    }
+
+    .hero-banner .hero-image
+    {
+        height: 200px;
+    }
+
+        .hero-banner .hero-image
+    {
+        border-radius: 14px 14px 0px 0px;
+    }
+
+    .hero-banner .hero-panel
+    {
+        border-radius: 0px 0px 14px 14px;
+    }
 }
 
 @media screen and (max-width: 425px) 
@@ -923,4 +965,6 @@ main.store-page {
     {
         grid-template-columns: 1fr;
     }
+
+    
 }
