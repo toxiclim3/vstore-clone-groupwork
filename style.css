@@ -662,6 +662,86 @@ main.store-page {
     font-size: 1rem;
 }
 
+/* Winter Sale Spotlight */
+.winter-sale .sale-grid {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.sale-card .text h6 {
+    margin: 8px 0 0 0;
+    color: var(--brightestGray);
+    font-weight: 600;
+    text-transform: none;
+}
+
+.sale-card .text h4 {
+    margin: 4px 0 6px 0;
+    font-weight: 800;
+}
+
+.price-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.old-price {
+    color: var(--brightestGray);
+    text-decoration: line-through;
+    font-weight: 700;
+}
+
+.new-price {
+    color: var(--baseWhite);
+    font-weight: 800;
+}
+
+.discount-badge {
+    background: var(--green);
+    color: #07290e;
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+}
+
+/* Deals of the Week banners */
+.sale-deals-grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 18px;
+}
+
+.deal-card { display: flex; flex-direction: column; }
+
+.deal-image {
+    position: relative;
+    height: 180px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+}
+
+.deal-banner {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    background: var(--green);
+    color: #09210b;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.deal-meta { padding: 10px 4px; }
+.deal-meta h4 { margin: 6px 0; font-size: 16px; font-weight: 800; }
+
+.deal-price-row { display: inline-flex; align-items: center; gap: 10px; }
+
 
 
 /* Стили пагинации */
