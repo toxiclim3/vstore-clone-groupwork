@@ -224,3 +224,197 @@ body
 .btn-download:hover {
     background-color: #a0dd7a; 
 }
+
+
+/* Футер от Виктора */
+/* Это футор */
+.site-footer {
+    
+    position: relative;
+
+    
+
+    padding: 36px 0 22px 0;
+    color: var(--brightestGray);
+
+    z-index: 0;
+}
+
+.site-footer .bg
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: var(--baseGray);
+    
+
+    z-index: -1;
+}
+
+.site-footer .bg2
+{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: var(--greenLeftRight);
+
+    z-index: -1;
+}
+
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 12px;
+    padding: 16px 20px 20px 20px; /* точные отступы */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    z-index: 2;
+}
+
+.footer-left-col {
+    max-width: 760px;
+}
+
+.footer-social {
+    margin-bottom: 12px;
+}
+
+.footer-social .social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 1.5em; /* увеличенные иконки */
+    height: 1.5em;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: var(--baseWhite);
+    color: #0b0b0b; /* чёрная иконка внутри белого кружка */
+    margin: 0 14px 0 0;
+    text-decoration: none;
+    font-size: 2em; /* размер иконки */
+}
+
+.footer-copy {
+    max-width: 720px;
+    margin: 0 0 12px 0;
+    font-size: 12px; /* чуть мельче как в образце */
+    color: var(--brightestGray);
+    text-align: left;
+    line-height: 1.5;
+}
+
+.footer-links {
+    display: flex;
+    gap: 22px; /* spacing между ссылками */
+    flex-wrap: wrap;
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+.footer-top-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.back-to-top {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: transparent;
+    color: var(--baseWhite);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo-img {
+    width: 48px;
+    height: auto;
+    display: block;
+    filter: brightness(0) invert(1); /* показать белым */
+    opacity: 0.95;
+}
+
+.footer-logo {
+    font-size: 36px;
+    color: rgba(255,255,255,0.14);
+    font-weight: 800;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: center; /* выровнять кнопку вверх/вниз */
+}
+
+
+
+
+.footer-left {
+    max-width: 760px;
+}
+
+.footer-copy {
+    font-size: 13px;
+    color: var(--brightestGray);
+    margin: 0 0 12px 0;
+}
+
+.footer-links a {
+    color: var(--brightestGray);
+    margin-right: 16px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.footer-links a:hover { color: var(--baseWhite); }
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.back-to-top {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: transparent;
+    color: var(--baseWhite);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo {
+    font-size: 36px;
+    color: rgba(255,255,255,0.14);
+    font-weight: 800;
+}
