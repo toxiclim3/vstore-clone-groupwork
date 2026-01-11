@@ -69,7 +69,7 @@ main.store-page {
 .hero-banner .hero-image {
     width: 100%;
     height: 520px;
-    border-radius: 12px;
+    border-radius: 8px 0px 0px 8px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -84,7 +84,7 @@ main.store-page {
 /* 12.2. Правая панель в баннере */
 .hero-banner .hero-panel {
     background: var(--lightGray);
-    border-radius: 12px;
+    border-radius: 0px 8px 8px 0px;
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -114,21 +114,27 @@ main.store-page {
 
 /* 12.3. Мелкие превью в панели */
 .hero-panel .hero-thumbs {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto auto;
     gap: 12px;
-    margin-top: 14px;
+
+    height: 100%;
+
+    margin: 14px 0;
 }
 
 .hero-panel .thumb {
-    height: 110px;
-    border-radius: 10px;
+    /* height: 110px; */
+    border-radius: 8px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
     border: 1px solid rgba(0,0,0,0.18);
     cursor: pointer;
     transition: border-color 0.2s ease, opacity 0.2s ease;
+
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .hero-panel .thumb:hover {
@@ -249,7 +255,7 @@ main.store-page {
     border: 1px solid rgba(255,255,255,0.12);
     color: var(--baseWhite);
     padding: 8px 12px;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 13px;
     cursor: pointer;
     transition: background 0.18s ease, color 0.18s ease, transform 0.06s ease;
@@ -263,6 +269,7 @@ main.store-page {
 
 /* 14. Сетки для карточек */
 .store-grid {
+    height: auto;
     display: grid;
     gap: 16px;
     /* На скриншоте 6 колонок в ряду */
@@ -281,7 +288,7 @@ main.store-page {
     gap: 12px;
     background: var(--baseGray);
     padding: 18px;
-    border-radius: 12px;
+    border-radius: 8px;
     border: 1px solid rgba(255,255,255,0.03);
     min-height: 300px; /* фиксированная высота карточки, приближена к оригиналу */
     justify-content: space-between; /* кнопка прижата вниз */
@@ -289,7 +296,7 @@ main.store-page {
 
 .store-grid-3 .card-shop .square {
     height: 180px; /* увеличенная высота превью для точного соответствия */
-    border-radius: 12px;
+    border-radius: 8px;
     overflow: hidden;
     position: relative;
 }
@@ -365,7 +372,7 @@ main.store-page {
     border: 1px solid rgba(255,255,255,0.08);
     color: var(--baseWhite);
     padding: 8px 12px;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 13px;
     display: inline-flex;
     align-items: center;
@@ -385,18 +392,19 @@ main.store-page {
 
 /* 15. Размеры карточек */
 
-.game-card {
+/* .game-card {
     height: 240px;
-}
+} */
 
 .big-card {
     height: 300px; /* Для секции "Fortnite" */
 }
 
 .square {
-    height: 180px; /* Для "Popular Games" */
+    /* height: 180px;  */
+    aspect-ratio: 3/4;
+    /* Для "Popular Games" */
 }
-
 /* Макет большой карточки для выделенных рядов, например «Бесплатные игры» */
 .big-card {
     display: flex;
@@ -409,7 +417,7 @@ main.store-page {
 .big-card .card-media {
     position: relative;
     height: 220px; /* увеличенная высота для соответствия макету */
-    border-radius: 12px;
+    border-radius: 8px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -440,7 +448,6 @@ main.store-page {
 .big-card .free-badge.soon {
     background: var(--lightGray);
     color: var(--brightestGray);
-    opacity: 0.95;
 }
 
 .big-card .card-meta {
@@ -481,7 +488,7 @@ main.store-page {
 .mobile-image {
     width: 62%;
     height: 340px;
-    border-radius: 12px;
+    border-radius: 8px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -532,7 +539,7 @@ main.store-page {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 1px solid rgba(0,0,0,0.12);
     background: var(--green);
     color: #0b0b0b; /* чёрный символ */
@@ -552,7 +559,7 @@ main.store-page {
 .store-stats>div {
     background-color: #1e2124;
     padding: 24px;
-    border-radius: 12px;
+    border-radius: 8px;
     border: 1px solid #3a3e46;
 
     display: flex;
@@ -563,7 +570,6 @@ main.store-page {
     margin-bottom: 15px;
     color: var(--green, #85c557); /* Зелёный заголовок */
     font-weight: 700;
-    text-transform: uppercase;
     font-size: 16px;
 }
 
@@ -611,7 +617,7 @@ main.store-page {
     width: 60px;
     height: 84px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 1px solid #3a3e46;
 }
 
@@ -674,7 +680,7 @@ main.store-page {
     color: var(--brightestGray);
     text-decoration: none;
     padding: 6px 10px;
-    border-radius: 6px;
+    border-radius: 8px;
     background: transparent;
     border: none;
     cursor: pointer;
