@@ -125,7 +125,7 @@ main.store-page {
 
 .hero-panel .thumb {
     /* height: 110px; */
-    border-radius: 8px;
+    border-radius: 14px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -162,7 +162,7 @@ main.store-page {
     color: #03210b;
     border: none;
     padding: 10px 16px;
-    border-radius: 8px;
+    border-radius: 14px;
     font-weight: 800;
     cursor: pointer;
 }
@@ -215,7 +215,7 @@ main.store-page {
     background: var(--baseGray);
     border: 1px solid rgba(255,255,255,0.04);
     padding: 18px 20px;
-    border-radius: 8px;
+    border-radius: 14px;
     margin-bottom: 18px;
 }
 
@@ -255,7 +255,7 @@ main.store-page {
     border: 1px solid rgba(255,255,255,0.12);
     color: var(--baseWhite);
     padding: 8px 12px;
-    border-radius: 8px;
+    border-radius: 14px;
     font-size: 13px;
     cursor: pointer;
     transition: background 0.18s ease, color 0.18s ease, transform 0.06s ease;
@@ -288,7 +288,7 @@ main.store-page {
     gap: 12px;
     background: var(--baseGray);
     padding: 18px;
-    border-radius: 8px;
+    border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.03);
     min-height: 300px; /* фиксированная высота карточки, приближена к оригиналу */
     justify-content: space-between; /* кнопка прижата вниз */
@@ -296,7 +296,7 @@ main.store-page {
 
 .store-grid-3 .card-shop .square {
     height: 180px; /* увеличенная высота превью для точного соответствия */
-    border-radius: 8px;
+    border-radius: 14px;
     overflow: hidden;
     position: relative;
 }
@@ -348,7 +348,7 @@ main.store-page {
     border: 1px solid rgba(255,255,255,0.06);
     color: var(--baseWhite);
     padding: 10px 14px;
-    border-radius: 8px;
+    border-radius: 14px;
     font-size: 13px;
     display: inline-flex;
     align-items: center;
@@ -372,7 +372,7 @@ main.store-page {
     border: 1px solid rgba(255,255,255,0.08);
     color: var(--baseWhite);
     padding: 8px 12px;
-    border-radius: 8px;
+    border-radius: 14px;
     font-size: 13px;
     display: inline-flex;
     align-items: center;
@@ -417,7 +417,7 @@ main.store-page {
 .big-card .card-media {
     position: relative;
     height: 220px; /* увеличенная высота для соответствия макету */
-    border-radius: 8px;
+    border-radius: 14px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -488,7 +488,7 @@ main.store-page {
 .mobile-image {
     width: 62%;
     height: 340px;
-    border-radius: 8px;
+    border-radius: 14px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
@@ -522,7 +522,7 @@ main.store-page {
     color: #0b0b0b;
     border: none;
     padding: 10px 16px;
-    border-radius: 8px;
+    border-radius: 14px;
     font-weight: 800;
     display: inline-flex;
     gap: 10px;
@@ -539,7 +539,7 @@ main.store-page {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 14px;
     border: 1px solid rgba(0,0,0,0.12);
     background: var(--green);
     color: #0b0b0b; /* чёрный символ */
@@ -549,26 +549,45 @@ main.store-page {
 
 /* 17. Секция статистики (Top Sellers, Most Played.) */
 .store-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* 3 колонки */
+    width: 100%;
+    height: 550px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+     /* 3 колонки */
     gap: 20px;
     padding: 20px 0 30px 0;
 }
 
 /* Стилизуем каждый блок статистики */
 .store-stats>div {
-    background-color: #1e2124;
+    /* background-color: #1e2124; */
     padding: 24px;
-    border-radius: 8px;
-    border: 1px solid #3a3e46;
+    border-radius: 14px;
+    /* border: 1px solid #3a3e46; */
 
     display: flex;
     flex-direction: column;
 }
 
+.store-stats .hr
+{
+    display: block;
+    
+    height: 100%;
+    width: 2px;
+
+    padding: 0;
+    border-radius: 0;
+
+    background-color: var(--brightGray);
+}
+
 .store-stats h4 {
     margin-bottom: 15px;
-    color: var(--green, #85c557); /* Зелёный заголовок */
+    color: white;
     font-weight: 700;
     font-size: 16px;
 }
@@ -582,7 +601,7 @@ main.store-page {
 
 .store-stats img
 {
-    border-radius: 8px;
+    border-radius: 14px;
     margin-right: 1em;
 }
 
@@ -614,10 +633,10 @@ main.store-page {
 }
 
 .upcoming-item img {
-    width: 60px;
-    height: 84px;
+    /* width: 60px;
+    height: 84px; */
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 14px;
     border: 1px solid #3a3e46;
 }
 
@@ -707,21 +726,31 @@ main.store-page {
 }
 
 /* Deals of the Week banners */
-.sale-deals-grid {
+.store-grid.sale-deals-grid {
     grid-template-columns: repeat(3, 1fr);
     margin-top: 18px;
 }
 
-.deal-card { display: flex; flex-direction: column; }
+.deal-card 
+{
+    display: flex;
+    flex-direction: column;
+}
 
 .deal-image {
     position: relative;
-    height: 180px;
-    border-radius: 8px;
+    height: auto;
+    border-radius: 14px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+}
+
+.deal-image img
+{
+    width: 100%;
+    border-radius: 14px;
 }
 
 .deal-banner {
@@ -760,7 +789,7 @@ main.store-page {
     color: var(--brightestGray);
     text-decoration: none;
     padding: 6px 10px;
-    border-radius: 8px;
+    border-radius: 14px;
     background: transparent;
     border: none;
     cursor: pointer;
