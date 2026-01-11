@@ -14,7 +14,12 @@ body
 .background2
 {
      /*Серый цвет для фона */
-    position: absolute;
+    position: fixed;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     width: 100vw;
     height: 100vh;
@@ -28,7 +33,12 @@ body
 .background
 {
     /*Градиентный зелёный для фона */
-    position: absolute;
+    position: fixed;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     width: 100vw;
     height: 100vh;
@@ -40,9 +50,9 @@ body
 /* Основной контейнер */
 .main
 {
-    width: 1400px;
-    margin: auto;
-    margin-top: 3em;
+    width: 80vw;
+    height: auto;
+    margin: 3em auto;
 }
 
 h1
@@ -54,6 +64,7 @@ h1
 .search-bar
 {
     margin-bottom: 1em;
+    width: 50%;
 }
 
 /* Вот эти вот сворачиваемые блоки текста */
@@ -66,6 +77,8 @@ details
     padding: 1rem;
     margin-bottom: 0.5em;
 
+    width: 100%;
+
 }
 
 /* Эти 2 скрывают стандартный маркер "развернуть\свернуть" */
@@ -76,17 +89,6 @@ summary
     position: relative;
 }
 
-details
-{
-    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-    filter: opacity(0);
-}
-
-details:open
-{
-    filter: opacity(1);
-}
-
 details summary
 {
     transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -94,7 +96,7 @@ details summary
 
 details:open summary
 {
-    padding-bottom: 0.5em;
+    padding-bottom: 1em;
 }
 
 

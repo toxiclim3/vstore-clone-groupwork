@@ -251,7 +251,7 @@ body
     left: 0;
     right: 0;
 
-    background: var(--baseGray);
+    background: var(--lightGray);
     
 
     z-index: -1;
@@ -303,10 +303,7 @@ body
 
     width: 1.5em; /* увеличенные иконки */
     height: 1.5em;
-    border-radius: 50%;
-    border: 1px solid rgba(0,0,0,0.08);
-    background: var(--baseWhite);
-    color: #0b0b0b; /* чёрная иконка внутри белого кружка */
+    color: var(--baseWhite); /* чёрная иконка внутри белого кружка */
     margin: 0 14px 0 0;
     text-decoration: none;
     font-size: 2em; /* размер иконки */
