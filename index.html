@@ -6,6 +6,8 @@
     <title>Главная страница</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     
     <link rel="stylesheet" href="./site/basestyle.css">
     <link rel="stylesheet" href="./style.css">
@@ -17,27 +19,35 @@
         <div class="header-container">
 
             <div class="header-left">
-                <a href="/" class="logo">
-                    <span class="logo-text">V STORE</span>
+                <a href="./index.html" class="logo-link">
+                    <img src="./site/img/icons/system-icons/logo-icon2.svg" alt="V Store" class="logo-full">
                 </a>
+
                 <nav class="main-navigation">
                     <ul>
-                        <li><a href="#" class="active">STORE</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="./site/support/indexplus.html">HELP</a></li>
-                        <li><a href="#">UNREAL ENGINE</a></li>
+                        <li><a href="./index.html" class="active">Discover</a></li>
+                        <li><a href="./site/support/indexplus.html">Support</a></li>
+                        <li><a href="./site/news/indexplus.html">News</a></li>
                     </ul>
                 </nav>
             </div>
 
-            <div class="header-right">
-                <a href="#" class="icon-button" aria-label="Выбор языка">
-                    <span>&#127760;</span>
-                </a>
-                <a href="./site/login/indexplus.html" class="btn btn-signin">SIGN IN</a>
-                <a href="#" class="btn btn-download">DOWNLOAD</a>
+            <div class="header-center">
+                <div class="search-bar">
+                    <span class="search-icon bi bi-search"></span>
+                    <input type="text" placeholder="Search store">
+                </div>
             </div>
 
+            <div class="header-right">
+                <a href="./site/profile/indexplus.html" class="icon-button bi bi-person-circle"></a>
+                <a href="#" class="icon-button bi bi-heart"></a>
+                <a href="#" class="icon-button bi bi-cart3"></a>
+                <a href="#" class="icon-button bi bi-globe2"></a>
+
+                <a href="./site/login/indexplus.html" class="btn btn-signin">Sign in</a>
+                <a href="#" class="btn btn-download">Download</a>
+            </div>
         </div>
     </header>
 
@@ -46,103 +56,386 @@
 
     
     <section class="hero-banner">
-        <div class="hero-image img-placeholder"></div>
-        <div class="hero-info">
-            <h2>APEX LEGENDS</h2>
-            <p>NEW SEASON</p>
-            <button class="btn btn-download">Learn more</button>
-        </div>
+        <div class="hero-image" style="background-image:url('./site/img/images/apex-legends-images/image1.png')"></div>
+        <aside class="hero-panel">
+            <div class="hero-info">
+                <h2>APEX LEGENDS</h2>
+                <p>NEW SEASON</p>
+            </div>
+
+            <div class="hero-thumbs">
+                <div class="thumb" style="background-image:url('./site/img/images/apex-legends-images/image2.png')"></div>
+                <div class="thumb" style="background-image:url('./site/img/images/apex-legends-images/image3.png')"></div>
+            </div>
+
+            <div class="hero-cta">
+                <div class="free-label">FREE</div>
+                <button class="btn btn-download">Learn more</button>
+            </div>
+        </aside>
     </section>
 
    
     <section class="store-section">
         <h3>Discover Something New</h3>
         <div class="store-grid">
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/discover-something-new-images/image1.png" alt=""></div>
+                <div class="text"><h4>The End of the Sun</h4><h4>UAH 15</h4></div>
+            </div>
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/discover-something-new-images/image2.png" alt=""></div>
+                <div class="text"><h4>Apex Legends</h4><h4>Free</h4></div>
+            </div>
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/discover-something-new-images/image3.png" alt=""></div>
+                <div class="text"><h4>The Wave Cleaner</h4><h4>UAH 225</h4></div>
+            </div>
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/discover-something-new-images/image4.png" alt=""></div>
+                <div class="text"><h4>The Emberlands</h4><h4>UAH 255</h4></div>
+            </div>
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/discover-something-new-images/image5.png" alt=""></div>
+                <div class="text"><h4>Kingdom Come</h4><h4>UAH 1,080</h4></div>
+            </div>
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/discover-something-new-images/image6.png" alt=""></div>
+                <div class="text"><h4>Final Fantasy VII</h4><h4>UAH 975</h4></div>
+            </div>
         </div>
     </section>
 
-    <section class="store-section">
+    <section class="store-section fortnite">
         <h3>Fortnite</h3>
         <div class="store-grid-3">
-            <div class="big-card img-placeholder"></div>
-            <div class="big-card img-placeholder"></div>
-            <div class="big-card img-placeholder"></div>
+            <div class="game-card card-shop">
+                <div class="img-placeholder"><img src="./site/img/images/discover-something-new-images/image7.png" alt=""></div>
+                <div class="text">
+                    <h4>Fortnite</h4>
+                    <p>Feudal Gotham’s Dark Night, Ninja Knight Batman, and the malicious wildcard Karuta Harley Quinn strike with a vengeance.</p>
+                    <button class="btn-shop">See In Shop <span class="bi bi-box-arrow-up-right"></span></button>
+                </div>
+            </div>
+
+            <div class="game-card card-shop">
+                <div class="img-placeholder"><img src="./site/img/images/discover-something-new-images/image8.png" alt=""></div>
+                <div class="text">
+                    <h4>Fortnite</h4>
+                    <p>BANG! Take your shot with bounty hunters Spike Spiegel and Faye Valentine from COWBOY BEBOP.</p>
+                    <button class="btn-shop">See In Shop <span class="bi bi-box-arrow-up-right"></span></button>
+                </div>
+            </div>
+
+            <div class="game-card card-shop">
+                <div class="img-placeholder"><img src="./site/img/images/discover-something-new-images/image9.png" alt=""></div>
+                <div class="text">
+                    <h4>Fortnite</h4>
+                    <p>My Hero Academia's League of Villains emerges in Fortnite!</p>
+                    <button class="btn-shop">See In Shop <span class="bi bi-box-arrow-up-right"></span></button>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <section class="store-section">
+    <section class="store-section winter-sale">
         <h3>Winter Sale Spotlight</h3>
-        <div class="store-grid">
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
+        <!-- Верхняя сетка из 6 карточек со скидками -->
+        <div class="store-grid sale-grid">
+            <!-- 1: The End of the Sun -->
+            <div class="game-card sale-card">
+                <div class="square img-placeholder"><img src="./site/img/images/winter-sale-spotlight-images/image1.png" alt="The End of the Sun"></div>
+                <div class="text">
+                    <h6>Base Game</h6>
+                    <h4>The End of the Sun</h4>
+                    <div class="price-row">
+                        <span class="discount-badge">-60%</span>
+                        <span class="old-price">UAH 1030</span>
+                        <span class="new-price">UAH 515</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2: Ranch Simulator -->
+            <div class="game-card sale-card">
+                <div class="square img-placeholder"><img src="./site/img/images/winter-sale-spotlight-images/image2.png" alt="Ranch Simulator"></div>
+                <div class="text">
+                    <h6>Base Game</h6>
+                    <h4>Ranch Simulator</h4>
+                    <div class="price-row">
+                        <span class="discount-badge">-60%</span>
+                        <span class="old-price">UAH 170</span>
+                        <span class="new-price">UAH 70</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3: FARCRY 3 -->
+            <div class="game-card sale-card">
+                <div class="square img-placeholder"><img src="./site/img/images/winter-sale-spotlight-images/image3.png" alt="FARCRY 3"></div>
+                <div class="text">
+                    <h6>Base Game</h6>
+                    <h4>FARCRY 3</h4>
+                    <div class="price-row">
+                        <span class="discount-badge">-40%</span>
+                        <span class="old-price">UAH 720</span>
+                        <span class="new-price">UAH 515</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4: FARCRY 4 -->
+            <div class="game-card sale-card">
+                <div class="square img-placeholder"><img src="./site/img/images/winter-sale-spotlight-images/image4.png" alt="FARCRY 4"></div>
+                <div class="text">
+                    <h6>Base Game</h6>
+                    <h4>FARCRY 4</h4>
+                    <div class="price-row">
+                        <span class="discount-badge">-40%</span>
+                        <span class="old-price">UAH 1120</span>
+                        <span class="new-price">UAH 815</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5: FARCRY 5 -->
+            <div class="game-card sale-card">
+                <div class="square img-placeholder"><img src="./site/img/images/winter-sale-spotlight-images/image5.png" alt="FARCRY 5"></div>
+                <div class="text">
+                    <h6>Base Game</h6>
+                    <h4>FARCRY 5</h4>
+                    <div class="price-row">
+                        <span class="discount-badge">-50%</span>
+                        <span class="old-price">UAH 1629</span>
+                        <span class="new-price">UAH 810</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6: FARCRY 6 -->
+            <div class="game-card sale-card">
+                <div class="square img-placeholder"><img src="./site/img/images/winter-sale-spotlight-images/image6.png" alt="FARCRY 6"></div>
+                <div class="text">
+                    <h6>Base Game</h6>
+                    <h4>FARCRY 6</h4>
+                    <div class="price-row">
+                        <span class="discount-badge">-50%</span>
+                        <span class="old-price">UAH 2070</span>
+                        <span class="new-price">UAH 1010</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Нижняя сетка «Deals of the Week» -->
+        <div class="store-grid sale-deals-grid">
+            <!-- Teenage Mutant Ninja Turtles: Splintered Fate -->
+            <div class="deal-card">
+                <div class="deal-image">
+                    <img src="./site/img/images/winter-sale-spotlight-images/image7.png" alt="">
+                    <div class="deal-banner">Deals of the Week</div>
+                </div>
+                <div class="deal-meta">
+                    <h4>Teenage Mutant Ninja Turtles: Splintered Fate</h4>
+                    <div class="deal-price-row">
+                        <span class="discount-badge">-60%</span>
+                        <span class="old-price">UAH 1030</span>
+                        <span class="new-price">UAH 515</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEGO: Horizon Adventures -->
+            <div class="deal-card">
+                <div class="deal-image">
+                    <img src="./site/img/images/winter-sale-spotlight-images/image8.png" alt="">
+                    <div class="deal-banner">Deals of the Week</div>
+                </div>
+                <div class="deal-meta">
+                    <h4>Lego: Horizon Adventures</h4>
+                    <div class="deal-price-row">
+                        <span class="discount-badge">-30%</span>
+                        <span class="old-price">UAH 930</span>
+                        <span class="new-price">UAH 600</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disney Dreamlight Valley -->
+            <div class="deal-card">
+                <div class="deal-image">
+                    <img src="./site/img/images/winter-sale-spotlight-images/image9.png" alt="">
+                    <div class="deal-banner">Deals of the Week</div>
+                </div>
+                <div class="deal-meta">
+                    <h4>Disney Dreamlight Valley</h4>
+                    <div class="deal-price-row">
+                        <span class="discount-badge">-60%</span>
+                        <span class="old-price">UAH 550</span>
+                        <span class="new-price">UAH 230</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="store-section wide">
-        <h3>Free games!</h3>
-        <div class="store-grid">
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
+        <div class="framed">
+            <div class="section-head">
+                <div class="section-title">
+                    <img src="./site/img/icons/system-icons/gift-icon.svg" class="section-icon" alt="gift">
+                    <h3>Free games!</h3>
+                </div>
+                <button class="view-more">View More</button>
+            </div>
+            <div class="store-grid">
+            <div class="big-card">
+                <div class="card-media" >
+                    <img src="./site/img/images/free-games-images/image1.png" alt="">
+                    <div class="free-badge">FREE NOW</div>
+                </div>
+                <div class="card-meta"><h4>Garden Story</h4><p>Free Now - Feb 27 at 05:00 PM</p></div>
+            </div>
+            <div class="big-card">
+                <div class="card-media">
+                    <img src="./site/img/images/free-games-images/image2.png" alt="">
+                    <div class="free-badge">FREE NOW</div>
+                </div>
+                <div class="card-meta"><h4>MAGES OF MYSTRALIA</h4><p>Free Now - Feb 27 at 05:00 PM</p></div>
+            </div>
+            <div class="big-card">
+                <div class="card-media">
+                    <img src="./site/img/images/free-games-images/image3.png" alt="">
+                    <div class="free-badge soon">FREE SOON</div>
+                </div>
+                <div class="card-meta"><h4>Them's Fighting Herds</h4><p>Free Soon - Feb 30 at 05:00 PM</p></div>
+            </div>
         </div>
     </section>
 
     
     <section class="store-section wide mobile-banner">
-        <div class="mobile-image img-placeholder"></div>
+        <div class="mobile-image" style="background-image: url('./site/img/images/system-images/vision-store-mobile-image.png')"></div>
         <div class="mobile-info">
             <h3>Vision Store Mobile</h3>
             <p>Feudal Gotham’s Dark Night, Ninja Knight Batman, and the malicious wildcard Karuta Harley Quinn strike with a vengeance.</p>
-            <button class="btn btn-download">Install Mobile</button>
+            <button class="btn btn-download btn-install">Install Mobile <span class="btn-icon bi bi-box-arrow-up-right" aria-hidden="true"></span></button>
         </div>
     </section>
 
     <section class="store-stats">
         <div>
             <h4>Top Sellers</h4>
-            <ul>
-                <li>Marvel Rivals</li>
-                <li>Honkai: Star Rail</li>
-                <li>Red Dead Redemption 2</li>
-            </ul>
+            <div class="upcoming-list">
+                <div class="upcoming-item">
+                    <img src="./site/img/images/top-sellers-images/image1.png" alt="Marvel Rivals">
+                    <div class="upcoming-info"><h4>Marvel Rivals</h4><p class="price">UAH 349</p></div>
+                </div>
+                <div class="upcoming-item">
+                    <img src="./site/img/images/top-sellers-images/image2.png" alt="Honkai: Star Rail">
+                    <div class="upcoming-info"><h4>Honkai: Star Rail</h4><p class="price">UAH 499</p></div>
+                </div>
+                <div class="upcoming-item">
+                    <img src="./site/img/images/top-sellers-images/image3.png" alt="Red Dead Redemption 2">
+                    <div class="upcoming-info"><h4>Red Dead Redemption 2</h4><p class="price">UAH 1,299</p></div>
+                </div>
+            </div>
         </div>
+        <div class="hr"></div>
         <div>
             <h4>Most Played</h4>
-            <ul>
-                <li>Fortnite</li>
-                <li>Rocket League</li>
-                <li>GTA V</li>
-            </ul>
+            <div class="upcoming-list">
+                <div class="upcoming-item">
+                    <img src="./site/img/images/most-played-images/image1.png" alt="Fortnite">
+                    <div class="upcoming-info"><h4>Fortnite</h4><p class="price">Free</p></div>
+                </div>
+                <div class="upcoming-item">
+                    <img src="./site/img/images/most-played-images/image2.png" alt="Rocket League">
+                    <div class="upcoming-info"><h4>Rocket League</h4><p class="price">Free</p></div>
+                </div>
+                <div class="upcoming-item">
+                    <img src="./site/img/images/most-played-images/image3.png" alt="World War Z">
+                    <div class="upcoming-info"><h4>World War Z</h4><p class="price">UAH 299</p></div>
+                </div>
+            </div>
         </div>
+        <div class="hr"></div>
         <div>
             <h4>Upcoming</h4>
-            <ul>
-                <li>Black Clover</li>
-                <li>Mist Royale</li>
-                <li>BORDERLANDS 4</li>
-            </ul>
+            <div class="upcoming-list">
+                <div class="upcoming-item">
+                    <img src="./site/img/images/top-upcoming-wishlisted-images/image1.png" alt="Assassin's Creed Shadows">
+                    <div class="upcoming-info"><h4>Assassin's Creed: Shadows</h4><p class="price">UAH 890</p></div>
+                </div>
+                <div class="upcoming-item">
+                    <img src="./site/img/images/top-upcoming-wishlisted-images/image2.png" alt="Miki Royale">
+                    <div class="upcoming-info"><h4>Miki Royale</h4><p class="price">UAH 299</p></div>
+                </div>
+                <div class="upcoming-item">
+                    <img src="./site/img/images/top-upcoming-wishlisted-images/image4.png" alt="Borderlands 4">
+                    <div class="upcoming-info"><h4>Borderlands 4</h4><p class="price">UAH 1,199</p></div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="store-section">
         <h3>Popular Games</h3>
         <div class="store-grid">
-            <div class="square img-placeholder"></div>
-            <div class="square img-placeholder"></div>
-            <div class="square img-placeholder"></div>
-            <div class="square img-placeholder"></div>
-            <div class="square img-placeholder"></div>
+            <div class="game-card">
+                <div class="square img-placeholder"> <img src="./site/img/images/popular-games-images/image1.png" alt=""></div>
+                <div class="text">
+                    <h6>base game</h6>
+                    <h4>Grand Theft Auto V</h4>
+                    <h4>UAH 799</h4>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/popular-games-images/image2.png" alt=""></div>
+                <div class="text">
+                    <h6>base game</h6>
+                    <h4>Valorant</h4>
+                    <h4>Free</h4>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/popular-games-images/image3.png" alt=""></div>
+                <div class="text">
+                    <h6>base game</h6>
+                    <h4>Witch It</h4>
+                    <h4>UAH 199</h4>
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/popular-games-images/image4.png" alt=""></div>
+                <div class="text">
+                    <h6>base game</h6>
+                    <h4>Crosshair X</h4>
+                    <h4>Free</h4>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/popular-games-images/image5.png" alt=""></div>
+                <div class="text">
+                    <h6>base game</h6>
+                    <h4>Farming Simulator</h4>
+                    <h4>UAH 499</h4>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/popular-games-images/image6.png" alt=""></div>
+                <div class="text">
+                    <h6>base game</h6>
+                    <h4>Zenless Zone Zero</h4>
+                    <h4>UAH 699</h4>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -150,26 +443,226 @@
     <section class="store-section">
         <h3>Recently Updated</h3>
         <div class="store-grid">
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
-            <div class="game-card img-placeholder"></div>
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/recently-updated-images/image1.png" alt=""></div>
+                <div class="text"><h6>base game</h6><h4>Black Myth: Wukong</h4><h4>UAH 1,029</h4></div>
+            </div>
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/recently-updated-images/image2.png" alt=""></div>
+                <div class="text"><h6>base game</h6><h4>Star Trek Online</h4><h4>Free</h4></div>
+            </div>
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/recently-updated-images/image3.png" alt=""></div>
+                <div class="text"><h6>base game</h6><h4>Disney Speedstorm</h4><h4>Free</h4></div>
+            </div>
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/recently-updated-images/image4.png" alt=""></div>
+                <div class="text"><h6>base game</h6><h4>Destiny 2</h4><h4>Free</h4></div>
+            </div>
         </div>
     </section>
 
     <section class="store-section">
         <h3>Now On This Store</h3>
         <div class="store-grid">
-            <div class="square img-placeholder"></div>
-            <div class="square img-placeholder"></div>
-            <div class="square img-placeholder"></div>
-            <div class="square img-placeholder"></div>
-            <div class="square img-placeholder"></div>
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/now-on-the-store-images/image1.png" alt=""></div>
+                <div class="text"><h6>base game</h6><h4>Hell Let Loose</h4><h4>UAH 1,629</h4></div>
+            </div>
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/now-on-the-store-images/image2.png" alt=""></div>
+                <div class="text"><h6>base game</h6><h4>Turnmoil</h4><h4>UAH 299</h4></div>
+            </div>
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/now-on-the-store-images/image3.png" alt=""></div>
+                <div class="text"><h6>base game</h6><h4>Vampire Survivors</h4><h4>UAH 79</h4></div>
+            </div>
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/now-on-the-store-images/image4.png" alt=""></div>
+                <div class="text"><h6>base game</h6><h4>DREDGE</h4><h4>UAH 589</h4></div>
+            </div>
+            <div class="game-card">
+                <div class="square img-placeholder"><img src="./site/img/images/now-on-the-store-images/image5.png" alt=""></div>
+                <div class="text"><h6>base game</h6><h4>New Arrival</h4><h4>UAH 299</h4></div>
+            </div>
         </div>
     </section>
 
+    <nav class="store-pagination" aria-label="Page navigation">
+        <button class="page-prev" aria-label="Previous page">Previous</button>
+        <a href="#" class="page active">1</a>
+        <a href="#" class="page">2</a>
+        <a href="#" class="page">3</a>
+        <a href="#" class="page">4</a>
+        <a href="#" class="page">5</a>
+        <a href="#" class="page">6</a>
+        <span class="page-ellipsis">…</span>
+        <a href="#" class="page">198</a>
+        <button class="page-next" aria-label="Next page">Next</button>
+    </nav>
+
 </main>
 
+    <!-- Футер -->
+    <footer class="site-footer">
+        <div class="bg"></div>
+        <div class="bg2"></div>
+        <div class="footer-top">
+            <div class="footer-left-col">
+                <div class="footer-social">
+                    <a href="#" class="social bi bi-facebook" aria-label="Facebook"></a>
+                    <a href="#" class="social bi bi-twitter" aria-label="Twitter"></a>
+                    <a href="#" class="social bi bi-youtube" aria-label="YouTube"></a>
+                </div>
+                <p class="footer-copy">© 2025 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.<br>VAT included in all prices where applicable.</p>
+                <div class="footer-links">
+                    <a href="#">Terms of service</a>
+                    <a href="#">Jobs</a>
+                    <a href="#">Rules</a>
+                    <a href="#">Contracts</a>
+                    <a href="#">Gift cards</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+
+            <div class="footer-top-right">
+                <button class="back-to-top" aria-label="Back to top"><span class="bi bi-arrow-up"></span></button>
+                <img src="./site/img/icons/system-icons/logo-icon1.svg" alt="Logo" class="footer-logo-img">
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-left"> 
+                <!-- ссылки перенесены выше для соответствия макету -->
+            </div>
+
+            <!-- дублирующие контролы удалены; контролы сверху (назад к началу + логотип) находятся в .footer-top-right -->
+        </div>
+    </footer>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<script>
+// Поведение пагинации при наведении и клике: кнопка при наведении подсвечивается зелёным и временно очищает предыдущую активную; клик сохраняет активное состояние.
+(function(){
+    const pagination = document.querySelector('.store-pagination');
+    if (!pagination) return;
+    const pages = Array.from(pagination.querySelectorAll('.page'));
+    const prevBtn = pagination.querySelector('.page-prev');
+    const nextBtn = pagination.querySelector('.page-next');
+
+    // найти индекс изначально активной страницы
+    let activeIndex = pages.findIndex(p => p.classList.contains('active'));
+    if (activeIndex === -1 && pages.length) {
+        activeIndex = 0;
+        pages[0].classList.add('active');
+    }
+
+    function restoreActive() {
+        pages.forEach((p,i) => {
+            p.classList.toggle('active', i === activeIndex);
+            p.classList.remove('hovered');
+        });
+        if (prevBtn) prevBtn.classList.remove('hovered');
+        if (nextBtn) nextBtn.classList.remove('hovered');
+    }
+
+    function setActive(index){
+        if (index < 0 || index >= pages.length) return;
+        activeIndex = index;
+        restoreActive();
+        pages[activeIndex].classList.add('active');
+    }
+
+    pages.forEach((p,i) => {
+        p.addEventListener('mouseenter', () => {
+            pages.forEach(x => x.classList.remove('active'));
+            p.classList.add('hovered');
+        });
+        p.addEventListener('mouseleave', () => {
+            p.classList.remove('hovered');
+            restoreActive();
+        });
+        p.addEventListener('click', (e) => {
+            e.preventDefault();
+            pages.forEach(x=> x.classList.remove('hovered'));
+            setActive(i);
+        });
+    });
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => setActive(Math.max(0, activeIndex - 1)));
+        prevBtn.addEventListener('mouseenter', () => {
+            pages.forEach(x => x.classList.remove('active'));
+            prevBtn.classList.add('hovered');
+        });
+        prevBtn.addEventListener('mouseleave', () => restoreActive());
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => setActive(Math.min(pages.length - 1, activeIndex + 1)));
+        nextBtn.addEventListener('mouseenter', () => {
+            pages.forEach(x => x.classList.remove('active'));
+            nextBtn.classList.add('hovered');
+        });
+        nextBtn.addEventListener('mouseleave', () => restoreActive());
+    }
+})();
+
+// Переключатель изображений баннера героя
+(function(){
+    const heroImage = document.querySelector('.hero-banner .hero-image');
+    const heroThumbs = document.querySelector('.hero-banner .hero-thumbs');
+    
+    if (!heroImage || !heroThumbs) return;
+    
+    // Все доступные изображения
+    const allImages = [
+        './site/img/images/apex-legends-images/image1.png',
+        './site/img/images/apex-legends-images/image2.png',
+        './site/img/images/apex-legends-images/image3.png'
+    ];
+    
+    // Текущее главное изображение
+    let currentMainImage = allImages[0];
+    
+    // Обработчик клика на превью
+    heroThumbs.addEventListener('click', (e) => {
+        const thumb = e.target.closest('.thumb');
+        if (!thumb) return;
+        
+        // Получаем URL изображения из превью
+        const bgImage = thumb.style.backgroundImage;
+        const urlMatch = bgImage.match(/url\(['"]?(.+?)['"]?\)/);
+        if (!urlMatch) return;
+        
+        const clickedImage = urlMatch[1];
+        
+        // Меняем главное изображение с плавным затуханием
+        const previousMainImage = currentMainImage;
+        currentMainImage = clickedImage;
+
+        heroImage.classList.add('fading');
+        setTimeout(() => {
+            heroImage.style.backgroundImage = `url('${clickedImage}')`;
+            heroImage.classList.remove('fading');
+        }, 150);
+        
+        // Очищаем превью и создаём заново, исключая текущее главное
+        heroThumbs.innerHTML = '';
+        allImages.forEach(imgUrl => {
+            if (imgUrl !== currentMainImage) {
+                const newThumb = document.createElement('div');
+                newThumb.className = 'thumb';
+                newThumb.style.backgroundImage = `url('${imgUrl}')`;
+                heroThumbs.appendChild(newThumb);
+            }
+        });
+    });
+})();
+</script>
+
 </body>
 </html>

@@ -4,3 +4,118 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body
+{
+    transition: var(--hovTrans);
+}
+
+/* Фоны */
+.background2
+{
+     /*Серый цвет для фона */
+    position: fixed;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: var(--bluishGray);
+    /* filter: opacity(0.7); */
+
+    z-index: -2;
+}
+
+.background
+{
+    /*Градиентный зелёный для фона */
+    position: fixed;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: var(--greenRight);
+    z-index: -1;
+}
+
+/* Основной контейнер */
+.main
+{
+    width: 80vw;
+    height: auto;
+    margin: 3em auto;
+}
+
+h1
+{
+    padding-bottom: 1em;
+    color: white;
+}
+
+.search-bar
+{
+    margin-bottom: 1em;
+    width: 50%;
+}
+
+/* Вот эти вот сворачиваемые блоки текста */
+details
+{
+    background: var(--lightGray);
+    border-radius: 8px;
+    color: white;
+
+    padding: 1rem;
+    margin-bottom: 0.5em;
+
+    width: 100%;
+
+}
+
+/* Эти 2 скрывают стандартный маркер "развернуть\свернуть" */
+::-webkit-details-marker {display: none;}
+summary 
+{
+    display: block;
+    position: relative;
+}
+
+details summary
+{
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+details:open summary
+{
+    padding-bottom: 1em;
+}
+
+
+summary::before {
+    content: "\F285";
+    font-size: 1.5em;
+
+
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    translate:0 -50%;
+}
+
+details:open > summary::before {
+    content: "\F282";
+
+    top: 50%;
+    translate:0 -50%;
+}
+
+

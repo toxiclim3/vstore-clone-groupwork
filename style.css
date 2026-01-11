@@ -1,6 +1,6 @@
 
-/* ======================================= */
-/* == СТИЛИ КОНТЕНТА СТРАНИЦЫ (V STORE) == */
+
+/* Стили шапки перенесены в site/basestyle.css */
 /* ======================================= */
 
 /* фон */
@@ -49,55 +49,145 @@ main.store-page {
     border-color: var(--green, #85c557); /* Подсветка при наведении */
 }
 
+.img-placeholder img
+{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
 /* 12. Главный баннер */
 .hero-banner {
-    position: relative; /* Нужен для позиционирования текста */
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 0;
+    align-items: stretch;
     margin-bottom: 40px;
 }
 
 /* 12.1. Изображение баннера (в HTML это .hero-image) */
 .hero-banner .hero-image {
     width: 100%;
-    height: 380px;
-    border-radius: 12px; /* Уже есть в .img-placeholder, но для надежности тк я любитель всё ломать*/
-    background-image: url('https://cdn2.unrealengine.com/egs-apex-legends-upheaval-carousel-desktop-1248x702-65f013f23212.jpg');
+    height: 520px;
+    border-radius: 8px 0px 0px 8px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
-/* 12.2. Информация на баннере */
-.hero-banner .hero-info {
-    position: absolute;
-    bottom: 25px;
-    left: 25px;
-    z-index: 2;
-    text-shadow: 0 0 10px rgba(0,0,0,0.7); /* Тень для читаемости */
+.hero-banner .hero-image.fading {
+    opacity: 0;
 }
 
-.hero-banner .hero-info h2 {
-    font-size: 32px;
-    font-weight: 900;
+/* 12.2. Правая панель в баннере */
+.hero-banner .hero-panel {
+    background: var(--lightGray);
+    border-radius: 0px 8px 8px 0px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 520px;
+}
+
+.hero-panel .hero-info {
+    margin: 0 0 8px 0;
+}
+
+.hero-panel .hero-info h2 {
     margin: 0;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--baseWhite, #f6f7f8);
     text-transform: uppercase;
 }
 
-.hero-banner .hero-info p {
-    font-size: 18px;
+.hero-panel .hero-info p {
+    margin: 6px 0 0 0;
+    font-size: 13px;
     font-weight: 700;
-    color: var(--green, #85c557);
+    color: #b6bdbf;
     text-transform: uppercase;
-    margin-bottom: 15px;
 }
 
-/* 12.3. Градиент для затемнения (для читаемости) */
-.hero-banner::after {
+/* 12.3. Мелкие превью в панели */
+.hero-panel .hero-thumbs {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 12px;
+
+    height: 100%;
+
+    margin: 14px 0;
+}
+
+.hero-panel .thumb {
+    /* height: 110px; */
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.18);
+    cursor: pointer;
+    transition: border-color 0.2s ease, opacity 0.2s ease;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero-panel .thumb:hover {
+    border-color: var(--green);
+    opacity: 0.9;
+}
+
+/* Ряд с кнопкой действия */
+.hero-panel .hero-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.hero-panel .free-label {
+    color: var(--green, #6fd24a);
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    font-size: 14px;
+}
+
+.hero-panel .btn-download {
+    background: #66c24a;
+    color: #03210b;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 14px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.hero-panel .btn-download:hover {
+    transform: translateY(-2px);
+}
+
+/* Декоративная тёмная вставка слева от панели для соответствия скриншоту */
+.hero-panel::before {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-    border-radius: 12px;
-    pointer-events: none; /* Не мешает кликам */
+    right: calc(100% - 360px - 24px); /* выравнивание по левому краю панели в сетке */
+    display: none; /* визуально не нужно, но зарезервировано */
+}
+
+/* малые экраны: панели в столбец */
+@media (max-width: 980px) {
+    .hero-banner {
+        grid-template-columns: 1fr;
+    }
+    .hero-banner .hero-image,
+    .hero-banner .hero-panel {
+        height: 420px;
+    }
 }
 
 /* 13. Секции контента */
@@ -108,13 +198,78 @@ main.store-page {
 .store-section h3 {
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     text-transform: uppercase; /* Все заголовки большими буквами */
     letter-spacing: 0.05em; /* Немного разрядим буквы */
 }
 
+.section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.framed {
+    /* фон панели взят из базовых переменных для согласованного вида */
+    background: var(--baseGray);
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: 18px 20px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+}
+
+.framed .section-head
+{
+    margin-bottom: 1em;
+}
+
+.framed .store-grid
+{
+    justify-items: center;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.section-icon {
+    width: 28px;
+    height: 28px;
+    /* заставляет SVG отображаться чисто белым */
+    filter: brightness(0) invert(1);
+} 
+
+.section-title h3 {
+    margin: 0;
+    color: var(--baseWhite);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+}
+
+.section-head .view-more {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--baseWhite);
+    padding: 8px 12px;
+    border-radius: 14px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease, transform 0.06s ease;
+}
+
+.section-head .view-more:hover {
+    background: rgba(255,255,255,0.03);
+    color: var(--baseWhite);
+    transform: translateY(-1px);
+} 
+
 /* 14. Сетки для карточек */
 .store-grid {
+    height: auto;
     display: grid;
     gap: 16px;
     /* На скриншоте 6 колонок в ряду */
@@ -127,84 +282,330 @@ main.store-page {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.store-grid-3 .card-shop {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--baseGray);
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.03);
+    min-height: 300px; /* фиксированная высота карточки, приближена к оригиналу */
+    justify-content: space-between; /* кнопка прижата вниз */
+}
+
+.store-grid-3 .card-shop .square {
+    height: 180px; /* увеличенная высота превью для точного соответствия */
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+}
+
+.store-grid-3 .card-shop .square img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* маленькая декоративная точка в правом нижнем углу превью (как на оригинале) */
+.store-grid-3 .card-shop .square::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.18);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+.store-grid-3 .card-shop .text {
+    padding-top: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.store-grid-3 .card-shop .text h4 {
+    margin: 0;
+    color: var(--baseWhite);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.store-grid-3 .card-shop .text p {
+    margin: 0 0 12px 0;
+    color: var(--brightestGray);
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.btn-shop {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.06);
+    color: var(--baseWhite);
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.12s ease, transform 0.06s ease;
+    align-self: flex-start; /* кнопка слева внизу */
+}
+
+.btn-shop:hover {
+    background: rgba(255,255,255,0.03);
+    transform: translateY(-2px);
+}
+
+.btn-shop .bi {
+    font-size: 14px;
+}
+
+.btn-shop {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.08);
+    color: var(--baseWhite);
+    padding: 8px 12px;
+    border-radius: 14px;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background 0.12s ease, transform 0.06s ease;
+}
+
+.btn-shop:hover {
+    background: rgba(255,255,255,0.03);
+    transform: translateY(-2px);
+}
+
+.btn-shop .bi {
+    font-size: 14px;
+}
+
 /* 15. Размеры карточек */
 
-.game-card {
-    height: 240px;
-}
-
-.big-card {
-    height: 300px; /* Для секции "Fortnite" */
-}
-
 .square {
-    height: 180px; /* Для "Popular Games" */
+    /* height: 180px;  */
+    aspect-ratio: 3/4;
+    /* Для "Popular Games" */
+}
+/* Макет большой карточки для выделенных рядов, например «Бесплатные игры» */
+.big-card {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.big-card .card-media {
+    position: relative;
+    /* height: 220px; */
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+}
+
+.big-card .card-media img
+{
+    width: 100%;
+}
+
+.big-card .free-badge {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 40px;
+
+    background: var(--green);
+    color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 800;
+    font-size: 15px;
+    text-transform: uppercase;
+    
+    letter-spacing: 0.04em;
+}
+
+.big-card .free-badge.soon {
+    background: var(--lightGray);
+    color: var(--brightestGray);
+}
+
+.big-card .card-meta {
+    padding: 12px 10px;
+}
+
+.big-card .card-meta h4 {
+    font-size: 16px;
+    margin: 0 0 6px 0;
+    color: var(--baseWhite, #eeeeee);
+    font-weight: 700;
+}
+
+.big-card .card-meta p {
+    margin: 0;
+    color: var(--brightestGray, #acacae);
+    font-size: 13px;
+}
+
+/* Для широких секций (например «Бесплатные игры») используйте 3 колонки */
+.store-section.wide .store-grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 24px;
 }
 
 /* 16. Баннер мобильного приложения */
 .mobile-banner {
     display: flex;
-    gap: 30px;
+    gap: 48px;
     align-items: center;
-    background-color: #1e2124; /* Тот же фон, что у карточек */
-    padding: 30px;
+    background-color: var(--baseGray);
+    padding: 28px 36px;
     border-radius: 12px;
     margin-bottom: 45px;
 }
 
 .mobile-image {
-    width: 60%;
-    height: 300px;
-    border-radius: 10px;
+    width: 62%;
+    height: 340px;
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
 
 .mobile-info {
-    width: 40%;
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .mobile-info h3 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--baseWhite);
 }
 
 .mobile-info p {
-    color: var(--brightestGray, #acacae);
-    margin-bottom: 20px;
-    line-height: 1.6;
+    color: var(--brightestGray);
+    margin-bottom: 18px;
+    line-height: 1.5;
+    max-width: 360px;
 }
+
+/* кнопка установки стилизована под скриншот, используя базовые цветовые переменные */
+.btn-install {
+    background: var(--green);
+    color: #0b0b0b;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 14px;
+    font-weight: 800;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-install:hover {
+    filter: brightness(0.96);
+}
+
+.btn-install .btn-icon {
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.12);
+    background: var(--green);
+    color: #0b0b0b; /* чёрный символ */
+    font-size: 13px;
+}
+
 
 /* 17. Секция статистики (Top Sellers, Most Played.) */
 .store-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    width: 100%;
+    height: 550px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+     /* 3 колонки */
     gap: 20px;
     padding: 20px 0 30px 0;
 }
 
 /* Стилизуем каждый блок статистики */
-.store-stats div {
-    background-color: #1e2124;
+.store-stats>div {
+    /* background-color: #1e2124; */
     padding: 24px;
-    border-radius: 12px;
-    border: 1px solid #3a3e46;
+    border-radius: 14px;
+    /* border: 1px solid #3a3e46; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+.store-stats .hr
+{
+    display: block;
+    
+    height: 100%;
+    width: 2px;
+
+    padding: 0;
+    border-radius: 0;
+
+    background-color: var(--brightGray);
 }
 
 .store-stats h4 {
     margin-bottom: 15px;
-    color: var(--green, #85c557); /* Зеленый заголовок */
+    color: white;
     font-weight: 700;
-    text-transform: uppercase;
     font-size: 16px;
 }
 
 .store-stats ul {
+
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+.store-stats img
+{
+    border-radius: 14px;
+    margin-right: 1em;
+}
+
 .store-stats li {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
     margin-bottom: 10px;
     color: var(--brightestGray, #acacae);
     font-size: 14px;
@@ -212,6 +613,200 @@ main.store-page {
 .store-stats li:last-child {
     margin-bottom: 0;
 }
+
+/* Список релизов: миниатюра + заголовок и цена (в стиле Epic) */
+.upcoming-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.upcoming-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.upcoming-item img {
+    /* width: 60px;
+    height: 84px; */
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid #3a3e46;
+}
+
+.upcoming-info h4 {
+    font-size: 15px;
+    margin: 0;
+    color: var(--baseWhite, #eeeeee);
+    font-weight: 700;
+}
+
+.upcoming-info .price {
+    margin: 6px 0 0 0;
+    color: var(--brightestGray, #acacae);
+    font-weight: 700;
+}
+
+/* Популярные игры */
+.store-section
+{
+
+}
+
+.store-section .store-grid
+{
+    grid-template-columns: repeat(6,1fr);
+}
+
+.store-section .store-grid .text
+{
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+}
+
+.store-section .store-grid h6
+{
+    font-size: 0.8rem;
+    color: var(--brightestGray);
+}
+
+.store-section .store-grid h4
+{
+    font-size: 1rem;
+}
+
+/* Winter Sale Spotlight */
+.winter-sale .sale-grid {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.sale-card .text h6 {
+    margin: 8px 0 0 0;
+    color: var(--brightestGray);
+    font-weight: 600;
+    text-transform: none;
+}
+
+.sale-card .text h4 {
+    margin: 4px 0 6px 0;
+    font-weight: 800;
+}
+
+.price-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.old-price {
+    color: var(--brightestGray);
+    text-decoration: line-through;
+    font-weight: 700;
+}
+
+.new-price {
+    color: var(--baseWhite);
+    font-weight: 800;
+}
+
+.discount-badge {
+    background: var(--green);
+    color: #07290e;
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+}
+
+/* Deals of the Week banners */
+.store-grid.sale-deals-grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 18px;
+}
+
+.deal-card 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.deal-image {
+    position: relative;
+    height: auto;
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+}
+
+.deal-image img
+{
+    width: 100%;
+    border-radius: 14px;
+}
+
+.deal-banner {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    background: var(--green);
+    color: #09210b;
+    /* height: 40px; */
+    padding: 0 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.deal-meta { padding: 10px 4px; }
+.deal-meta h4 { margin: 6px 0; font-size: 16px; font-weight: 800; }
+
+.deal-price-row { display: inline-flex; align-items: center; gap: 10px; }
+
+
+
+/* Стили пагинации */
+.store-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 28px 0;
+    color: var(--brightestGray);
+    font-size: 14px;
+}
+.store-pagination .page,
+.store-pagination .page-prev,
+.store-pagination .page-next {
+    color: var(--brightestGray);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 14px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+/* ховер подсвечивает наведённый элемент */
+.store-pagination .page:hover,
+.store-pagination .page-prev:hover,
+.store-pagination .page-next:hover { color: var(--green); }
+/* классы используются JS для указания временного состояния при наведении */
+.store-pagination .page.hovered,
+.store-pagination .page-prev.hovered,
+.store-pagination .page-next.hovered {
+    color: var(--green);
+    font-weight: 700;
+}
+/* кликнутая (сохранённая) активная страница */
+.store-pagination .page.active {
+    color: var(--green);
+    font-weight: 700;
+}
+.store-pagination .page-ellipsis { padding: 0 8px; color: rgba(255,255,255,0.45); }
 
 /* 18. Адаптивность (Media Queries) */
 @media (max-width: 1200px) {
@@ -223,6 +818,15 @@ main.store-page {
     .store-grid-3 {
         grid-template-columns: repeat(2, 1fr);
     }
+
+
+}
+
+@media screen and (max-width:1100px)
+{
+    .winter-sale .sale-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
 }
 
 @media (max-width: 900px) {
@@ -231,9 +835,11 @@ main.store-page {
     }
     
     /* 4 колонки -> 3 колонки */
-    .store-grid {
+    .store-section .store-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    
     
     /* Баннер мобильного приложения - вертикально */
     .mobile-banner {
@@ -243,16 +849,36 @@ main.store-page {
         width: 100%;
     }
     
-    /* Статистика - в 1 колонку */
+
+            /* Статистика - в 1 колонку */
     .store-stats {
-        grid-template-columns: 1fr;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .store-stats>div
+    {
+        width: 100%;
+    }
+
+    .store-stats .upcoming-list
+    {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .store-stats .hr
+    {
+        width:100%;
+        height: 2px;
     }
 }
 
 @media (max-width: 600px) {
     /* Все сетки -> 2 колонки */
-    .store-grid,
-    .store-grid-3 {
+     .store-section .store-grid,
+     .store-section .store-grid-3 {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -266,5 +892,35 @@ main.store-page {
     /* Скрываем навигацию */
     .main-navigation {
         display: none; /* Временно скроем, чтобы не ломать шапку */
+    }
+
+
+    .store-stats .upcoming-list
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .store-section .framed .store-grid
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .deal-banner
+    {
+        font-size: 0.8em;
+    }
+
+    .old-price
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) 
+{  
+    .store-stats .upcoming-list
+    {
+        grid-template-columns: 1fr;
     }
 }

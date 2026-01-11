@@ -58,8 +58,8 @@ header a
     right: 0;
     margin: auto;
 
-    width: 60vw;
-    height: 50vh;
+    width: 800px;
+    height: 450px;
 
     display: flex;
     justify-content: space-evenly;
@@ -107,7 +107,7 @@ header a
 
 .left input
 {
-    padding: 1.5rem 0.8rem;
+    padding: 1rem 0.8rem;
     width: 100%;
 
     margin-bottom: 2em;
@@ -150,17 +150,28 @@ header a
     color: var(--red);
 }
 
+.left form label
+{
+	margin-bottom: 0.4rem;
+}
+
 .left form .buttons input[type="submit"]
 {
     flex-basis: 60%;
-    margin-right: 4em;
+    margin-right: 1em;
 
     background: var(--greenBrightRight);
+
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 
 .left form .buttons input[type="button"]
 {
     flex-basis: 40%;
+
+    font-weight: 500;
+    font-size: 1.2rem;
 
     background: #363a42;
 }
@@ -241,4 +252,45 @@ header a
 .right .use
 {
     font-size: 0.9em;
+}
+
+@media screen and (max-width: 820px) 
+{
+    .container
+    {
+        width: 90vw;
+    }
+
+    .left
+    {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .loginContainer
+    {
+        padding: 5%;
+    }
+
+    .right
+    {
+
+        display: none;
+    }
+    
+    .buttons
+    {
+        flex-direction: column !important;
+    }
+
+    .left form .buttons input[type="submit"]
+    {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    .left form .buttons input[type="button"]
+    {
+        margin-bottom: 1em;
+    }
 }
