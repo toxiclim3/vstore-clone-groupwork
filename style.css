@@ -73,6 +73,12 @@ main.store-page {
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.hero-banner .hero-image.fading {
+    opacity: 0;
 }
 
 /* 12.2. Правая панель в баннере */

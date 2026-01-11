@@ -528,10 +528,15 @@
         
         const clickedImage = urlMatch[1];
         
-        // Меняем главное изображение
+        // Меняем главное изображение с плавным затуханием
         const previousMainImage = currentMainImage;
         currentMainImage = clickedImage;
-        heroImage.style.backgroundImage = `url('${clickedImage}')`;
+
+        heroImage.classList.add('fading');
+        setTimeout(() => {
+            heroImage.style.backgroundImage = `url('${clickedImage}')`;
+            heroImage.classList.remove('fading');
+        }, 150);
         
         // Очищаем превью и создаём заново, исключая текущее главное
         heroThumbs.innerHTML = '';
