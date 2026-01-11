@@ -3,13 +3,13 @@
 @font-face
 {
     font-family: 'Roboto';
-    src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);
+    src: url(../fonts/Roboto-VariableFont_wdth\,wght.ttf);
 }
 
 @font-face
 {
     font-family: 'Inter';
-    src: url(fonts/Inter-VariableFont_opsz\,wght.ttf);
+    src: url(../fonts/Inter-VariableFont_opsz\,wght.ttf);
 }
 
 body
