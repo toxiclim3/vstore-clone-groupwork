@@ -391,7 +391,7 @@
 
 </main>
 
-    <!-- Это футор -->
+    <!-- Футер -->
     <footer class="site-footer">
         <div class="bg"></div>
         <div class="bg2"></div>
@@ -422,10 +422,10 @@
 
         <div class="footer-main">
             <div class="footer-left"> 
-                <!-- links moved above for layout parity with reference -->
+                <!-- ссылки перенесены выше для соответствия макету -->
             </div>
 
-            <!-- duplicate controls removed; top controls (back-to-top + logo) are in .footer-top-right -->
+            <!-- дублирующие контролы удалены; контролы сверху (назад к началу + логотип) находятся в .footer-top-right -->
         </div>
     </footer>
 
@@ -433,7 +433,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 <script>
-// Pagination hover + click behavior: hovered button lights green and temporarily clears the previous active; clicking persists the active state.
+// Поведение пагинации при наведении и клике: кнопка при наведении подсвечивается зелёным и временно очищает предыдущую активную; клик сохраняет активное состояние.
 (function(){
     const pagination = document.querySelector('.store-pagination');
     if (!pagination) return;
@@ -441,7 +441,7 @@
     const prevBtn = pagination.querySelector('.page-prev');
     const nextBtn = pagination.querySelector('.page-next');
 
-    // find initial active page index
+    // найти индекс изначально активной страницы
     let activeIndex = pages.findIndex(p => p.classList.contains('active'));
     if (activeIndex === -1 && pages.length) {
         activeIndex = 0;
@@ -497,6 +497,53 @@
         });
         nextBtn.addEventListener('mouseleave', () => restoreActive());
     }
+})();
+
+// Переключатель изображений баннера героя
+(function(){
+    const heroImage = document.querySelector('.hero-banner .hero-image');
+    const heroThumbs = document.querySelector('.hero-banner .hero-thumbs');
+    
+    if (!heroImage || !heroThumbs) return;
+    
+    // Все доступные изображения
+    const allImages = [
+        './site/img/images/apex-legends-images/image1.png',
+        './site/img/images/apex-legends-images/image2.png',
+        './site/img/images/apex-legends-images/image3.png'
+    ];
+    
+    // Текущее главное изображение
+    let currentMainImage = allImages[0];
+    
+    // Обработчик клика на превью
+    heroThumbs.addEventListener('click', (e) => {
+        const thumb = e.target.closest('.thumb');
+        if (!thumb) return;
+        
+        // Получаем URL изображения из превью
+        const bgImage = thumb.style.backgroundImage;
+        const urlMatch = bgImage.match(/url\(['"]?(.+?)['"]?\)/);
+        if (!urlMatch) return;
+        
+        const clickedImage = urlMatch[1];
+        
+        // Меняем главное изображение
+        const previousMainImage = currentMainImage;
+        currentMainImage = clickedImage;
+        heroImage.style.backgroundImage = `url('${clickedImage}')`;
+        
+        // Очищаем превью и создаём заново, исключая текущее главное
+        heroThumbs.innerHTML = '';
+        allImages.forEach(imgUrl => {
+            if (imgUrl !== currentMainImage) {
+                const newThumb = document.createElement('div');
+                newThumb.className = 'thumb';
+                newThumb.style.backgroundImage = `url('${imgUrl}')`;
+                heroThumbs.appendChild(newThumb);
+            }
+        });
+    });
 })();
 </script>
 

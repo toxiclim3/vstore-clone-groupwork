@@ -60,7 +60,7 @@ main.store-page {
 .hero-banner {
     display: grid;
     grid-template-columns: 1fr 360px;
-    gap: 24px;
+    gap: 0;
     align-items: stretch;
     margin-bottom: 40px;
 }
@@ -77,7 +77,7 @@ main.store-page {
 
 /* 12.2. Правая панель в баннере */
 .hero-banner .hero-panel {
-    background: linear-gradient(180deg, #2f3739, #393f41);
+    background: var(--lightGray);
     border-radius: 12px;
     padding: 24px;
     display: flex;
@@ -110,7 +110,7 @@ main.store-page {
 .hero-panel .hero-thumbs {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 12px;
     margin-top: 14px;
 }
 
@@ -121,9 +121,16 @@ main.store-page {
     background-position: center;
     overflow: hidden;
     border: 1px solid rgba(0,0,0,0.18);
+    cursor: pointer;
+    transition: border-color 0.2s ease, opacity 0.2s ease;
 }
 
-/* CTA row */
+.hero-panel .thumb:hover {
+    border-color: var(--green);
+    opacity: 0.9;
+}
+
+/* Ряд с кнопкой действия */
 .hero-panel .hero-cta {
     display: flex;
     align-items: center;
@@ -152,15 +159,15 @@ main.store-page {
     transform: translateY(-2px);
 }
 
-/* Decorative dark inset on left of panel to match screenshot */
+/* Декоративная тёмная вставка слева от панели для соответствия скриншоту */
 .hero-panel::before {
     content: '';
     position: absolute;
-    right: calc(100% - 360px - 24px); /* align with panel left in grid */
-    display: none; /* not necessary visually but reserved */
+    right: calc(100% - 360px - 24px); /* выравнивание по левому краю панели в сетке */
+    display: none; /* визуально не нужно, но зарезервировано */
 }
 
-/* smaller screens: stack panels */
+/* малые экраны: панели в столбец */
 @media (max-width: 980px) {
     .hero-banner {
         grid-template-columns: 1fr;
@@ -384,7 +391,7 @@ main.store-page {
     height: 180px; /* Для "Popular Games" */
 }
 
-/* Макет большой карточки для выделенных рядов, например «Free games» */
+/* Макет большой карточки для выделенных рядов, например «Бесплатные игры» */
 .big-card {
     display: flex;
     flex-direction: column;
@@ -447,7 +454,7 @@ main.store-page {
     font-size: 13px;
 }
 
-/* Для широких секций (например «Free games») используйте 3 колонки */
+/* Для широких секций (например «Бесплатные игры») используйте 3 колонки */
 .store-section.wide .store-grid {
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
@@ -496,7 +503,7 @@ main.store-page {
     max-width: 360px;
 }
 
-/* install button styled to match screenshot, using base color variables */
+/* кнопка установки стилизована под скриншот, используя базовые цветовые переменные */
 .btn-install {
     background: var(--green);
     color: #0b0b0b;
@@ -548,7 +555,7 @@ main.store-page {
 
 .store-stats h4 {
     margin-bottom: 15px;
-    color: var(--green, #85c557); /* Зеленый заголовок */
+    color: var(--green, #85c557); /* Зелёный заголовок */
     font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;
@@ -645,7 +652,7 @@ main.store-page {
 
 
 
-/* Pagination styles */
+/* Стили пагинации */
 .store-pagination {
     display: flex;
     justify-content: center;
@@ -666,18 +673,18 @@ main.store-page {
     border: none;
     cursor: pointer;
 }
-/* hover highlights the hovered control */
+/* ховер подсвечивает наведённый элемент */
 .store-pagination .page:hover,
 .store-pagination .page-prev:hover,
 .store-pagination .page-next:hover { color: var(--green); }
-/* classes used by JS to indicate temporary hover state */
+/* классы используются JS для указания временного состояния при наведении */
 .store-pagination .page.hovered,
 .store-pagination .page-prev.hovered,
 .store-pagination .page-next.hovered {
     color: var(--green);
     font-weight: 700;
 }
-/* clicked (persisted) active page */
+/* кликнутая (сохранённая) активная страница */
 .store-pagination .page.active {
     color: var(--green);
     font-weight: 700;
