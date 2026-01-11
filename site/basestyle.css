@@ -251,7 +251,7 @@ body
     left: 0;
     right: 0;
 
-    background: var(--baseGray);
+    background: var(--lightGray);
     
 
     z-index: -1;
@@ -303,10 +303,7 @@ body
 
     width: 1.5em; /* увеличенные иконки */
     height: 1.5em;
-    border-radius: 50%;
-    border: 1px solid rgba(0,0,0,0.08);
-    background: var(--baseWhite);
-    color: #0b0b0b; /* чёрная иконка внутри белого кружка */
+    color: var(--baseWhite); /* чёрная иконка внутри белого кружка */
     margin: 0 14px 0 0;
     text-decoration: none;
     font-size: 2em; /* размер иконки */
@@ -418,3 +415,42 @@ body
     color: rgba(255,255,255,0.14);
     font-weight: 800;
 }
+
+/* Pagination styles */
+.store-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 28px 0;
+    color: var(--brightestGray);
+    font-size: 14px;
+}
+.store-pagination .page,
+.store-pagination .page-prev,
+.store-pagination .page-next {
+    color: var(--brightestGray);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+/* hover highlights the hovered control */
+.store-pagination .page:hover,
+.store-pagination .page-prev:hover,
+.store-pagination .page-next:hover { color: var(--green); }
+/* classes used by JS to indicate temporary hover state */
+.store-pagination .page.hovered,
+.store-pagination .page-prev.hovered,
+.store-pagination .page-next.hovered {
+    color: var(--green);
+    font-weight: 700;
+}
+/* clicked (persisted) active page */
+.store-pagination .page.active {
+    color: var(--green);
+    font-weight: 700;
+}
+.store-pagination .page-ellipsis { padding: 0 8px; color: rgba(255,255,255,0.45); }
