@@ -392,14 +392,6 @@ main.store-page {
 
 /* 15. Размеры карточек */
 
-/* .game-card {
-    height: 240px;
-} */
-
-.big-card {
-    height: 300px; /* Для секции "Fortnite" */
-}
-
 .square {
     /* height: 180px;  */
     aspect-ratio: 3/4;
@@ -410,18 +402,21 @@ main.store-page {
     display: flex;
     flex-direction: column;
     background: transparent;
-
-    aspect-ratio: 1.2/1;
 }
 
 .big-card .card-media {
     position: relative;
-    height: 220px; /* увеличенная высота для соответствия макету */
+    /* height: 220px; */
     border-radius: 14px;
     background-size: cover;
     background-position: center;
     overflow: hidden;
     box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+}
+
+.big-card .card-media img
+{
+    width: 100%;
 }
 
 .big-card .free-badge {
@@ -758,7 +753,8 @@ main.store-page {
     left: 0; right: 0; bottom: 0;
     background: var(--green);
     color: #09210b;
-    height: 40px;
+    /* height: 40px; */
+    padding: 0 0.5em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -816,17 +812,21 @@ main.store-page {
 @media (max-width: 1200px) {
     /* 6 колонок -> 4 колонки */
     .store-grid {
-        grid-template-columns: repeat(4, 1fr) !important;
+        grid-template-columns: repeat(4, 1fr);
     }
     /* 3 колонки -> 2 колонки */
     .store-grid-3 {
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .framed .store-grid
-    {
-        grid-template-columns: 1fr !important;
-    }
+
+}
+
+@media screen and (max-width:1100px)
+{
+    .winter-sale .sale-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
 }
 
 @media (max-width: 900px) {
@@ -835,8 +835,8 @@ main.store-page {
     }
     
     /* 4 колонки -> 3 колонки */
-    .store-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
+    .store-section .store-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     
@@ -849,17 +849,37 @@ main.store-page {
         width: 100%;
     }
     
-    /* Статистика - в 1 колонку */
+
+            /* Статистика - в 1 колонку */
     .store-stats {
-        grid-template-columns: 1fr;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .store-stats>div
+    {
+        width: 100%;
+    }
+
+    .store-stats .upcoming-list
+    {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .store-stats .hr
+    {
+        width:100%;
+        height: 2px;
     }
 }
 
 @media (max-width: 600px) {
     /* Все сетки -> 2 колонки */
-    .store-grid,
-    .store-grid-3 {
-        grid-template-columns: repeat(2, 1fr) !important;
+     .store-section .store-grid,
+     .store-section .store-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .square {
@@ -872,5 +892,35 @@ main.store-page {
     /* Скрываем навигацию */
     .main-navigation {
         display: none; /* Временно скроем, чтобы не ломать шапку */
+    }
+
+
+    .store-stats .upcoming-list
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .store-section .framed .store-grid
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .deal-banner
+    {
+        font-size: 0.8em;
+    }
+
+    .old-price
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) 
+{  
+    .store-stats .upcoming-list
+    {
+        grid-template-columns: 1fr;
     }
 }
