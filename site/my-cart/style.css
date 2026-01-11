@@ -58,12 +58,12 @@ nav section .menu ul li
 
 nav section .search-stroke
 {
+    width: 500px;
+    height: 39px;
     display: flex;
     align-items: center;
     background: #393E46;
     border-radius: 20px;
-    width: 289px;
-    height: 39px;
     padding-left: 15px;
 }
 
@@ -114,17 +114,23 @@ nav aside .nav-icons
 {
     display: flex;
     gap: 15px;
+    align-items: center;
 }
 
-nav aside .nav-icons img
+nav aside .nav-icons svg
 {
-    width: 24px;
+    stroke: #EEEEEE;
     cursor: pointer;
 }
 
-nav aside .nav-icons img:nth-child(3)
+nav aside .nav-icons svg:nth-child(3)
 {
     cursor: default;
+}
+
+nav aside .nav-icons svg:hover
+{
+    stroke: #7BC74D;
 }
 
 nav aside .nav-buttons
@@ -485,9 +491,15 @@ footer .content section .social-media-icons
     gap: 20px;
 }
 
-footer .content section .social-media-icons img
+footer .content section .social-media-icons svg
 {
+    fill: #EEEEEE;
     cursor: pointer;
+}
+
+footer .content section .social-media-icons svg:hover
+{
+    fill: #7BC74D;
 }
 
 footer .content section .credits p
