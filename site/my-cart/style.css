@@ -597,7 +597,12 @@ footer .content aside .arrow-up-icon2:hover
     left: 0;
     position: fixed;
     z-index: 8;
-/*  display: none; */
+    display: none;
+}
+
+#payment-window.active
+{
+    display: flex;
 }
 
 #payment-window .main-window
@@ -618,20 +623,28 @@ footer .content aside .arrow-up-icon2:hover
 {
     width: 60%;
     padding: 30px 10px 30px 20px;
-    background: #7BC74D;
 }
 
 #payment-window .main-window section p
 {
+    color: #ffffff;
     margin: 0 0 20px 0;
 }
 
-#payment-window .main-window section input
+#payment-window .main-window .tick
 {
-    width: 25px;
-    height: 50px;
-    border-radius: 4px;
-    margin: 0;
+    left: 29px; 
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#payment-window .main-window input[type="checkbox"]:checked + .tick
+{
+    display: block;
 }
 
 #payment-window .main-window section .Visa
@@ -642,14 +655,17 @@ footer .content aside .arrow-up-icon2:hover
     border-radius: 4px;
     display: flex;
     flex-direction: row;
-    align-content: center;
-    gap: 2%;
+    align-items: center;
+    gap: 3%;
     margin-bottom: 10px;
+    padding: 0 25px;
+    position: relative;
 }
 
-#payment-window .main-window section .Visa img
+#payment-window .main-window section .Visa p,
+#payment-window .main-window section .Master-card p
 {
-    width: 40px;
+    margin: 0;
 }
 
 #payment-window .main-window section .Master-card
@@ -660,13 +676,39 @@ footer .content aside .arrow-up-icon2:hover
     border-radius: 4px;
     display: flex;
     flex-direction: row;
-    align-content: center;
+    align-items: center;
+    gap: 3%;
+    padding: 0 25px;
+    position: relative;
+}
+
+#payment-window .main-window section input
+{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 1px #393E46 solid;
+    background-color: rgba(238, 238, 238, 0.5);
+    flex-shrink: 0;
+    border-radius: 4px;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+}
+
+#payment-window .main-window section input:checked
+{
+    border: 1px #393E46 solid;
+    background-color: #7BC74D;
 }
 
 #payment-window .main-window aside
 {
     width: 40%;
     padding: 30px 20px 30px 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 #payment-window .main-window aside .title-and-text
@@ -680,12 +722,19 @@ footer .content aside .arrow-up-icon2:hover
 
 #payment-window .main-window aside .title-and-text p
 {
+    color: #ffffff;
     margin: 0;
 }
 
-#payment-window .main-window aside .title-and-text img
+#payment-window .main-window aside .title-and-text svg
 {
+    stroke: #EEEEEE;
     cursor: pointer;
+}
+
+#payment-window .main-window aside .title-and-text svg:hover
+{
+    stroke: #7BC74D;
 }
 
 #payment-window .main-window aside .main-informaton
@@ -705,12 +754,45 @@ footer .content aside .arrow-up-icon2:hover
 
 #payment-window .main-window aside .main-informaton .information
 {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-left: 10px;
 }
 
 #payment-window .main-window aside .main-informaton .information p
 {
     margin: 0;
+}
+
+#payment-window .main-window aside .main-informaton .information .title
+{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#payment-window .main-window aside .main-informaton .information .developer
+{
+    font-size: 16px;
+    color: rgb(238, 238, 238, 0.7);
+    margin: 0;
+}
+
+#payment-window .main-window aside .main-informaton .information .price
+{
+    font-size: 14px;
+    color: rgb(238, 238, 238, 0.7);
+    margin: 0;
+}
+
+#payment-window .main-window aside .main-informaton .total-price-and-taxes1
+{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 #payment-window .main-window aside .main-informaton .total-price-and-taxes1 .total-price
@@ -722,6 +804,8 @@ footer .content aside .arrow-up-icon2:hover
 
 #payment-window .main-window aside .main-informaton .total-price-and-taxes1 .total-price p
 {
+    font-size: 16px;
+    color: rgb(238, 238, 238, 0.7);
     margin: 0;
 }
 
@@ -734,6 +818,8 @@ footer .content aside .arrow-up-icon2:hover
 
 #payment-window .main-window aside .main-informaton .total-price-and-taxes1 .taxes1 p
 {
+    font-size: 16px;
+    color: rgb(238, 238, 238, 0.7);
     margin: 0;
 }
 
@@ -746,6 +832,8 @@ footer .content aside .arrow-up-icon2:hover
 
 #payment-window .main-window aside .main-informaton .taxes2 p
 {
+    font-size: 16px;
+    font-weight: bold;
     margin: 0;
 }
 
@@ -754,21 +842,52 @@ footer .content aside .arrow-up-icon2:hover
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    align-items: center;
+    position: relative;
 }
 
 #payment-window .main-window aside .main-informaton .agreement input
 {
+    appearance: none;
+    -webkit-appearance: none;
     width: 25px;
-    margin: 0;
+    height: 25px;
+    border: 1px #222831 solid;
+    background-color: rgb(238, 238, 238);
+    flex-shrink: 0;
+    border-radius: 4px;
+    margin: 0 20px 0 0;
+    cursor: pointer;
+    position: relative;
+}
+
+#payment-window .main-window aside .main-informaton .agreement .tick
+{
+    left: 4px; 
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#payment-window .main-window aside .main-informaton .agreement input:checked
+{
+    border: 1px #222831 solid;
+    background-color: rgb(238, 238, 238);
 }
 
 #payment-window .main-window aside .main-informaton .agreement p
 {
+    font-size: 14px;
+    color: rgb(238, 238, 238, 0.7);
     margin: 0;
 }
 
 #payment-window .main-window aside .main-informaton .conditions
 {
+    font-size: 12px;
+    color: rgb(238, 238, 238, 0.7);
     margin: 0;
 }
 
@@ -780,11 +899,20 @@ footer .content aside .arrow-up-icon2:hover
 #payment-window .main-window aside .main-informaton button
 {
     width: 100%;
-    height: 7%;
+    height: 12%;
     color: #222831;
     background: #606976;
     border: none;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#payment-window .main-window aside .main-informaton button p
+{
+    font-size: 14px;
+    font-weight: bold;
 }
 
 #payment-window .main-window aside .main-informaton hr

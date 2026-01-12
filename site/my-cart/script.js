@@ -1,13 +1,19 @@
-document.getElementById('closeBtn').addEventListener('click', () =>
+const paymentWindow = document.getElementById('payment-window');
+const openBtn = document.getElementById('payment-open-button');
+const closeBtn = document.getElementById('payment-close-button');
+
+openBtn.addEventListener('click', function()
 {
-    const wrapper = document.getElementById('wrapper');
-    const animationDuration = 350;
+    paymentWindow.classList.add('active');
+});
 
-    wrapper.classList.add('slideToDown_closing_animation');
+closeBtn.addEventListener('click', function()
+{
+    paymentWindow.classList.remove('active');
+});
 
-    setTimeout(() =>
-    {
-        wrapper.style.display = 'none';
-        wrapper.classList.remove('slideToDown_closing_animation');
-    }, animationDuration);
+const blurredBg = document.querySelector('.blurred-background');
+blurredBg.addEventListener('click', function()
+{
+    paymentWindow.classList.remove('active');
 });

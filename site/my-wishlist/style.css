@@ -1,0 +1,692 @@
+*{box-sizing: border-box;}
+
+@font-face
+{
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face
+{
+    font-family: 'Inter';
+    src: url(../fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+body
+{
+    width: 100%;
+    height: 1040px;
+    margin: 0;
+    color: #EEEEEE;
+    background: #222831 linear-gradient(90deg, #00000000, rgba(136, 255, 61, 0.1));
+    font-family: 'Roboto';
+}
+
+nav
+{
+    width: 100%;
+    height: 63px;
+    background: linear-gradient(90deg, #373C43, #25282D);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav section
+{
+    display: flex;
+    margin-left: 1%;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+nav section .menu ul
+{
+    font-size: 16px;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+nav section .menu ul li
+{
+    cursor: pointer;
+}
+
+nav section .search-stroke
+{
+    display: flex;
+    align-items: center;
+    background: #393E46;
+    border-radius: 20px;
+    width: 289px;
+    height: 39px;
+    padding-left: 15px;
+}
+
+nav section .search-stroke img
+{
+    margin-right: 12px;
+    opacity: 75%;
+}
+
+nav section .search-stroke input
+{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #EEEEEE;
+    font-size: 16px;
+    padding: 0;
+}
+
+nav section .search-stroke input::placeholder
+{
+    color: rgba(238, 238, 238, 0.75);
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+
+nav section .search-stroke input::-webkit-search-cancel-button
+{
+    display: none;
+}
+
+nav section .logo-icon2
+{
+    cursor: pointer;
+}
+
+nav aside
+{
+    display: flex;
+    margin-right: 1%;
+    flex-direction: row;
+    gap: 15px;
+}
+
+nav aside .nav-icons
+{
+    display: flex;
+    gap: 15px;
+}
+
+nav aside .nav-icons img
+{
+    width: 24px;
+    cursor: pointer;
+}
+
+nav aside .nav-icons img:nth-child(2)
+{
+    cursor: default;
+}
+
+nav aside .nav-buttons
+{
+    display: flex;
+    gap: 15px;
+}
+
+nav aside .nav-buttons .Sign-in-button
+{
+    width: 72px;
+    height: 39px;
+    color: #EEEEEE;
+    background-color: #393E46;
+    border: none;
+    border-radius: 4.1px;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+nav aside .nav-buttons .Download-button
+{
+    width: 97px;
+    height: 39px;
+    color: #222831;
+    background-color: #7BC74D;
+    border: none;
+    border-radius: 4.1px;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+main
+{
+    width: 100%;
+    height: 747px;
+    display: flex;
+    justify-content: center;
+}
+
+main .content
+{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .content .header1 .title-and-price
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+main .content .header1 .title-and-price .My-Wishlist-title
+{
+    width: 50%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+main .content .header1 .title-and-price .My-Wishlist-title h1
+{
+    font-weight: 800;
+    margin: 0;
+}
+
+main .content .header1 .title-and-price .price-stroke
+{
+    width: 50%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+main .content .header1 .title-and-price .price-stroke p
+{
+    margin: 0;
+}
+
+main .content .header1 .price-stroke p
+{
+    width: 94px;
+    height: 31px;
+    color: #EEEEEE;
+    background: rgba(96, 105, 118, 0.2);
+    border: 1px solid;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .content .header2
+{
+    width: 100%;
+    height: 55px;
+    background: #393E46;
+    border-radius: 0 7px 7px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification-bar
+{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent
+{
+    width: 100%;
+    height: 55px;
+    display: flex;
+}
+
+.left-part
+{
+    width: 2%;
+    height: 100%;
+    background: #7BC74D;
+    border-radius: 7px 0 0 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-part
+{
+    width: 95%;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5%;
+    gap: 0.75%;
+}
+
+.toggle-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-container
+{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.toggle-switch
+{
+    width: 67px;
+    height: 30px;
+    background: #222831;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 7%;
+    cursor: pointer;
+}
+
+.toggle-circle
+{
+    width: 22px;
+    height: 22px;
+    background: #606976;
+    border-radius: 50%;
+}
+
+.toggle-text
+{
+    font-size: 9px;
+    font-family: 'Inter';
+    color: #40464F;
+    padding-left: 15%;
+}
+
+main .content .header3
+{
+    width: 100%;
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+main .content .header3 .filter
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+main .content .header3 .filter p
+{
+    width: 5%;
+    height: 55px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: rgba(238, 238, 238, 0.8);
+}
+
+main .content .header3 .filter summary
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    list-style: none;
+    cursor: pointer;
+}
+
+main .content .header3 .filter details[open] summary img
+{
+    transform: rotate(180deg);
+}
+
+main .content section
+{
+    width: 100%;
+    height: 747px;
+}
+
+main .content section .purchase-box
+{
+    width: 100%;
+    height: 200px;
+    background: #393E46;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 2% 1.5%;
+}
+
+main .content #purchase-stroke
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main .content section .purchase-box .image
+{
+    display: flex;
+    align-items: center;
+}
+
+main .content section .purchase-box .image img
+{
+    width: 125px;
+}
+
+main .content section .purchase-box .info
+{
+    width: 100%;
+    height: 166.66px;
+    margin-left: 1.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .content section .purchase-box .info .category-and-price
+{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main .content section .purchase-box .info .os-icons-and-move-buttons
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main .content section .purchase-box .info .os-icons-and-move-buttons .os-icons
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 1%;
+}
+
+main .content section .purchase-box .info .os-icons-and-move-buttons .os-icons img
+{
+    opacity: 80%;
+}
+
+main .content section .purchase-box .info .os-icons-and-move-buttons .move-buttons
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 1%;
+}
+
+main .content section .purchase-box .info .os-icons-and-move-buttons .move-buttons button
+{
+    color: rgba(238, 238, 238, 0.8);
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+main .content section .purchase-box .info .os-icons-and-move-buttons .move-buttons button:nth-child(2)
+{
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 110px;
+    height: 39px;
+    color: #222831;
+    background-color: #7BC74D;
+    border-radius: 4.1px;
+}
+
+main .content section .purchase-box .info .category-and-price .category
+{
+    display: flex;
+    align-items: center;
+}
+
+main .content section .purchase-box .info .category-and-price .category p
+{
+    width: 76px;
+    height: 22px;
+    font-size: 12px;
+    background: #4E555F;
+    border-radius: 4.1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .content section .purchase-box .info .category-and-price .price p
+{
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .content section .purchase-box .info .title
+{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0.25%;
+}
+
+main .content section .purchase-box .info .reviews p:nth-child(2)
+{
+    color: #7BC74D;
+}
+
+main .content section .purchase-box .info .reviews
+{
+    margin-top: 1.75%;
+}
+
+main .content section .purchase-box .info .date
+{
+    margin-top: 1.25%;
+}
+
+main .content section .purchase-box .info .reviews,
+main .content section .purchase-box .info .date
+{
+    width: 23.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main .content section .purchase-box .info .reviews p,
+main .content section .purchase-box .info .date p
+{
+    margin: 0;
+}
+
+main .content aside
+{
+    width: 23%;
+    height: 747px;
+}
+
+main .content aside .full-check
+{
+    height: 200px;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .content aside .full-check .total-stroke
+{
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main .content aside .full-check .total-stroke p
+{
+    margin: 0;
+}
+
+main .content aside .full-check .total-stroke p:nth-child(1)
+{
+    font-weight: 500;
+}
+
+main .content aside .full-check .tax-stroke
+{
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main .content aside .full-check .tax-stroke p
+{
+    margin: 0;
+}
+
+main .content aside .full-check .description p
+{
+    margin: 0;
+    color: rgba(238, 238, 238, 0.8);
+    font-size: 14px;
+}
+
+main .content aside .full-check .Check-Out-button button
+{
+    width: 100%;
+    height: 47px;
+    color: #222831;
+    background: #7BC74D;
+    border: none;
+    border-radius: 4.1px;
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer
+{
+    width: 100%;
+    height: 270px;
+    background: #373C43 linear-gradient(90deg, rgb(123, 199, 77, 0.1), #7cc74d00, rgb(123, 199, 77, 0.1));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .content
+{
+    width: 60%;
+    height: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .content section
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer .content section .social-media-icons
+{
+    display: flex;
+    gap: 20px;
+}
+
+footer .content section .social-media-icons img
+{
+    cursor: pointer;
+}
+
+footer .content section .credits p
+{
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+footer .content section .buttons ul
+{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+footer .content section .buttons ul li
+{
+    color: #ffffff;
+    padding: 0;
+    font-size: 16px;
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    cursor: pointer;
+}
+
+footer .content aside
+{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+footer .content aside .arrow-up-icon2,
+footer .content aside .logo-icon1
+{ 
+    cursor: pointer;
+}
