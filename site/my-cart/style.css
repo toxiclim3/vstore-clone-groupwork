@@ -20,6 +20,7 @@ body
     color: #EEEEEE;
     background: #222831 linear-gradient(90deg, #00000000, rgba(136, 255, 61, 0.1));
     font-family: 'Roboto';
+    position: relative;
     overflow: hidden;
 }
 
@@ -586,4 +587,222 @@ footer .content aside .logo-icon1
 footer .content aside .arrow-up-icon2:hover
 {
     stroke: #7BC74D;
+}
+
+#payment-window
+{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 8;
+/*  display: none; */
+}
+
+#payment-window .main-window
+{
+    width: 1200px;
+    height: 700px;
+    background: #393E46;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+#payment-window .main-window section
+{
+    width: 60%;
+    padding: 30px 10px 30px 20px;
+    background: #7BC74D;
+}
+
+#payment-window .main-window section p
+{
+    margin: 0 0 20px 0;
+}
+
+#payment-window .main-window section input
+{
+    width: 25px;
+    height: 50px;
+    border-radius: 4px;
+    margin: 0;
+}
+
+#payment-window .main-window section .Visa
+{
+    width: 100%;
+    height: 50px;
+    background: #222831;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 2%;
+    margin-bottom: 10px;
+}
+
+#payment-window .main-window section .Visa img
+{
+    width: 40px;
+}
+
+#payment-window .main-window section .Master-card
+{
+    width: 100%;
+    height: 50px;
+    background: #222831;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+#payment-window .main-window aside
+{
+    width: 40%;
+    padding: 30px 20px 30px 10px;
+}
+
+#payment-window .main-window aside .title-and-text
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+}
+
+#payment-window .main-window aside .title-and-text p
+{
+    margin: 0;
+}
+
+#payment-window .main-window aside .title-and-text img
+{
+    cursor: pointer;
+}
+
+#payment-window .main-window aside .main-informaton
+{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#payment-window .main-window aside .main-informaton .purchases-and-text
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#payment-window .main-window aside .main-informaton .information
+{
+    margin-left: 10px;
+}
+
+#payment-window .main-window aside .main-informaton .information p
+{
+    margin: 0;
+}
+
+#payment-window .main-window aside .main-informaton .total-price-and-taxes1 .total-price
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#payment-window .main-window aside .main-informaton .total-price-and-taxes1 .total-price p
+{
+    margin: 0;
+}
+
+#payment-window .main-window aside .main-informaton .total-price-and-taxes1 .taxes1
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#payment-window .main-window aside .main-informaton .total-price-and-taxes1 .taxes1 p
+{
+    margin: 0;
+}
+
+#payment-window .main-window aside .main-informaton .taxes2
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#payment-window .main-window aside .main-informaton .taxes2 p
+{
+    margin: 0;
+}
+
+#payment-window .main-window aside .main-informaton .agreement
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#payment-window .main-window aside .main-informaton .agreement input
+{
+    width: 25px;
+    margin: 0;
+}
+
+#payment-window .main-window aside .main-informaton .agreement p
+{
+    margin: 0;
+}
+
+#payment-window .main-window aside .main-informaton .conditions
+{
+    margin: 0;
+}
+
+#payment-window .main-window aside .main-informaton .conditions u
+{
+    cursor: pointer;
+}
+
+#payment-window .main-window aside .main-informaton button
+{
+    width: 100%;
+    height: 7%;
+    color: #222831;
+    background: #606976;
+    border: none;
+    border-radius: 5px;
+}
+
+#payment-window .main-window aside .main-informaton hr
+{
+    height: 1px;
+    margin: 0;
+    border: none;
+    background: rgba(238, 238, 238, 0.3);
+}
+
+#payment-window .blurred-background
+{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 9;
+    position: absolute;
 }
