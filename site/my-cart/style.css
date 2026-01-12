@@ -647,7 +647,7 @@ footer .content aside .arrow-up-icon2:hover
     display: block;
 }
 
-#payment-window .main-window section .Visa
+#payment-window .main-window section #Visa-option .method-header
 {
     width: 100%;
     height: 50px;
@@ -662,13 +662,13 @@ footer .content aside .arrow-up-icon2:hover
     position: relative;
 }
 
-#payment-window .main-window section .Visa p,
-#payment-window .main-window section .Master-card p
+#payment-window .main-window section #Visa-option .method-header p,
+#payment-window .main-window section #Master-card-option .method-header p
 {
     margin: 0;
 }
 
-#payment-window .main-window section .Master-card
+#payment-window .main-window section #Master-card-option .method-header
 {
     width: 100%;
     height: 50px;
@@ -852,8 +852,8 @@ footer .content aside .arrow-up-icon2:hover
     -webkit-appearance: none;
     width: 25px;
     height: 25px;
-    border: 1px #222831 solid;
-    background-color: rgb(238, 238, 238);
+    border: 1px #EEEEEE solid;
+    background-color: none;
     flex-shrink: 0;
     border-radius: 4px;
     margin: 0 20px 0 0;
