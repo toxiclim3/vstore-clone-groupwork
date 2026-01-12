@@ -125,7 +125,7 @@
                         </div>
 
                         <div class="Check-Out-button">
-                            <button>Check Out</button>
+                            <button id="payment-open-button">Check Out</button>
                         </div>
                     </div>
                 </aside>
@@ -198,11 +198,13 @@
                 <p>CHECKOUT</p>
                 <div class="Visa">
                     <input type="checkbox">
+                    <img class="tick" src="../img/icons/system-icons/tick-mark-icon.svg">
                     <img src="../img/icons/system-icons/visa-icon.svg">
                     <p>Visa</p>
                 </div>
                 <div class="Master-card">
                     <input type="checkbox">
+                    <img class="tick" src="../img/icons/system-icons/tick-mark-icon.svg">
                     <img src="../img/icons/system-icons/mastercard-icon.svg">
                     <p>Master card</p>
                 </div>
@@ -211,7 +213,9 @@
             <aside>
                 <div class="title-and-text">
                     <p>ORDER SUMMARY</p>
-                    <img src="../img/icons/system-icons/cross-icon.svg">
+                    <svg id="payment-close-button" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 1L1 13M1 1L13 13" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </div>
                 <div class="main-informaton">
                     <div class="purchases-and-text">
@@ -239,6 +243,7 @@
                     </div>
                     <div class="agreement">
                         <input type="checkbox" checked>
+                        <img class="tick" src="../img/icons/system-icons/tick-mark-icon.svg">
                         <p>I am 13 years of age or older and agree to the terms of the Steam Subscriber Agreement and the Valve Privacy Policy.</p>
                     </div>
                     <hr>
