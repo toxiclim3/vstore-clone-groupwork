@@ -105,6 +105,8 @@ nav section .search-stroke input::-webkit-search-cancel-button
 
 nav section .logo-icon2
 {
+    display: flex;
+    align-items: center;
     cursor: pointer;
 }
 
@@ -159,6 +161,11 @@ nav aside .nav-buttons .Sign-in-button
     cursor: pointer;
 }
 
+nav aside .nav-buttons .Sign-in-button:hover
+{
+    background-color: #61676b;
+}
+
 nav aside .nav-buttons .Download-button
 {
     width: 97px;
@@ -171,6 +178,12 @@ nav aside .nav-buttons .Download-button
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
+}
+
+nav aside .nav-buttons .Download-button:hover
+{
+    color: #EEEEEE;
+    background: #95ce6a;
 }
 
 main
@@ -468,6 +481,12 @@ main .content aside .full-check .Check-Out-button button
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+}
+
+main .content aside .full-check .Check-Out-button button:hover
+{
+    color: #EEEEEE;
+    background: #95ce6a;
 }
 
 footer
