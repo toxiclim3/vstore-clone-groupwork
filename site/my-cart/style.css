@@ -3,23 +3,24 @@
 @font-face
 {
     font-family: 'Roboto';
-    src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);
+    src: url(../fonts/Roboto-VariableFont_wdth\,wght.ttf);
 }
 
 @font-face
 {
     font-family: 'Inter';
-    src: url(fonts/Inter-VariableFont_opsz\,wght.ttf);
+    src: url(../fonts/Inter-VariableFont_opsz\,wght.ttf);
 }
 
 body
 {
     width: 100%;
-    height: 1040px;
+    height: 100vh;
     margin: 0;
     color: #EEEEEE;
     background: #222831 linear-gradient(90deg, #00000000, rgba(136, 255, 61, 0.1));
     font-family: 'Roboto';
+    overflow: hidden;
 }
 
 nav
@@ -56,14 +57,19 @@ nav section .menu ul li
     cursor: pointer;
 }
 
+nav section .menu ul li:hover
+{
+    color: #7BC74D;
+}
+
 nav section .search-stroke
 {
+    width: 500px;
+    height: 39px;
     display: flex;
     align-items: center;
     background: #393E46;
     border-radius: 20px;
-    width: 289px;
-    height: 39px;
     padding-left: 15px;
 }
 
@@ -114,17 +120,23 @@ nav aside .nav-icons
 {
     display: flex;
     gap: 15px;
+    align-items: center;
 }
 
-nav aside .nav-icons img
+nav aside .nav-icons svg
 {
-    width: 24px;
+    stroke: #EEEEEE;
     cursor: pointer;
 }
 
-nav aside .nav-icons img:nth-child(3)
+nav aside .nav-icons svg:nth-child(3)
 {
     cursor: default;
+}
+
+nav aside .nav-icons svg:hover
+{
+    stroke: #7BC74D;
 }
 
 nav aside .nav-buttons
@@ -164,7 +176,7 @@ nav aside .nav-buttons .Download-button
 main
 {
     width: 100%;
-    height: 747px;
+    height: 65%;
     display: flex;
     justify-content: center;
 }
@@ -328,6 +340,11 @@ main .content section .purchase-box .info .os-icons-and-move-buttons .move-butto
     cursor: pointer;
 }
 
+main .content section .purchase-box .info .os-icons-and-move-buttons .move-buttons button:hover
+{
+    color: #7BC74D;
+}
+
 main .content section .purchase-box .info .category
 {
     display: flex;
@@ -485,9 +502,15 @@ footer .content section .social-media-icons
     gap: 20px;
 }
 
-footer .content section .social-media-icons img
+footer .content section .social-media-icons svg
 {
+    fill: #EEEEEE;
     cursor: pointer;
+}
+
+footer .content section .social-media-icons svg:hover
+{
+    fill: #7BC74D;
 }
 
 footer .content section .credits p
@@ -518,6 +541,11 @@ footer .content section .buttons ul li
     cursor: pointer;
 }
 
+footer .content section .buttons ul li:hover
+{
+    color: #7BC74D;
+}
+
 footer .content aside
 {
     display: flex;
@@ -525,8 +553,18 @@ footer .content aside
     gap: 45px;
 }
 
-footer .content aside .arrow-up-icon2,
-footer .content aside .logo-icon1
-{ 
+footer .content aside .arrow-up-icon2
+{
     cursor: pointer;
+    stroke: #EEEEEE;
+}
+
+footer .content aside .logo-icon1
+{
+    cursor: pointer;
+}
+
+footer .content aside .arrow-up-icon2:hover
+{
+    stroke: #7BC74D;
 }
