@@ -21,6 +21,7 @@
             <div class="header-left">
                 <a href="./index.html" class="logo-link">
                     <img src="./site/img/icons/system-icons/logo-icon2.svg" alt="V Store" class="logo-full">
+                    <img src="./site/img/icons/system-icons/logo-icon1.svg" alt="V Store" class="logo-small" id="smallLogo">
                 </a>
 
                 <nav class="main-navigation">
@@ -36,19 +37,43 @@
                 <div class="search-bar">
                     <span class="search-icon bi bi-search"></span>
                     <input type="text" placeholder="Search store">
-                </div>
+                </div> 
             </div>
 
             <div class="header-right">
-                <a href="./site/profile/indexplus.html" class="icon-button bi bi-person-circle"></a>
-                <a href="#" class="icon-button bi bi-heart"></a>
-                <a href="#" class="icon-button bi bi-cart3"></a>
-                <a href="#" class="icon-button bi bi-globe2"></a>
+                <div class="buttons">
+                    <a href="./site/profile/indexplus.html" class="icon-button bi bi-person-circle"></a>
+                    <a href="./site/my-wishlist/index.html" class="icon-button bi bi-heart"></a>
+                    <a href="./site/my-cart/index.html" class="icon-button bi bi-cart3"></a>
+                    <a href="#" class="icon-button bi bi-globe2"></a>
+                </div>
 
                 <a href="./site/login/indexplus.html" class="btn btn-signin">Sign in</a>
                 <a href="#" class="btn btn-download">Download</a>
             </div>
+
+            <div class="popup" id="popup">
+                <nav class="main-navigation">
+                    <ul>
+                        <li><a href="./index.html" class="active">Discover</a></li>
+                        <li><a href="./site/support/indexplus.html">Support</a></li>
+                        <li><a href="./site/news/indexplus.html">News</a></li>
+                    </ul>
+                </nav>
+
+                <div class="search-bar">
+                    <span class="search-icon bi bi-search"></span>
+                    <input type="text" placeholder="Search store">
+                </div>
+            </div>
         </div>
+
+        <script>
+            let menuBtn = document.getElementById("smallLogo");
+            let menu = document.getElementById("popup");
+
+            menuBtn.addEventListener("click", () => {event.preventDefault();menu.classList.toggle("open")})
+        </script>
     </header>
 
     <div class="background"></div>
@@ -80,7 +105,7 @@
         <h3>Discover Something New</h3>
         <div class="store-grid">
             <div class="game-card">
-                <div class="square img-placeholder"><img src="./site/img/images/discover-something-new-images/image1.png" alt=""></div>
+                <div class="square img-placeholder"><img src="./site/img/images/discover-something-new-images/image1.svg" alt=""></div>
                 <div class="text"><h4>The End of the Sun</h4><h4>UAH 15</h4></div>
             </div>
             <div class="game-card">
