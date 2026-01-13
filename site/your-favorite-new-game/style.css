@@ -21,7 +21,6 @@ body
     background: #222831 linear-gradient(90deg, #00000000, rgba(136, 255, 61, 0.1));
     font-family: 'Roboto';
     position: relative;
-    overflow: hidden;
 }
 
 nav
