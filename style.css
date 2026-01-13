@@ -168,6 +168,11 @@ main.store-page {
     cursor: pointer;
 }
 
+.hero-panel .btn-download a {
+    color: #222831;
+    text-decoration: none;
+}
+
 .hero-panel .btn-download:hover {
     transform: translateY(-2px);
 }
