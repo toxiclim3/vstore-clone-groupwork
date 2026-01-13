@@ -28,6 +28,7 @@
 
 	--grayDiag: linear-gradient(to bottom right, var(--lightGray),var(--baseGray));
 	--grayTop: linear-gradient(to bottom, var(--lightGray),var(--baseGray));
+	--grayLeft: linear-gradient(to right, var(--lightGray),var(--baseGray));
    
 	/* Стандартный переход для :hover, можно перезаписать локально*/
 	
@@ -60,7 +61,7 @@ body
 
 /* 1. Стили самой шапки */
 .site-header {
-	background-color: #25282d; 
+	background: var(--grayLeft); 
 	padding: 12px 24px;
 	border-bottom: none;
 	/* Добавим, чтобы шапка была привязана к верху */
