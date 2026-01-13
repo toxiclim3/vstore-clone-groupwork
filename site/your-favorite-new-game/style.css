@@ -15,11 +15,13 @@
 body
 {
     width: 100%;
-    height: 1040px;
+    height: 100vh;
     margin: 0;
     color: #EEEEEE;
     background: #222831 linear-gradient(90deg, #00000000, rgba(136, 255, 61, 0.1));
     font-family: 'Roboto';
+    position: relative;
+    overflow: hidden;
 }
 
 nav
@@ -51,19 +53,30 @@ nav section .menu ul
     list-style: none;
 }
 
-nav section .menu ul li
+nav section .menu ul a
+{
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+nav section .menu ul a li
 {
     cursor: pointer;
 }
 
+nav section .menu ul a li:hover
+{
+    color: #7BC74D;
+}
+
 nav section .search-stroke
 {
+    width: 500px;
+    height: 39px;
     display: flex;
     align-items: center;
     background: #393E46;
     border-radius: 20px;
-    width: 289px;
-    height: 39px;
     padding-left: 15px;
 }
 
@@ -99,6 +112,8 @@ nav section .search-stroke input::-webkit-search-cancel-button
 
 nav section .logo-icon2
 {
+    display: flex;
+    align-items: center;
     cursor: pointer;
 }
 
@@ -114,17 +129,24 @@ nav aside .nav-icons
 {
     display: flex;
     gap: 15px;
+    align-items: center;
 }
 
-nav aside .nav-icons img
+nav aside .nav-icons a
 {
-    width: 24px;
+    display: flex;
+    align-items: center;
+}
+
+nav aside .nav-icons svg
+{
+    stroke: #EEEEEE;
     cursor: pointer;
 }
 
-nav aside .nav-icons img:nth-child(3)
+nav aside .nav-icons svg:hover
 {
-    cursor: default;
+    stroke: #7BC74D;
 }
 
 nav aside .nav-buttons
@@ -147,6 +169,11 @@ nav aside .nav-buttons .Sign-in-button
     cursor: pointer;
 }
 
+nav aside .nav-buttons .Sign-in-button:hover
+{
+    background-color: #61676b;
+}
+
 nav aside .nav-buttons .Download-button
 {
     width: 97px;
@@ -159,6 +186,12 @@ nav aside .nav-buttons .Download-button
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
+}
+
+nav aside .nav-buttons .Download-button:hover
+{
+    color: #EEEEEE;
+    background: #95ce6a;
 }
 
 main

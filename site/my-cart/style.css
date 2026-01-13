@@ -53,12 +53,18 @@ nav section .menu ul
     list-style: none;
 }
 
-nav section .menu ul li
+nav section .menu ul a
+{
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+nav section .menu ul a li
 {
     cursor: pointer;
 }
 
-nav section .menu ul li:hover
+nav section .menu ul a li:hover
 {
     color: #7BC74D;
 }
@@ -126,15 +132,16 @@ nav aside .nav-icons
     align-items: center;
 }
 
+nav aside .nav-icons a
+{
+    display: flex;
+    align-items: center;
+}
+
 nav aside .nav-icons svg
 {
     stroke: #EEEEEE;
     cursor: pointer;
-}
-
-nav aside .nav-icons svg:nth-child(3)
-{
-    cursor: default;
 }
 
 nav aside .nav-icons svg:hover
@@ -577,11 +584,6 @@ footer .content aside .arrow-up-icon2
 {
     cursor: pointer;
     stroke: #EEEEEE;
-}
-
-footer .content aside .logo-icon1
-{
-    cursor: pointer;
 }
 
 footer .content aside .arrow-up-icon2:hover
