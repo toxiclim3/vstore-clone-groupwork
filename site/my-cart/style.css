@@ -619,6 +619,157 @@ footer .content aside .arrow-up-icon2:hover
     flex-direction: row;
 }
 
+#payment-window .main-window .payment-option
+{
+    width: 100%;
+    background: #222831;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #222831;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+#payment-window .main-window .payment-option .method-details
+{
+    display: none; 
+    padding: 20px 25px;
+    border-top: 5px solid #393E46;
+}
+
+#payment-window .main-window .payment-option.active .method-details
+{
+    display: block;
+}
+
+#payment-window .main-window .payment-option.active .method-details .error-message
+{
+    display: none;
+    color: #C74D4D;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+#payment-window .main-window .payment-option.active .method-details .input-field.invalid input
+{
+    border: 1px solid #C74D4D;
+}
+
+#payment-window .main-window .payment-option.active .method-details .input-field.invalid .error-message
+{
+    display: inline;
+}
+
+#payment-window .main-window .payment-option.active .method-details .details-title
+{
+    color: #EEEEEE;
+}
+
+#payment-window .main-window .payment-option.active .method-details .row .input-field
+{
+    width: 50%;
+}
+
+#payment-window .main-window .payment-option.active .method-details .input-field p
+{
+    margin: 0 0 5px 0;
+    color: rgba(238, 238, 238, 0.8);
+}
+
+#payment-window .main-window .payment-option.active .method-details .input-field input
+{
+    width: 100%;
+    background: rgba(96, 105, 118, 0.4);
+    border: 1px solid #606976;
+    height: 40px;
+    padding: 0 10px;
+    color: white;
+    border-radius: 4px;
+    margin: 0 0 15px 0;
+}
+
+
+#payment-window .main-window .payment-option.active .method-details .save-method .tick
+{
+    left: 4px;
+    top: 55%;
+    transform: translateY(-50%);
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#payment-window .main-window .payment-option.active .method-details .save-method input:checked
+{
+    border: 1px #222831 solid;
+    background-color: rgb(238, 238, 238);
+}
+
+#payment-window .main-window .payment-option.active .method-details .row
+{
+    display: flex;
+    gap: 4%;
+    width: 100%;
+}
+
+#payment-window .main-window .payment-option.active .method-details .row input
+{
+    width: 100%;
+}
+
+#payment-window .main-window .payment-option.active .save-method .question
+{
+    color: #eeeeee;
+}
+
+#payment-window .main-window .payment-option.active .save-method .conditions
+{
+    color: rgba(238, 238, 238, 0.7);
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+}
+
+#payment-window .main-window .payment-option.active .save-method .checkbox-and-question
+{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    position: relative;
+}
+
+#payment-window .main-window .payment-option.active .save-method .checkbox-and-question .method-check
+{
+    border: 1px #222831 solid;
+    background: rgb(238, 238, 238);
+}
+
+#payment-window .main-window .payment-option.active .save-method .checkbox-and-question input
+{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 1px #EEEEEE solid;
+    background: none;
+    flex-shrink: 0;
+    border-radius: 4px;
+    margin: 0 20px 0 0;
+    cursor: pointer;
+    position: relative;
+    margin: 0 20px 0 0;
+}
+
+#payment-window .main-window .payment-option.active .save-method .checkbox-and-question p
+{
+    margin: 0;
+}
+
+#payment-window .main-window .payment-option.active
+{
+    border-color: #7BC74D;
+}
+
 #payment-window .main-window section
 {
     width: 60%;
@@ -657,7 +808,6 @@ footer .content aside .arrow-up-icon2:hover
     flex-direction: row;
     align-items: center;
     gap: 3%;
-    margin-bottom: 10px;
     padding: 0 25px;
     position: relative;
 }
@@ -900,7 +1050,6 @@ footer .content aside .arrow-up-icon2:hover
 {
     width: 100%;
     height: 12%;
-    color: #222831;
     background: #606976;
     border: none;
     border-radius: 5px;
@@ -909,8 +1058,16 @@ footer .content aside .arrow-up-icon2:hover
     justify-content: center;
 }
 
+#payment-window .main-window aside .main-informaton button.ready
+{
+    background: linear-gradient(90deg, #7BC74D, #82CA77);
+    color: #222831;
+    cursor: pointer;
+}
+
 #payment-window .main-window aside .main-informaton button p
 {
+    color: rgba(34, 40, 49, 0.8);
     font-size: 14px;
     font-weight: bold;
 }
@@ -921,6 +1078,60 @@ footer .content aside .arrow-up-icon2:hover
     margin: 0;
     border: none;
     background: rgba(238, 238, 238, 0.3);
+}
+
+#payment-window.success .main-window
+{
+    display: none;
+}
+
+#payment-window.success .gratitude-window
+{
+    display: flex;
+}
+
+#payment-window .gratitude-window
+{
+    width: 1200px;
+    height: 700px;
+    background: linear-gradient(#373C43, #25282D);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    display: none; 
+}
+
+#payment-window .gratitude-window img
+{
+    width: 79px;
+}
+
+#payment-window .gratitude-window .text1
+{
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#payment-window .gratitude-window .text2
+{
+    color: rgba(238, 238, 238, 0.8);
+    font-size: 16px;
+    margin: 0;
+}
+
+#payment-window .gratitude-window .text3
+{
+    color: rgba(238, 238, 238, 0.8);
+    font-size: 16px;
+    margin: 0;
 }
 
 #payment-window .blurred-background

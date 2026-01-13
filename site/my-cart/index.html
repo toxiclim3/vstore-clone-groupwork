@@ -198,7 +198,7 @@
                 <p>CHECKOUT</p>
                 <div class="payment-option" id="Visa-option">
                     <div class="method-header">
-                        <input type="checkbox">
+                        <input type="checkbox" class="method-check" id="visa-check">
                         <img class="tick" src="../img/icons/system-icons/tick-mark-icon.svg">
                         <img src="../img/icons/system-icons/visa-icon.svg">
                         <p>Visa</p>
@@ -207,27 +207,29 @@
                     <div class="method-details">
                         <p class="details-title">CARD DETAILS</p>
                         <div class="input-field">
-                            <p>Card number</p>
-                            <input type="text">
+                            <p>Card number<span class="error-message">(an error was made)</span></p>
+                            <input type="text" class="card-number-input" maxlength="19">
                         </div>
                         <div class="input-field">
-                            <p>Name on card</p>
-                            <input type="text">
+                            <p>Name on card<span class="error-message">(an error was made)</span></p>
+                            <input type="text" class="card-name-input" maxlength="50">
                         </div>
                         <div class="row">
                             <div class="input-field">
-                                <p>Expiration</p>
-                                <input type="text">
+                                <p>Expiration<span class="error-message">(an error was made)</span></p>
+                                <input type="text" class="expiration-input" maxlength="5">
                             </div>
                             <div class="input-field">
-                                <p>CVV</p>
-                                <input type="password">
+                                <p>CVV<span class="error-message">(an error was made)</span></p>
+                                <input type="password" class="cvv-input" maxlength="3">
                             </div>
                         </div>
                         <div class="save-method">
-                            <input type="checkbox" id="save-visa">
-                            <img class="tick small-tick" src="../img/icons/system-icons/tick-mark-icon.svg">
-                            <p class="question">Save this payment method for future purchase?</p>
+                            <div class="checkbox-and-question">
+                                <input type="checkbox" id="save-visa">
+                                <img class="tick" src="../img/icons/system-icons/tick-mark-icon.svg">
+                                <p class="question">Save this payment method for future purchase?</p>
+                            </div>
                             <p class="conditions">By choosing to save your payment information, this payment method will be selected as the default for all purchases made using Epic Games payment, including purchases in Fortnite, Rocket League, Fall Guys and the Epic Games Store. You can delete your saved payment information anytime on this payment screen or by logging in to your Epic Games account, and selecting payment management in your account settings</p>
                         </div>
                     </div>
@@ -235,7 +237,7 @@
                 
                 <div class="payment-option" id="Master-card-option">
                     <div class="method-header">
-                        <input type="checkbox">
+                        <input type="checkbox" class="method-check" id="master-card-check">
                         <img class="tick" src="../img/icons/system-icons/tick-mark-icon.svg">
                         <img src="../img/icons/system-icons/mastercard-icon.svg">
                         <p>Master card</p>
@@ -244,27 +246,29 @@
                     <div class="method-details">
                         <p class="details-title">CARD DETAILS</p>
                         <div class="input-field">
-                            <p>Card number</p>
-                            <input type="text">
+                            <p>Card number<span class="error-message">(an error was made)</span></p>
+                            <input type="text" class="card-number-input" maxlength="19">
                         </div>
                         <div class="input-field">
-                            <p>Name on card</p>
-                            <input type="text">
+                            <p>Name on card<span class="error-message">(an error was made)</span></p>
+                            <input type="text" class="card-name-input" maxlength="50">
                         </div>
                         <div class="row">
                             <div class="input-field">
-                                <p>Expiration</p>
-                                <input type="text">
+                                <p>Expiration<span class="error-message">(an error was made)</span></p>
+                                <input type="text" class="expiration-input" maxlength="5">
                             </div>
                             <div class="input-field">
-                                <p>CVV</p>
-                                <input type="password">
+                                <p>CVV<span class="error-message">(an error was made)</span></p>
+                                <input type="password" class="cvv-input" maxlength="3">
                             </div>
                         </div>
                         <div class="save-method">
-                            <input type="checkbox" id="save-visa">
-                            <img class="tick small-tick" src="../img/icons/system-icons/tick-mark-icon.svg">
-                            <p class="question">Save this payment method for future purchase?</p>
+                            <div class="checkbox-and-question">
+                                <input type="checkbox" id="save-master-card">
+                                <img class="tick" src="../img/icons/system-icons/tick-mark-icon.svg">
+                                <p class="question">Save this payment method for future purchase?</p>
+                            </div>
                             <p class="conditions">By choosing to save your payment information, this payment method will be selected as the default for all purchases made using Epic Games payment, including purchases in Fortnite, Rocket League, Fall Guys and the Epic Games Store. You can delete your saved payment information anytime on this payment screen or by logging in to your Epic Games account, and selecting payment management in your account settings</p>
                         </div>
                     </div>
@@ -303,7 +307,7 @@
                         <p>UAH 19.50</p>
                     </div>
                     <div class="agreement">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" id="agreement-checkbox" checked>
                         <img class="tick" src="../img/icons/system-icons/tick-mark-icon.svg">
                         <p>I am 13 years of age or older and agree to the terms of the Steam Subscriber Agreement and the Valve Privacy Policy.</p>
                     </div>
@@ -312,12 +316,20 @@
                         You are purchasing a digital license for this product. For full terms, see <u>purchase policy</u>.<br><br>
                         By clicking "Place Order" below, I represent that I am over 18 and an authorized user of this payment method, I agree to the <u>End User License Agreement</u>.
                     </p>
-                    <button>
+                    <button id="place-order">
                         <p>PLACE ORDER</p>
                     </button>
                 </div>
             </aside>
         </div>
+
+        <div class="gratitude-window">
+            <img src="../img/icons/system-icons/logo-icon1.svg">
+            <p class="text1">Thank you for buying our games!</p>
+            <p class="text2">An email receipt has been sent to you.</p>
+            <p class="text3">If there is anything else you need, feel free to browse our shop!</p>
+        </div>
+
         <div class="blurred-background"></div>
     </div>
     
