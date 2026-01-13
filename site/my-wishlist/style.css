@@ -15,13 +15,12 @@
 body
 {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     color: #EEEEEE;
     background: #222831 linear-gradient(90deg, #00000000, rgba(136, 255, 61, 0.1));
     font-family: 'Roboto';
     position: relative;
-    overflow: hidden;
 }
 
 nav
@@ -197,7 +196,7 @@ nav aside .nav-buttons .Download-button:hover
 main
 {
     width: 100%;
-    height: 747px;
+    height: 65%;
     display: flex;
     justify-content: center;
 }
