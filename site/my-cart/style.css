@@ -359,6 +359,7 @@ main .content section .purchase-box .info .os-icons-and-move-buttons .move-butto
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0;
 }
 
 main .content section .purchase-box .info .os-icons-and-move-buttons .move-buttons button:hover

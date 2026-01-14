@@ -152,3 +152,11 @@ placeOrderBtn.addEventListener('click', () =>
 });
 
 agreementCheckbox.addEventListener('change', checkFormReadiness);
+
+const scrollToTopBtn = document.querySelector('.arrow-up-icon2');
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
