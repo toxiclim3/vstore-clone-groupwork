@@ -1,0 +1,6 @@
+My Cart → CARD DETAILS
+
+Card number: 1111 1111 1111 1111
+Name on card: NAME SURNAME
+Expiration: 11/11
+CVV: 111
