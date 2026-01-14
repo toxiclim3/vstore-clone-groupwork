@@ -411,7 +411,7 @@ body {
 
 /* phones */
 @media (max-width: 768px) {
-  .header-container {
+  /* .header-container {
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -442,10 +442,10 @@ body {
     width: 100%;
     justify-content: space-between;
     margin-top: 10px;
-  }
+  } */
 
   /* hide big buttons on small screens */
-  .btn-signin, .btn-download { display: none; }
+  /* .btn-signin, .btn-download { display: none; } */
 
   .profile {
     flex-direction: column;
