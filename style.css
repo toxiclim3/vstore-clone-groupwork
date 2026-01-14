@@ -901,9 +901,7 @@ main.store-page {
     /* .store-grid, .store-grid-3 { grid-template-columns: 1fr; } */
 
     /* Скрываем навигацию */
-    .main-navigation {
-        display: none; /* Временно скроем, чтобы не ломать шапку */
-    }
+    
 
 
     .store-stats .upcoming-list

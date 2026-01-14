@@ -15,40 +15,65 @@
 	<div class="background"></div>
 
 	<header class="site-header">
-		<div class="header-container">
+        <div class="header-container">
 
-			<div class="header-left">
-				<a href="../../index.html" class="logo-link">
-					<img src="../img/icons/system-icons/logo-icon2.svg" alt="V Store" class="logo-full">
-				</a>
+            <div class="header-left">
+                <a href="../../index.html" class="logo-link">
+                    <img src="../img/icons/system-icons/logo-icon2.svg" alt="V Store" class="logo-full">
+                    <img src="../img/icons/system-icons/logo-icon1.svg" alt="V Store" class="logo-small" id="smallLogo">
+                </a>
 
-				<nav class="main-navigation">
-					<ul>
-						<li><a href="../../index.html" class="active">Discover</a></li>
-						<li><a href="../support/indexplus.html">Support</a></li>
-						<li><a href="../news/indexplus.html">News</a></li>
-					</ul>
-				</nav>
-			</div>
+                <nav class="main-navigation">
+                    <ul>
+                        <li><a href="../../index.html" class="active">Discover</a></li>
+                        <li><a href="../support/indexplus.html">Support</a></li>
+                        <li><a href="../news/indexplus.html">News</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-			<div class="header-center">
-				<div class="search-bar">
-					<span class="search-icon bi bi-search"></span>
-					<input type="text" placeholder="Search store">
-				</div>
-			</div>
+            <div class="header-center">
+                <div class="search-bar">
+                    <span class="search-icon bi bi-search"></span>
+                    <input type="text" placeholder="Search store">
+                </div> 
+            </div>
 
-			<div class="header-right">
-				<a href="../profile/indexplus.html" class="icon-button bi bi-person-circle"></a>
-				<a href="#" class="icon-button bi bi-heart"></a>
-				<a href="#" class="icon-button bi bi-cart3"></a>
-				<a href="#" class="icon-button bi bi-globe2"></a>
+            <div class="header-right">
+                <div class="buttons">
+                    <a href="../profile/indexplus.html" class="icon-button bi bi-person-circle"></a>
+                    <a href="../my-wishlist/index.html" class="icon-button bi bi-heart"></a>
+                    <a href="../my-cart/index.html" class="icon-button bi bi-cart3"></a>
+                    <a href="#" class="icon-button bi bi-globe2"></a>
+                </div>
 
-				<a href="../login/indexplus.html" class="btn btn-signin">Sign in</a>
-				<a href="#" class="btn btn-download">Download</a>
-			</div>
-		</div>
-	</header>
+                <a href="../login/indexplus.html" class="btn btn-signin">Sign in</a>
+                <a href="#" class="btn btn-download">Download</a>
+            </div>
+
+            <div class="popup" id="popup">
+                <nav class="main-navigation">
+                    <ul>
+                        <li><a href="../../index.html" class="active">Discover</a></li>
+                        <li><a href="../support/indexplus.html">Support</a></li>
+                        <li><a href="../news/indexplus.html">News</a></li>
+                    </ul>
+                </nav>
+
+                <div class="search-bar">
+                    <span class="search-icon bi bi-search"></span>
+                    <input type="text" placeholder="Search store">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let menuBtn = document.getElementById("smallLogo");
+            let menu = document.getElementById("popup");
+
+            menuBtn.addEventListener("click", () => {event.preventDefault();menu.classList.toggle("open")})
+        </script>
+    </header>
 
 	<div class="main">
 
