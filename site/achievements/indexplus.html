@@ -1,16 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../basestyle.css">
-    <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>V STORE — Achievements</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <!-- ===== NAVBAR ===== -->
+  <header class="nav">
+    <div class="nav__inner">
+
+      <!-- Left: brand + menu -->
+      <div class="nav__left">
+        <a class="brand" href="#">
+          <span class="brand__v">V</span>
+          <span class="brand__name">STORE</span>
+        </a>
+
+        <nav class="menu">
+          <a class="menu__link menu__link--active" href="#">Discover</a>
+          <a class="menu__link" href="#">Support</a>
+          <a class="menu__link" href="#">News</a>
+        </nav>
+      </div>
+
+      <!-- Middle: search -->
+      <div class="nav__mid">
+        <div class="search">
+          <i class="bi bi-search"></i>
+          <input type="search" placeholder="Search store" />
+        </div>
+      </div>
+
+      <!-- Right: icons + buttons -->
+      <div class="nav__right">
+        <div class="icons">
+          <button class="iconBtn" type="button" aria-label="Profile"><i class="bi bi-person"></i></button>
+          <button class="iconBtn" type="button" aria-label="Wishlist"><i class="bi bi-heart"></i></button>
+          <button class="iconBtn" type="button" aria-label="Cart"><i class="bi bi-cart"></i></button>
+          <button class="iconBtn" type="button" aria-label="Language"><i class="bi bi-globe"></i></button>
+        </div>
+
+        <button class="btn btn--ghost" type="button">Sign in</button>
+        <button class="btn btn--green" type="button">Download</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ===== PAGE ===== -->
+  <main class="page">
+    <div class="wrap">
+      <h1 class="title">Achievements</h1>
+      <p class="subtitle">Amount of achievements: 230</p>
+
+      <!-- Achievement item -->
+      <div class="ach">
+        <div class="ach__icon"><img src="achievements-icon1.png" alt=""></div>
+        <div class="ach__text">
+          <h3>Professional newbies</h3>
+          <p>Complete the game at the easiest difficulty</p>
+        </div>
+        <div class="ach__right">
+          <div class="bar"><span style="width:95%"></span></div>
+          <div class="percent">95%</div>
+        </div>
+      </div>
+
+      <div class="ach">
+        <div class="ach__icon"><img src="achievements-icon2.png" alt=""></div>
+        <div class="ach__text">
+          <h3>The ultimate bug killer</h3>
+          <p>Sometimes you just gotta kill em</p>
+        </div>
+        <div class="ach__right">
+          <div class="bar"><span style="width:93%"></span></div>
+          <div class="percent">93%</div>
+        </div>
+      </div>
+
+      <div class="ach">
+        <div class="ach__icon"><img src="achievements-icon3.png" alt=""></div>
+        <div class="ach__text">
+          <h3>Nightly sniper</h3>
+          <p>Kill 10 players in a single night</p>
+        </div>
+        <div class="ach__right">
+          <div class="bar"><span style="width:88%"></span></div>
+          <div class="percent">88%</div>
+        </div>
+      </div>
+
+      <div class="ach">
+        <div class="ach__icon"><img src="achievements-icon4.png" alt=""></div>
+        <div class="ach__text">
+          <h3>Star of respect</h3>
+          <p>Complete a mission perfectly</p>
+        </div>
+        <div class="ach__right">
+          <div class="bar"><span style="width:70%"></span></div>
+          <div class="percent">70%</div>
+        </div>
+      </div>
+
+      <div class="ach">
+        <div class="ach__icon"><img src="achievements-icon5.png" alt=""></div>
+        <div class="ach__text">
+          <h3>Head collector</h3>
+          <p>Kill every type of enemy</p>
+        </div>
+        <div class="ach__right">
+          <div class="bar"><span style="width:56%"></span></div>
+          <div class="percent">56%</div>
+        </div>
+      </div>
+
+      <div class="ach">
+        <div class="ach__icon"><img src="achievements-icon6.png" alt=""></div>
+        <div class="ach__text">
+          <h3>KABLOOID</h3>
+          <p>Make the biggest bomb possible</p>
+        </div>
+        <div class="ach__right">
+          <div class="bar"><span style="width:50%"></span></div>
+          <div class="percent">50%</div>
+        </div>
+      </div>
+
+      <div class="ach">
+        <div class="ach__icon"><img src="achievements-icon7.png" alt=""></div>
+        <div class="ach__text">
+          <h3>Armor up</h3>
+          <p>Upgrade armor to the maximum</p>
+        </div>
+        <div class="ach__right">
+          <div class="bar"><span style="width:42%"></span></div>
+          <div class="percent">42%</div>
+        </div>
+      </div>
+
+      <div class="ach">
+        <div class="ach__icon"><img src="achievements-icon8.png" alt=""></div>
+        <div class="ach__text">
+          <h3>All done</h3>
+          <p>Complete everything in the game</p>
+        </div>
+        <div class="ach__right">
+          <div class="bar"><span style="width:34%"></span></div>
+          <div class="percent">34%</div>
+        </div>
+      </div>
+
+      <div class="ach">
+        <div class="ach__icon"><img src="achievements-icon9.png" alt=""></div>
+        <div class="ach__text">
+          <h3>Mine farmer</h3>
+          <p>Upgrade armor to the maximum</p>
+        </div>
+        <div class="ach__right">
+          <div class="bar"><span style="width:20%"></span></div>
+          <div class="percent">20%</div>
+        </div>
+      </div>
+
+      <div class="ach">
+        <div class="ach__icon"><img src="achievements-icon10.png" alt=""></div>
+        <div class="ach__text">
+          <h3>Get down!</h3>
+          <p>Help your teammate with a ping</p>
+        </div>
+        <div class="ach__right">
+          <div class="bar"><span style="width:15%"></span></div>
+          <div class="percent">15%</div>
+        </div>
+      </div>
+
+      <div class="ach">
+        <div class="ach__icon"><img src="achievements-icon11.png" alt=""></div>
+        <div class="ach__text">
+          <h3>Freedom, against all odds</h3>
+          <p>Defeat the boss</p>
+        </div>
+        <div class="ach__right">
+          <div class="bar"><span style="width:10%"></span></div>
+          <div class="percent">10%</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+<!-- ===== PAGINATION ===== -->
+<div class="pagination-wrap">
+  <a href="#" class="page-btn">‹ Previous</a>
+  <a href="#" class="page-num active">1</a>
+  <a href="#" class="page-num">2</a>
+  <a href="#" class="page-num">3</a>
+  <a href="#" class="page-num">4</a>
+  <span class="page-dots">…</span>
+  <a href="#" class="page-num">19</a>
+  <a href="#" class="page-btn">Next ›</a>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+
+  <div class="footer-top">
+    <div class="socials">
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-twitter"></i></a>
+      <a href="#"><i class="bi bi-youtube"></i></a>
+    </div>
+
+    <button class="to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <i class="bi bi-chevron-up"></i>
+    </button>
+
+    <div class="footer-logo">V</div>
+  </div>
+
+  <div class="footer-mid">
+    © 2025 Valve Corporation. All rights reserved. All trademarks are property of their respective
+    owners in the US and other countries.<br>
+    VAT included in all prices where applicable
+  </div>
+
+  <div class="footer-links">
+    <a href="#">Terms of service</a>
+    <a href="#">Jobs</a>
+    <a href="#">Rules</a>
+    <a href="#">Contracts</a>
+    <a href="#">Gift cards</a>
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+  </div>
+
+</footer>
+
 </body>
 </html>
