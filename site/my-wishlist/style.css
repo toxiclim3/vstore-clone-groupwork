@@ -15,12 +15,13 @@
 body
 {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
     color: #EEEEEE;
     background: #222831 linear-gradient(90deg, #00000000, rgba(136, 255, 61, 0.1));
     font-family: 'Roboto';
     position: relative;
+    overflow: hidden;
 }
 
 nav
@@ -275,7 +276,15 @@ main .content .header2
     align-items: center;
 }
 
-.notification-bar
+main .content .header2 .parent
+{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+main .content .header2 .parent .notification-bar
 {
     width: 100%;
     height: 55px;
@@ -284,14 +293,7 @@ main .content .header2
     align-items: center;
 }
 
-.parent
-{
-    width: 100%;
-    height: 55px;
-    display: flex;
-}
-
-.left-part
+main .content .header2 .parent .notification-bar .left-part
 {
     width: 2%;
     height: 100%;
@@ -302,57 +304,93 @@ main .content .header2
     justify-content: center;
 }
 
-.right-part
+main .content .header2 .parent .notification-bar .right-part
 {
     width: 95%;
     flex-grow: 1;
     display: flex;
     align-items: center;
-    padding: 0 1.5%;
+    padding: 0 0 0 20px;
     gap: 0.75%;
 }
 
-.toggle-container
+main .content .header2 .parent .toggle-switch
 {
+    width: 5%;
+    height: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
+    margin: 0 20px 0 0;
 }
 
-.toggle-container
+main .content .header2 .parent .toggle-switch input
 {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
+    display: none;
 }
 
-.toggle-switch
+main .content .header2 .parent .toggle-switch input:checked + .button
 {
-    width: 67px;
-    height: 30px;
+    border: 1px solid #7BC74D;
+}
+
+main .content .header2 .parent .toggle-switch input:checked + .button::before
+{
+    border: 1px solid #7BC74D;
+    transform: translate(30px, -50%); 
+}
+
+main .content .header2 .parent .toggle-switch .button
+{
+    width: 100%;
+    height: 52%;
     background: #222831;
-    border-radius: 15px;
+    border-radius: 200px;
+    cursor: pointer;
     position: relative;
     display: flex;
     align-items: center;
-    padding: 7%;
-    cursor: pointer;
-}
-
-.toggle-circle
-{
-    width: 22px;
-    height: 22px;
-    background: #606976;
-    border-radius: 50%;
-}
-
-.toggle-text
-{
-    font-size: 9px;
+    font-size: 8px;
     font-family: 'Inter';
     color: #40464F;
-    padding-left: 15%;
+    justify-content: center;
+}
+
+main .content .header2 .parent .toggle-switch .button::before
+{
+    position: absolute;
+    content: '';
+    background: #606976;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 0 0 5px;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+main .content .header2 .parent .toggle-switch .button::after
+{
+    font-size: 8px;
+    content: 'OFF';
+    font-family: 'Inter';
+    color: #40464F;
+    margin-left: 12px; 
+}
+
+main .content .header2 .parent .toggle-switch input:checked + .button::after
+{
+    content: 'ON';
+    color: #7BC74D;
+    margin-left: 0;
+    margin-right: 12px;
+}
+
+main .content .header2 .parent .toggle-switch input:checked + .button::before
+{
+    right: 0;
+    background: #606976;
 }
 
 main .content .header3
@@ -368,6 +406,7 @@ main .content .header3 .filter
     width: 100%;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 main .content .header3 .filter p
@@ -395,6 +434,34 @@ main .content .header3 .filter summary
 main .content .header3 .filter details[open] summary img
 {
     transform: rotate(180deg);
+}
+
+main .content .header3 .filter .dropdown
+{
+    position: absolute;
+    top: 80%;
+    width: 100px;
+    height: 75%;
+    background: #393E46;
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+}
+
+main .content .header3 .filter .dropdown p
+{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .content .header3 .filter .dropdown p:hover
+{
+    background: #61676b;
+    cursor: pointer;
 }
 
 main .content section
@@ -493,6 +560,7 @@ main .content section .purchase-box .info .os-icons-and-move-buttons .move-butto
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0;
 }
 
 main .content section .purchase-box .info .os-icons-and-move-buttons .move-buttons button:nth-child(2)
@@ -508,6 +576,34 @@ main .content section .purchase-box .info .os-icons-and-move-buttons .move-butto
     color: #222831;
     background-color: #7BC74D;
     border-radius: 4.1px;
+}
+
+main .content section .purchase-box .info .os-icons-and-move-buttons .move-buttons button:hover
+{
+    color: #7BC74D;
+}
+
+main .content section .purchase-box .info .os-icons-and-move-buttons .move-buttons button:nth-child(2)
+{
+    font-weight: 500;
+}
+
+main .content section .purchase-box .info .os-icons-and-move-buttons .move-buttons button:hover:nth-child(2)
+{
+    color: #EEEEEE;
+    background: #95ce6a;
+}
+
+main .content section .purchase-box .info .os-icons-and-move-buttons .move-buttons button.add-to-cart-btn.added
+{
+    background-color: #393E46;
+    color: #7BC74D;
+    border: 1px solid #7BC74D;
+}
+
+main .content section .purchase-box .info .os-icons-and-move-buttons .move-buttons button.add-to-cart-btn.added:hover
+{
+    background-color: #606976;
 }
 
 main .content section .purchase-box .info .category-and-price .category
@@ -677,9 +773,15 @@ footer .content section .social-media-icons
     gap: 20px;
 }
 
-footer .content section .social-media-icons img
+footer .content section .social-media-icons svg
 {
+    fill: #EEEEEE;
     cursor: pointer;
+}
+
+footer .content section .social-media-icons svg:hover
+{
+    fill: #7BC74D;
 }
 
 footer .content section .credits p
@@ -710,6 +812,11 @@ footer .content section .buttons ul li
     cursor: pointer;
 }
 
+footer .content section .buttons ul li:hover
+{
+    color: #7BC74D;
+}
+
 footer .content aside
 {
     display: flex;
@@ -717,8 +824,13 @@ footer .content aside
     gap: 45px;
 }
 
-footer .content aside .arrow-up-icon2,
-footer .content aside .logo-icon1
-{ 
+footer .content aside .arrow-up-icon2
+{
     cursor: pointer;
+    stroke: #EEEEEE;
+}
+
+footer .content aside .arrow-up-icon2:hover
+{
+    stroke: #7BC74D;
 }
