@@ -243,7 +243,78 @@ main .content1 .wrapper section .visualization1 img
 
 main .content1 .wrapper section .visualization2
 {
-    width: 81%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+    cursor: pointer;
+}
+
+main .content1 .wrapper section .about-this-game h2
+{
+    font-size: 32px;
+    font-weight: 500;
+    margin: 40px 0 0 0;
+}
+
+main .content1 .wrapper section .about-this-game h3
+{
+    color: rgba(238, 238, 238, 0.9);
+    font-size: 24px;
+    font-weight: 400;
+    margin: 25px 0 20px 0;
+}
+
+main .content1 .wrapper section .about-this-game p
+{
+    color: rgba(238, 238, 238, 0.8);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0 15px 0;
+}
+
+main .content1 .wrapper section .about-this-game .img
+{
+    width: 100%;
+}
+
+main .content1 .wrapper section .about-this-game .show-more-button
+{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #7BC74D;
+    margin: 0;
+    cursor: pointer;
+}
+
+main .content1 .wrapper section .about-this-game .show-more-stroke
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 0 0;
+    cursor: pointer;
+}
+
+main .content1 .wrapper section .about-this-game .show-more-stroke h3
+{
+    font-size: 16px;
+    font-weight: 500;
+    color: #7BC74D;
+    margin: 0 10px 0 0;
+}
+
+main .content1 .wrapper section .system-requirements h2
+{
+    font-size: 32px;
+    font-weight: 500;
+    margin: 25px 0 10px 0;
+}
+
+main .content1 .wrapper section .system-requirements .wrapper
+{
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -268,6 +339,11 @@ main .content1 .wrapper section .system-requirements .characteristics div p
     margin: 0;
 }
 
+main .content1 .wrapper section .system-requirements .characteristics div p:nth-child(1)
+{
+    font-size: 14px;
+}
+
 main .content1 .wrapper section .system-requirements .characteristics p:nth-child(1)
 {
     color: rgba(255, 255, 255, 0.7);
@@ -275,12 +351,18 @@ main .content1 .wrapper section .system-requirements .characteristics p:nth-chil
 
 main .content1 .wrapper section .system-requirements section
 {
-    width: 50%;
+    width: auto;
+}
+
+main .content1 .wrapper section .system-requirements section h3,
+main .content1 .wrapper section .system-requirements aside h3
+{
+    font-size: 18px;
 }
 
 main .content1 .wrapper section .system-requirements aside
 {
-    width: 50%;
+    width: auto;
 }
 
 main .content1 .wrapper hr
@@ -289,6 +371,7 @@ main .content1 .wrapper hr
     height: auto;
     background: rgba(238, 238, 238, 0.3);
     border: none;
+    margin: 0 15px;
 }
 
 main .content1 .wrapper aside
@@ -305,7 +388,10 @@ main .content1 .wrapper aside .visualization3
 
 main .content1 .wrapper aside .visualization3 .text-description
 {
+    line-height: 25px;
+    font-size: 18px;
     color: #EEEEEE;
+    margin: 5px 0 25px 0;
 }
 
 main .content1 .wrapper aside .visualization3 .detailed-description
@@ -367,6 +453,24 @@ main .content1 .wrapper aside .visualization3 .buttons button:nth-child(1)
     cursor: pointer;
 }
 
+main .content1 .wrapper aside .visualization3 .buttons button:nth-child(1):hover
+{
+    color: #EEEEEE;
+    background: #95ce6a;
+}
+
+main .content1 .wrapper aside .visualization3 .buttons button.add-to-cart-btn.added
+{
+    background-color: transparent;
+    color: #7BC74D;
+    border: 1px solid #7BC74D;
+}
+
+main .content1 .wrapper aside .visualization3 .buttons button.add-to-cart-btn.added:hover
+{
+    background-color: #606976;
+}
+
 main .content1 .wrapper aside .visualization3 .buttons button:nth-child(2)
 {
     width: 47%;
@@ -379,6 +483,11 @@ main .content1 .wrapper aside .visualization3 .buttons button:nth-child(2)
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
+}
+
+main .content1 .wrapper aside .visualization3 .buttons button:nth-child(2):hover
+{
+    background-color: #61676b;
 }
 
 main .content1 .wrapper aside .visualization3 .age-limit
@@ -409,11 +518,54 @@ main .content2
     flex-direction: column;
 }
 
+main .content2 h2
+{
+    font-size: 32px;
+    font-weight: 500;
+    margin: 40px 0 25px 0;
+}
+
 main .content2 .wrapper
 {
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+main .content2 .wrapper h4
+{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 15px 0 5px 0;
+}
+
+main .content2 .wrapper p
+{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    margin: 5px 0 5px 0;
+}
+
+main .content2 .show-more-stroke
+{
+    width: 8%;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0 0 0;
+    cursor: pointer;
+}
+
+main .content2 .show-more-stroke a
+{
+    text-decoration: none;
+}
+
+main .content2 .show-more-stroke h3
+{
+    font-size: 16px;
+    font-weight: 500;
+    color: #7BC74D;
+    margin: 0 10px 0 0;
 }
 
 main .content3
@@ -423,9 +575,333 @@ main .content3
     flex-direction: column;
 }
 
+main .content3 h2
+{
+    font-size: 32px;
+    font-weight: 500;
+    margin: 40px 0 20px 0;
+}
+
+main .content3 h4
+{
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+
+main .content3 .reviews-counts
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 0 0 0;
+}
+
+main .content3 .reviews-counts h3
+{
+    font-size: 24px;
+    font-weight: 500;
+    color: #7BC74D;
+    margin: 0 5px 0 0;
+}
+
+main .content3 .reviews-counts h5
+{
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 10px 0 0;
+}
+
+main .content3 .filter
+{
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 10px 0 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+main .content3 .filter p
+{
+    width: 5%;
+    height: 55px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: rgba(238, 238, 238, 0.8);
+}
+
+main .content3 .filter summary
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    list-style: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    color: #eeeeee;
+}
+
+main .content3 .filter details[open] summary img
+{
+    transform: rotate(180deg);
+}
+
+main .content3 .filter .dropdown
+{
+    position: absolute;
+    top: 80%;
+    width: 100px;
+    height: 75%;
+    background: #393E46;
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+}
+
+main .content3 .filter .dropdown p
+{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .content3 .filter .dropdown p:hover
+{
+    background: #61676b;
+    cursor: pointer;
+}
+
+main .content3 .wrapper
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main .content3 .wrapper section
+{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main .content3 .wrapper section .comment1 .part1,
+main .content3 .wrapper section .comment2 .part1,
+main .content3 .wrapper section .comment3 .part1,
+main .content3 .wrapper section .comment4 .part1,
+main .content3 .wrapper aside .comment5 .part1,
+main .content3 .wrapper aside .comment6 .part1,
+main .content3 .wrapper aside .comment7 .part1
+{
+    background: #393E46;
+    border-radius: 7px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 5px 0;
+}
+
+main .content3 .wrapper section .comment1 .part1 .title-info,
+main .content3 .wrapper section .comment2 .part1 .title-info,
+main .content3 .wrapper section .comment3 .part1 .title-info,
+main .content3 .wrapper section .comment4 .part1 .title-info,
+main .content3 .wrapper aside .comment5 .part1 .title-info,
+main .content3 .wrapper aside .comment6 .part1 .title-info,
+main .content3 .wrapper aside .comment7 .part1 .title-info
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch; 
+}
+
+main .content3 .wrapper section .comment1 .part1 .title-info .user-name-and-date,
+main .content3 .wrapper section .comment2 .part1 .title-info .user-name-and-date,
+main .content3 .wrapper section .comment3 .part1 .title-info .user-name-and-date,
+main .content3 .wrapper section .comment4 .part1 .title-info .user-name-and-date,
+main .content3 .wrapper aside .comment5 .part1 .title-info .user-name-and-date,
+main .content3 .wrapper aside .comment6 .part1 .title-info .user-name-and-date,
+main .content3 .wrapper aside .comment7 .part1 .title-info .user-name-and-date
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main .content3 .wrapper section .comment1 .part1 .title-info .user-name-and-date p,
+main .content3 .wrapper section .comment2 .part1 .title-info .user-name-and-date p,
+main .content3 .wrapper section .comment3 .part1 .title-info .user-name-and-date p,
+main .content3 .wrapper section .comment4 .part1 .title-info .user-name-and-date p,
+main .content3 .wrapper aside .comment5 .part1 .title-info .user-name-and-date p,
+main .content3 .wrapper aside .comment6 .part1 .title-info .user-name-and-date p,
+main .content3 .wrapper aside .comment7 .part1 .title-info .user-name-and-date p
+{
+    margin: 0;
+}
+
+main .content3 .wrapper section .comment1 .part1 img,
+main .content3 .wrapper section .comment2 .part1 img,
+main .content3 .wrapper section .comment3 .part1 img,
+main .content3 .wrapper section .comment4 .part1 img,
+main .content3 .wrapper aside .comment5 .part1 img,
+main .content3 .wrapper aside .comment6 .part1 img,
+main .content3 .wrapper aside .comment7 .part1 img
+{
+    margin: 0 10px 0 0;
+}
+
+main .content3 .wrapper section .comment1 .part2,
+main .content3 .wrapper section .comment2 .part2,
+main .content3 .wrapper section .comment3 .part2,
+main .content3 .wrapper section .comment4 .part2,
+main .content3 .wrapper aside .comment5 .part2,
+main .content3 .wrapper aside .comment6 .part2,
+main .content3 .wrapper aside .comment7 .part2
+{
+    background: #393E46;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+main .content3 .wrapper section .comment1 .part2 p,
+main .content3 .wrapper section .comment2 .part2 p,
+main .content3 .wrapper section .comment3 .part2 p,
+main .content3 .wrapper section .comment4 .part2 p,
+main .content3 .wrapper aside .comment5 .part2 p,
+main .content3 .wrapper aside .comment6 .part2 p,
+main .content3 .wrapper aside .comment7 .part2 p
+{
+    margin: 0;
+}
+
+main .content3 .wrapper section .comment1 .part2 .question,
+main .content3 .wrapper section .comment2 .part2 .question,
+main .content3 .wrapper section .comment3 .part2 .question,
+main .content3 .wrapper section .comment4 .part2 .question,
+main .content3 .wrapper aside .comment5 .part2 .question,
+main .content3 .wrapper aside .comment6 .part2 .question,
+main .content3 .wrapper aside .comment7 .part2 .question
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+main .content3 .wrapper .question
+{
+    margin: 30px 0 0 0;
+}
+
+main .content3 .wrapper .question svg
+{
+    cursor: pointer;
+}
+
+main .content3 .wrapper .question svg:nth-of-type(1):hover rect
+{
+    fill: rgba(124, 199, 77, 0.3);
+}
+
+main .content3 .wrapper .question svg:nth-of-type(2):hover rect
+{
+    fill: rgba(199, 77, 77, 0.3);
+}
+
+main .content3 .wrapper .question svg.like-btn.active-like rect
+{
+    fill: #7BC74D;
+    opacity: 1;
+}
+main .content3 .wrapper .question svg.like-btn.active-like path
+{
+    stroke: #222831;
+}
+
+main .content3 .wrapper .question svg.dislike-btn.active-dislike rect
+{
+    fill: #C74D4D;
+    opacity: 1;
+}
+main .content3 .wrapper .question svg.dislike-btn.active-dislike path
+{
+    stroke: #222831;
+}
+
+main .content3 .wrapper .user-name-and-date p:nth-child(1)
+{
+    color: rgba(238, 238, 238, 0.9);
+}
+
+main .content3 .wrapper .user-name-and-date p:nth-child(2)
+{
+    font-size: 14px;
+    color: rgba(238, 238, 238, 0.8);
+}
+
+main .content3 .wrapper .title-info #like
+{
+    font-size: 18px;
+    color: #DCF0D0;
+}
+
+main .content3 .wrapper .title-info #dislike
+{
+    font-size: 18px;
+    color: #F0D0D0;
+}
+
+main .content3 .wrapper .part2 p:nth-child(1)
+{
+    font-size: 18px;
+}
+
+main .content3 .wrapper .part2 .question p
+{
+    font-size: 18px;
+    color: rgba(238, 238, 238, 0.7);
+}
+
+main .content3 .wrapper aside
+{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main .content section .purchase-box .info .os-icons-and-move-buttons .move-buttons button.add-to-cart-btn.added
+{
+    background-color: transparent;
+    color: #7BC74D;
+    border: 1px solid #7BC74D;
+}
+
+main .content section .purchase-box .info .os-icons-and-move-buttons .move-buttons button.add-to-cart-btn.added:hover
+{
+    background-color: #606976;
+}
+
 main .content4
 {
     width: 70%;
+    margin: 50px 0;
 }
 
 main .content4 .pages-navigation
@@ -448,6 +924,47 @@ main .content4 .pages-navigation .next
 {
     display: flex;
     flex-direction: row;
+}
+
+main .content4 .pages-navigation .previous
+{
+    cursor: pointer;
+}
+
+main .content4 .pages-navigation .previous img
+{
+    opacity: 70%;
+    margin: 0 10px 0 0;
+}
+
+main .content4 .pages-navigation .previous p
+{
+    color: rgba(238, 238, 238, 0.7);
+}
+
+main .content4 .pages-navigation .numbers p
+{
+    cursor: pointer;
+}
+
+main .content4 .pages-navigation .numbers p:hover
+{
+    color: #7BC74D;
+}
+
+main .content4 .pages-navigation .numbers p:nth-child(1)
+{
+    color: #7BC74D;
+}
+
+main .content4 .pages-navigation .next
+{
+    cursor: pointer;
+}
+
+main .content4 .pages-navigation .next img
+{
+    margin: 0 0 0 10px;
 }
 
 footer
@@ -482,9 +999,15 @@ footer .content section .social-media-icons
     gap: 20px;
 }
 
-footer .content section .social-media-icons img
+footer .content section .social-media-icons svg
 {
+    fill: #EEEEEE;
     cursor: pointer;
+}
+
+footer .content section .social-media-icons svg:hover
+{
+    fill: #7BC74D;
 }
 
 footer .content section .credits p
@@ -515,6 +1038,11 @@ footer .content section .buttons ul li
     cursor: pointer;
 }
 
+footer .content section .buttons ul li:hover
+{
+    color: #7BC74D;
+}
+
 footer .content aside
 {
     display: flex;
@@ -522,8 +1050,13 @@ footer .content aside
     gap: 45px;
 }
 
-footer .content aside .arrow-up-icon2,
-footer .content aside .logo-icon1
-{ 
+footer .content aside .arrow-up-icon2
+{
     cursor: pointer;
+    stroke: #EEEEEE;
+}
+
+footer .content aside .arrow-up-icon2:hover
+{
+    stroke: #7BC74D;
 }

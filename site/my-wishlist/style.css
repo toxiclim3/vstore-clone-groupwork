@@ -596,7 +596,7 @@ main .content section .purchase-box .info .os-icons-and-move-buttons .move-butto
 
 main .content section .purchase-box .info .os-icons-and-move-buttons .move-buttons button.add-to-cart-btn.added
 {
-    background-color: #393E46;
+    background-color: transparent;
     color: #7BC74D;
     border: 1px solid #7BC74D;
 }
