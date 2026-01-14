@@ -166,3 +166,24 @@ header a
 
     background: var(--greenBrightRight);
 }
+
+.left input.failure
+{
+	outline: 3px solid var(--red);
+}
+
+.left input.success
+{
+	outline: 3px solid var(--green);
+}
+
+.left>p
+{
+	margin-top: 1em;
+	text-align: center;
+}
+
+p#error
+{
+	color: var(--red);
+}

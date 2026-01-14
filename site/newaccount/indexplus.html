@@ -21,26 +21,78 @@
          <div class="loginContainer">
             <!-- Форма для регистрации -->
             <div class="left login">
-                <form action="">
+                <form action="" id="newacc">
                     <label for="login">YOUR EMAIL</label>
                     <input type="text" name="login" id="login">
 
                     <label for="password">CREATE A PASSWORD</label>
                     <input type="password" name="password" id="password">
 
-                    <div class="checkbox">
-                        <input type="checkbox" name="agecheck" id="agecheck">
-                        <label for="agecheck">I am 13 years of age or older and agree to the terms of the VStore User Agreement and the VStore Privacy Policy</label>
+                    <label for="repeat">REPEAT YOUR PASSWORD</label>
+                    <input type="password" name="repeat" id="repeat">
+
+                    <div class="checkbox" id="checkbox">
+                        <input type="checkbox" name="agecheck" id="agecheck" id="tos">
+                        <label for="agecheck" >I am 13 years of age or older and agree to the terms of the VStore User Agreement and the VStore Privacy Policy</label>
                     </div>
 
+
+                    <p id="error"></p>
                     <!-- Я не добавлял капчу потому что лень -->
                     <div class="buttons">
                         <input type="submit" value="CREATE ACCOUNT">
                     </div>
+
+
                 </form>
             </div>
          </div>
     </div>
 
+
+    <script>
+        function redirect(where)
+{
+    window.location.assign(where);
+}
+
+let form = document.getElementById("newacc");
+let passwd = document.getElementById("password");
+let errorbox = document.getElementById("error") ;
+let tos = document.getElementById("tos");
+
+let checkbox = document.getElementById("checkbox");
+
+form.addEventListener("submit", (event) => 
+	{
+		event.preventDefault();
+
+        let pass1 = document.getElementById("password").value;
+        let pass2 = document.getElementById("repeat").value;
+
+        if (pass1 == pass2) 
+        {
+            if (tos.checked == false) 
+            {
+                errorbox.innerHTML = `Please confirm your age`;
+                checkbox.classList.add("failure");
+            }
+            else
+            {
+                redirect("../loggedin/indexplus.html");
+            }
+            
+        }
+        else
+        {
+            errorbox.innerHTML = `Passwords don't match`;
+            repeat.classList.add("failure");
+
+
+        }
+
+    }
+)
+    </script>
 </body>
 </html>
